@@ -1,0 +1,55 @@
+\documentclass{llncs}
+\usepackage{subcaption} %% For complex figures with subfigures/subcaptions
+                        %% http://ctan.org/pkg/subcaption
+\captionsetup{compatibility=false}
+\usepackage{graphics,xcolor,amssymb}
+\usepackage{algorithm}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage[noend]{algpseudocode}
+\usepackage{stmaryrd}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.15}
+
+
+\input{./macros}
+\begin{document}
+
+\newcommand{\HLS}{\textit{HLS}}
+\newcommand{\sem}[1]{\llbracket #1 \rrbracket}
+\pagestyle{plain} % Remove when publishing
+
+%% Title information
+\title{Delta Logics: Logics for Change}
+\author{Adithya Murali \and
+  P.\@ Madhusudan
+}
+
+\institute{
+  Department of Computer Science, University of Illinois, Urbana-Champaign
+}
+
+\maketitle
+
+\begin{abstract}
+~\\
+\end{abstract}
+
+
+%\input{intro}
+\input{logic}
+
+
+%% Bibliography
+\bibliographystyle{splncs03}
+\bibliography{references}
+
+
+
+\end{document}
