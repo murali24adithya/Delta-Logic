@@ -1,0 +1,358 @@
+\section{Delta Logics}
+In this section, we define a general delta-logic extending many-sorted first-order logic with least fixpoints
+with background axiomatizations of some of the sorts.
+
+Let us fix a many-sorted first-order signature $\Sigma = (S, {\cal F}, {\cal P}, {\cal C}, {\cal G}, {\cal R})$ where 
+$S=\{\sigma_0, \ldots, \sigma_n\}$ is a nonempty finite set of sorts, 
+${\cal F}$, ${\cal P}$, and ${\cal C}$ are sets of function symbols, relation symbols,
+and constant symbols, respectively, and
+${\cal G}$ and ${\cal R}$ are function and relation symbols that will be recursively defined. 
+These symbols have implicity defined an appropriate arity and a type signature.
+
+
+Let $\sigma_0$ be a special sort that we refer to as the \emph{location} sort, which
+will model locations of the heap. The other sorts, which we refer to as background sorts, can be arbitrary and
+constrained to conform to some theory (such as a theory of arithmetic or a theory of sets).
+
+We assume the following restrictions:
+\begin{itemize}
+	\item We assume all functions in ${\cal F}$ map either from tuples of one sort to itself or from the foreground
+	 sort $\sigma_0$ to a background sort $\sigma_i$. Relations in ${\cal P}$ are over tuples of one sort only.
+	\item The functions in ${\cal F}$ whose domain is over the foreground sort $\sigma_0$ are \emph{unary}.
+	      Also, relations over the foreground sort $\sigma_0$ are unary relations.
+	\item Recursively defined functions (in ${\cal G}$) are all unary functions from the foreground sort $\sigma_0$ 
+	         to the foreground sort or a background sort. Recursively defined relations (in ${\cal R}$) are all unary relations on the foreground sort $\sigma_0$.
+\end{itemize}
+
+The restriction to have unary functions from the foreground sort (which models locations) is sufficient
+to model pointers on the heap (unary functions from $\sigma_0$ to $\sigma_0$) 
+and to model data stored in the heap (like the key stored at locations modeled as a function from $\sigma_0$ to a
+background sort of integers).
+This restriction will greatly simplify the presentation of delta-logics below.
+The restriction of having unary recursively defined functions and relations will also simplify the notation.
+Note that recursive definitions such as $\textit{lseg}(x,y)$ that are binary can be written recursively
+as unary relations such as $\textit{lseg}_y(x)$ (i.e., parameterized over the variable $y$) with recursion
+on the variable $x$. 
+
+
+{\bf Define FO+LFP: syntax and semantics.}
+
+
+
+
+\subsection{Delta Logics}
+
+We parameterize delta logics by a finite set of first-order variables 
+$\Delta = \{ v_1, \ldots v_n\}$.
+
+Intuitively, a delta logic formula $\varphi(\vec{x})$ is a formula that evaluates
+on a model $M$ while \emph{ignoring} the functions/relations on the locations interpreted
+for the variables in $\Delta$. 
+
+More precisely, a semantic definition of the delta logic over $\Sigma$ with respect 
+to $\Delta$, is defined as below. First, let us define when a pair of models over the same
+universe and an interpretations differ only on $\Delta$.
+
+\begin{definition}[Models differing only on $\Delta$]
+Let $M$ and $M'$  be two $\Sigma$-models with universe $U$ that interpret constants the same way,
+and let $I$ be an interpretation of variables over $U$.
+Then we say $(M, I)$ and $(M', I)$ differ only on $\Delta$ if:
+\begin{itemize}
+	\item  for every
+	function symbol $f$ and for every $l \in U$, $\llbracket f \rrbracket_M(l)  \not = \llbracket f \rrbracket_{M'}(l)$ only if
+	there exists some $v \in \Delta$ such that $I(v) = l$.
+	
+	\item  for every relation symbol $S$ and for every $l \in U$, $\llbracket S \rrbracket_M(l)  \not \equiv \llbracket S \rrbracket_{M'}(l) $ only if 
+there exists some $v \in \Delta$ such that $I(v) = l$.\qed	
+\end{itemize}
+\end{definition}
+
+Intuitively, the above says that the interpretation of the (unary) functions and relations of the two models are 
+precisely the same for all elements in the universe that are not interpretations of the variables in $\Delta$.
+
+An FOL+lfp formula over $\Sigma$, $\varphi(\vec{x})$, is a delta-logic formula
+if the formula does not distinguish between models that differ only on $\Delta$:
+
+
+\begin{definition}[Delta-logic formulas]
+An FOL+lfp formula over $\Sigma$, $\varphi(\vec{x})$, is a delta-logic formula
+if for every two $\Sigma$-models $M$ and $M'$ with the same universe and every interpretation $I$ 
+such that $(M, I)$ and $(M', I)$ differ only on $\Delta$, 
+$M, I \models \varphi$ iff $M', I \models \varphi'$.\qed
+\end{definition}
+
+Delta-logic formulae can be easily written using syntactic restrictions where the formula (and the recursive definitions)
+are written so that every occurrence of $f(t)$ (where $f$ is a function symbol) or $P(t)$ (where $P$ is a relation symbol),
+where $t$ is a term of type $\sigma_0$, 
+is guarded by the clause ``$t \not \in \Delta$'', which is short for $\bigwedge_{v \in \Delta} t \not = v)$.
+
+\noindent Let us now give some examples of delta-logic formulae.
+
+\paragraph{Example:}
+\emph{
+Let us fix a finite set $\Delta$ of first-order variables.\\
+The recursive definition $$\textit{ls}(x) :=_{\textit{lfp}} (x=\textit{nil} \vee (x \not = nil \wedge x \not \in \Delta \wedge \textit{ls}(n(x))) 
+ \vee (x \not = nil \wedge \bigvee_{v \in \Delta} (x\!=\!v \wedge b_v)))$$ 
+ is a delta-logic definition with respect to $\Delta$.
+The above defines lists where by ``imbibing'' facts about whether a location $v$ in $\Delta$ is a list using the
+free Boolean variable $b_v$. The definition says that $x$ points to a list if it either is equal to the constant $\textit{nil}$,
+or is not equal to $\textit{nil}$ and either $x$ is not in $\Delta$ and $n(x)$ is a list or $x$ is in $\Delta$, and the corresponding
+Boolean variable holds. The least fixpoing semantics of the above definition gives a unique definition: $ls(u)$ is true iff
+there is a path using the pointer $n()$ that either ends in $\textit{nil}$ or ends in a node $v$ in $\Delta$ where $b_v$ is true. 
+Note that the formula $n(x)$ is guarded by the check $x \in \Delta$, and hence this is a delta-logic formula.
+Changing the model to reinterpret $n()$ over $\Delta$ (but preserving the interpretation of the variables $b_v$, $v \in \Delta$) 
+will not change the definition of $\textit{ls}$ in any way.
+}
+
+\emph{The formula $u \not \in \Delta \wedge u'\!\!=\!\!n(u) \wedge \textit{ls}(u')$ is a delta-logic formula that uses the above definition
+	(note that the formula $n(u)$ is again guarded by a check ensuring $u$ is not in $\Delta$). Again, changing the interpretation 
+	 of $n()$ on $\Delta$ will not affect the truth of this formula (provided the interpretation of $u$ and $u'$ do not change).
+}
+
+
+\section{Translating Verification Conditions to Delta Logics}
+
+
+\section{A Decidable Delta Logic on Lists with List Measures}
+
+In this section, we will define a delta logic on linked lists equipped with \emph{list measures}--- measures of
+list segments that include length, its heaplet, the multiset of keys stored in the list (say, in a data-field {\tt key}),
+and the minimum and maximum keys stored in it. We prove that the quantifier-free first-order logic fragment of this delta logic 
+is \emph{decidable}. More precisely, we show that the logic can be translated to an equisatisfiable quantifier-free first-order
+formula that is decidable by using a Nelson-Oppen combination of decidable theories of arithmetic, sets, and uninterpreted functions.
+The translation in fact will allow us to decide formulas of the form $\alpha \wedge \beta$ obtained as verification conditions
+in the section above, where $\alpha$ is a delta-logic formula on lists and list measures and $\beta$ is over a decidable
+Nelson-Oppen combinable quantifier-free theories, and where $\alpha$ and $\beta$ share Boolean and first-order variables.
+At the end of the section, we outline some generalizations of our result.
+
+\subsection*{A delta logic over list measures}
+As usual, let us fix a set of first-order variables $\Delta$.
+Let us also fix a single pointer field $n$.
+
+\begin{definition}[Recursive Definitions for the Logic of List Measures (LM)]
+Let us fix a set of \emph{parameter variables} $P$ that consists of a tuple of sets of variables:
+a set of Boolean variables $LS_z^v$, a set of variables with type set of locations
+$HLS_z^v$, a set of variables of type multiset of keys $MSKEYS_z^v$, and
+a set of variables of type integer $Max_z^v$ and $Min_z^v$, where $z,v$ range over $\Delta$.
+
+The delta-logic of list measures (LM) wrt $\Delta$ and parameter variables $P$ is defined using the following recursive definitions, which depend crucially on the parameter variables $P$.
+\begin{itemize}
+	\item We have unary relations $ls_z^P$ that capture linked list segments 
+	       that end in $z$, where
+	         the relation for a location $v$ in $\Delta$ is imbibed using the Boolean variables $LS_z^v$ ($v \in \Delta$),
+	      and where $z$ is any element of $\Delta$ or the constant location $\textit{nil}$.
+	      (The relation $ls_\textit{nil}()$ captures whether a location points to a list
+	       ending with $\textit{nil}$.)
+	
+	This is defined as follows:
+	$$\textit{ls}_z^P(x)\!\!:=_{\textit{lfp}}\!\! \left( x\!\!=\!\!\textit{z} \vee \left( x \!\not =\! z \wedge x \!\not=\! nil \wedge x \not \in \Delta \wedge \textit{ls}_z^P(n(x))\right) 
+	\vee\right.$$
+	$$~~~~ \left.\left(x \!\not =\! z \wedge x \in \Delta \wedge \bigwedge_{v \in \Delta} (x=v \Rightarrow LS_z^v)\right)\right)$$ 
+	           
+
+    \item We have recursive definitions that capture the heaplet of such list-segments, where the heaplet
+of list-segments from an element $v$ in $\Delta$ to $z$ (where $z \in \Delta \cup \{nil\}$) is imbibed from the set variable $\HLS_z^v$:
+\begin{align*}
+\textit{hls}_z^P(x) & :=_{\textit{lfp}} & \emptyset & \textit{~~if~} \sem{x}\!\!=\!\!\sem{z} \\
+& & \{x\} \cup \textit{hls}_z^P(n(x)) & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x} \!\not=\! \sem{nil} \wedge \sem{x} \not \in \sem{\Delta} \\
+& & \HLS\,_z^v & \textit{~~if~} \sem{x} \not = \sem{z} \wedge \sem{x}=\sem{v} \wedge v \in \Delta 
+\end{align*}
+
+    \item We have recursive definitions that capture the multiset of data elements (through a data-field
+    $\textit{key}$) stored in list segments, 
+    where again the multiset of data 
+of list-segments from an element $v$ in $\Delta$ to $z$ (where $z \in \Delta \cup \{nil\}$) is imbibed from the set variable $MSKeys_z^v$:
+\begin{align*}
+\textit{mskeys}_z^P(x) & :=_{\textit{lfp}} & \emptyset & \textit{~~if~} \ \sem{x}\!\!=\!\!\sem{z} \\
+& & \{\textit{key}(x)\} \cup_m \textit{mskeys}_z^P(n(x)) & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x} \!\not =\! \sem{nil} \wedge \sem{x} \not \in \sem{\Delta} \\
+& & \textit{MSKeys}_z^x & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x}=\sem{v} \wedge v \in \Delta 
+\end{align*}
+
+    \item We have recursive definitions that capture the maximum/minimum element of data elements stored in list segments, where again the maximum/minimum element  
+of list-segments from an element $v$ in $\Delta$ to $z$ where $z \in \Delta \cup \{nil\}$) is imbibed from the data variable $Max_z^v$ (or $Min_z^v$).
+We assume the data-domain has a linear-order $\leq$, and that there are special constants $-\infty$ and $+\infty$
+that are the minimum and maximum elements of this order. Let $max(r_1,r_2) \equiv \textit{ite}(r_1 \leq r_2, r_2, r_1)$.
+\begin{align*}
+\textit{Max}_z^P(x) & :=_{\textit{lfp}} & -\infty & \textit{~~if~} \sem{x}\!\!=\!\!\sem{z} \\
+& & \textit{max}(key(x), \textit{Max}_z^P(n(x))) & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x} \!\not=\! \sem{nil} \wedge \sem{x} \not \in \sem{\Delta} \\
+& & \textit{MSKeys}_z^v & \textit{~~if~} \sem{x} \not = \sem{z} \wedge \sem{x} = \sem{v} \wedge v \in \Delta 
+\end{align*}
+
+ The function $\textit{Min}_z^P$ is similarly defined.
+ 
+    \item We have a recursive definition that captures sortedness, using the minimum measure.
+\begin{align*}
+	&\textit{Sorted}_z^P(x) \!\!:=_{\textit{lfp}}\!\! \Big( ~~x\!\!=\!\textit{z} ~~\vee  \\
+	&~\left( x \!\not =\! z \wedge x \!\not=\! nil \wedge x \not \in \Delta \wedge \textit{min}_z^P(x) \!\not =\! \bot \wedge \textit{key}(x) \leq \textit{min}_z^P(x) \wedge \textit{Sorted}_z^P(n(x))\right) \vee\\
+&	~
+\left(x \!\not =\! z \wedge x \in \Delta \wedge \textit{min}_z^P(x) \!\not =\! \bot \wedge \textit{key}(x) \leq \textit{min}_z^P(x) \wedge \bigwedge_{v \in \Delta} (x=v \Rightarrow \textit{SORTED}_z^v\right)\Big)
+\end{align*}
+
+\end{itemize}
+\end{definition}
+
+The above definitions can be written in usual syntax using $\textit{ite}$ expressions; we omit this 
+formulation.
+
+We define the logic of list-measures (LM) to be quantifier-free formulas that use only the recursive 
+definitions of $LM$ mentioned above; the subformulae of the formula in $LM$ are however allowed
+to refer to \emph{different} sets of parameter variables.
+
+
+
+\subsection{Deciding the logic of list measures}
+We can now state the main result of this section:
+
+\begin{theorem}
+	Given a quantifier-free formula $\varphi(\vec{x})$ in LM with recursive definitions
+	of $ls$ and measures of length, heaplet, keys, max, and min, there is
+	an effective procedure that constructs a quantifier-free FOL formula $\psi(\vec{x})$ over 
+	a decidable Nelson-Oppen combination of theories of quantifier-free Presburger arithmetic, 
+	sets with cardinality constraints, and uninterpreted functions such that for \emph{any}
+	interpretation of the variables $\vec{x}$, there is a model that satisfies $\varphi$ iff there
+	is a model that satisfies $\psi$.
+\end{theorem}
+
+
+\begin{corollary}
+	 The satisfiability problem for quantifier-free $LM$ formulas is decidable.
+\end{corollary}
+
+Let us fix a set of sets of parameters ${\cal P} = \{P_1, \ldots P_k\}$
+(we encourage the reader to fix $k=2$ in their mind while reading the section, as it's the
+most common and the logic VCs translate to, as shown in Section~\ref{}).
+
+We will first describe the decision procedure and its proof of correctness for the fragment
+of $LM$ that involves only the three recursive definitions $ls_z^P$, $hls_z^P$, and $rank_z^P$,
+where $P \in \{cal P\}$, which we will refer to as $LM[ls,hls,rank]$. 
+Then we will extend the procedure to handle the logic with all the other measures; this latter
+proof requires more expressive decision procedures and pseudo-measures that make its proof harder.
+
+Let us assume a quantifier-free $LM[ls,hls,rank]$ formula $\varphi$ which is a $\Delta$-logic formula
+wrt a finite set of variables $\Delta$.
+Assume the (free) location variables occurring in $\varphi$ is $X = \{x_1, \ldots x_n\}$ with
+$\Delta \subseteq X$. 
+
+In order to determine whether there is a model satsifying $\varphi$, we need to construct a universe
+of locations, an interpretation of the variables in $X$, and the heap
+(with the single pointer field $n()$) on all locations \emph{outside} $\Delta$ (the definition
+of $n()$ on $\Delta$, by definition, does not matter).
+
+Our decision procedure intuitively relies on the following observations. First, note that the locations
+reached by using the $n()$ pointer any number of times forms the relevant set of locations that $\varphi$'s
+truth can depend on (as $\varphi$ is quantifier-free and has recursive definitions that only use the $n$-pointer).
+When pursuing the paths using the $n$-pointer on a location $x$, there are three distinct cases that can happen:
+(a) the path may reach a node in $\Delta$, (b) the path may reach a node that is reachable also from another location in $X$,
+or (c) the path may never reach a location in $\Delta$ nor a location that is reachable from another location in $X$. 
+
+The key idea is to \emph{collapse} paths where the reachability of them from variables in $X$ does not change.
+More precisely, let $L$ be the set of all locations reachable from $X$ such that $l$ is in $\Delta$ or 
+for every location $l'$ reachable from $X$ such that $n(l')=l$, the set of nodes in $X$ that have a path
+to $l'$ is different from the set of nodes in $X$ that have a path to $l$.
+
+It is easy to see that there are at most $|X|-1$ locations of the above kind that are distinct from $\Delta$,
+since the paths can merge at most $|X|-1$ times forming a tree-like structure. Our key idea is now to 
+represent these list segments that connect these kinds of locations \emph{symbolically}, summarizing the 
+measures on these list segments. Since there are only a bounded number of such locations and hence list
+segments, we can compute recursive definitions of linear measures involving them using quantifier-free
+and recursive-definition-free formulae.
+
+We construct a formula $\psi$ that is satisfiable iff $\varphi$ is satisfiable, as follows.
+First, we fix a new set (distinct from $X$) of location variables $V={v_1, \ldots v_{|X|-1}}$,
+to stand for the merging locations described above.
+We introduce an uninterpreted function $T: V \cup (X\setminus \Delta) \longrightarrow V \cup X \cup \{\bot\}$.
+Let $Z$ be the set of variables in $\Delta$ as well as the variables in $X \setminus \Delta$ 
+such that the recursive definitions $ls_z^P$, $hls_z^P$, $rank_z^P$, for some
+$P \in {\cal P}$, occurs in $\varphi$.
+
+\medskip
+\noindent 
+{\bf $\psi$ is the conjunct of the following formulas:}
+\begin{itemize}
+	\item The formula $\varphi$ (but with recursive definitions treated as uninterpreted relations and functions).
+	\item For every $z \in Z$, we introduce an uninterpreted function $Dist_z: V \cup (X \setminus \Delta) \longrightarrow \mathbb{N} \cup \{\bot\}$ that
+             is meant to capture the distance from any location in $V \cup X$ to $z$, if $z$ is reachable from
+               that location without going through $\Delta$, and is $\bot$ otherwise. We add the constraint:
+          $$\bigwedge_{v \in V\cup (X\setminus \Delta)} \big[ (Dist_z(v)\!=\!0 \Leftrightarrow v=z) ~\wedge ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$$
+          $$ v \!\not =\! z \Rightarrow \big(~\left( (T(v)\!=\!\bot \vee Dist_z(T(v))\!=\!\bot) \Rightarrow Dist_z(v) \!=\! \bot
+                 \right)~~~~~~~~~~~~~~~$$
+          $$  ~~~~~  \left. \wedge ~((T(v) \not = \bot \wedge Dist_z(T(v)) \not = \bot) \Rightarrow Dist_z(v) = Dist_z(T(v))+1
+                \big) ~\right)\big] $$
+              
+	\item For every $x \in X$, and for every $P \in {\cal P}$, we have a conjunct:
+		     $$ls_z^P(x) \Leftrightarrow (Dist_z(x)\not= \bot \vee \bigvee_{v \in \Delta} (Dist_v(x) \not = \bot
+		       \wedge LS_z^v))$$
+		     
+    \item For every $x \in X$, $z \in Z$, and for every $P \in {\cal P}$, we have a conjunct:
+             $$ \left( Dist_z(x) \!=\! \bot \Rightarrow rank_z^P\!(x)\!=\!\bot\right) ~~\wedge~~ 
+               \left( Dist_z(x) \!\not =\! \bot \Rightarrow rank_z^P\!(x)\!=\!RANK_z^P \right)$$
+               
+    \item We capture the heaplets of list-segments from $v \in V \cup (X \setminus \Delta)$ to $T(v)$ (excluding both
+              end-points) using a multiset
+             of locations $H(v)$
+             and constrain it so that it does not contain any elements in $X$:
+             $$ \bigwedge_{x \in X, v \in V \cup (X \setminus \Delta)} x \not \in H(v)$$  
+    
+    \item We can then precisely capture the heaplet $hls_z^P(x)$ by taking the union of all heaplets of
+           list segments lying on its path to $z$. We do this using the following constraint, for each
+           $v \in X \cup V$:
+           $$(Dist_z(v)=\bot \Rightarrow hls_z^P (v) = \emptyset) \wedge (hls_z^P(z)= \emptyset)\wedge $$
+           $$(Dist_z(v) \not = \bot \wedge v \not = z) \Rightarrow hls_z(v)= H(v) \cup \{T(v)\} \cup hls_z(T(v))$$
+
+\end{itemize}
+
+Note that the formula $\psi$ is quantifier-free and over the combined theory of arithmetic, uninterpreted functions, and sets, and hence is decidable. 
+
+We can show the correctness of the above translation:
+\begin{lemma}
+	For any quantifier-free formula $\varphi({\cal P}, X)$ of $LM[ls,hls,rank]$, the quantifier-free and recursion-free
+	 formula $\psi({\cal P}, X)$ obtained $\varphi$ obtained from the translation above
+	 satisfies the following property: for any interpretation of the free variables
+    in ${\cal P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
+\end{lemma}
+
+\bigskip
+
+We now turn to the more complex logic $LM[ls, hls, rank, len, MSKeys, Min, Max, Sorted]$, and show that
+any quantifier-free formula $\varphi$ in the logic can be satisfied. First, we model the multi-set
+of keys, minimum and maximum values and sortedness of each list-segment from $v$ to $T(v)$ 
+(where $v \in (X \setminus \Delta) \cup V$),
+which is outside $\Delta$, using multiset variables $M-MSKeys(v)$, integer variables $M-Min(v)$, $M-Max(v)$,
+and $M-Len(v)$ and Boolean variables $M-Sorted(v)$.
+We can also aggregate them, as above, to express the sets $MSKeys_z(x)$, $Min_z(x)$, $Max_z(x)$, $Len_z(x)$
+and $Sorted_z(x)$, for each $z \in Z$ and
+each $x \in (X \setminus \Delta) \cup V$, similar to definitions of $hls_z(x)$ as defined above.
+One point to note is that the recursive definition of sortedness across segments will by expressed
+by using both $Min_z(x)$ and $Max_z(x)$ definitions, though the definition of sortedness is defined
+using only minimum--- this is needed as expressing when concatenation of list segments is sorted
+requires the max value of the first segment. We skip these definitions as they are easy to derive.
+
+The main problem that remains is in \emph{constraining} these measures so that they can be the measures
+of the \emph{same} list segment. The following constraints capture these constraints, for each 
+$v \in (X \setminus \Delta) \cup V$:
+\begin{itemize}
+	\item The cardinality of $M-MSKeys(v)$ must be $M-Len(v)$.
+	\item $M-Min(v)$ and $M-Max(v)$ must be the minimum and maximum elements of $M-MSKeys(v)$.
+	\item If $M-Min(v)=M-Max(v)$ (and they are not $\bot$), then $M-Sorted(v)$ cannot be false.
+\end{itemize}
+
+The intuition is that any measures meeting the above constraints can be realized using true list
+segments. As for the third clause above, notice that any list segment with minumum element different
+from maximum can be realized using either a sorted list or an unsorted list.
+
+The above measures, though seemingly simple, are hard to shoehorn into existing decidable theories.
+The first constraint can be expressed using quantifier-free BAPA~\cite{} (Boolean Algebra with Presburger
+arithmetic) constraints, which is decidable. We can get around defining the minimum of list segments
+by having the set of keys store only offsets from the minimum (and including the key $0$ always). However,
+capturing max and sortedness measures in addition while preserving decidability seems hard.
+
+Consequently, we give a new decision procedure that exploits the setup we have here.
+First, note that we can restrict the formulas that use the keys stored in sets to involve
+only membership testing of free variables in them, combinations using union and intersection,
+and checking emptiness of derived sets. We can \emph{disallow checking non-emptiness} as non-emptiness
+of a set $S$ can always be captured by demanding $k \in S$, for a freshly introduced free variable $k$
+without affecting satisfiability.
+
+Our primary observation is that we can then restrict the multiset of keys to be over a  \emph{bounded}
+universe of elements, involving at most one element for each free variable mentioned in the formula,
+plus one extra element $\nu$. 
