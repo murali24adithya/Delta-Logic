@@ -1,0 +1,1112 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.24)  28 JAN 2018 12:03
+entering extended mode
+**"C:/Users/Adithya/Documents/Acads/UIUC/Madhu research/Delta-Logic/deltalogic.
+tex"
+
+("C:/Users/Adithya/Documents/Acads/UIUC/Madhu research/Delta-Logic/deltalogic.t
+ex"
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+(llncs.cls
+Document Class: llncs 2017/09/04 v2.19 
+ LaTeX document class for Lecture Notes in Computer Science
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
+"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\multicol.s
+ty"
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+\c@tracingmulticols=\count87
+\mult@box=\box26
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count88
+\c@collectmore=\count89
+\doublecol@number=\count90
+\multicoltolerance=\count91
+\multicolpretolerance=\count92
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\maxbalancingoverflow=\dimen108
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count93
+\c@finalcolumnbadness=\count94
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\mc@col@check@num=\count95
+) (aliascnt.sty
+Package: aliascnt 2009/09/08 v1.3 Alias counter (HO)
+ (remreset.sty))
+\c@chapter=\count96
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 368.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 369.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 370.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 371.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
+\tocchpnum=\dimen112
+\tocsecnum=\dimen113
+\tocsectotal=\dimen114
+\tocsubsecnum=\dimen115
+\tocsubsectotal=\dimen116
+\tocsubsubsecnum=\dimen117
+\tocsubsubsectotal=\dimen118
+\tocparanum=\dimen119
+\tocparatotal=\dimen120
+\tocsubparanum=\dimen121
+\@tempcntc=\count97
+\fnindent=\dimen122
+\c@@inst=\count98
+\c@@auth=\count99
+\c@auco=\count100
+\instindent=\dimen123
+\authrun=\box52
+\authorrunning=\toks14
+\tocauthor=\toks15
+\titrun=\box53
+\titlerunning=\toks16
+\toctitle=\toks17
+\c@theorem=\count101
+\c@case=\count102
+\c@conjecture=\count103
+\c@corollary=\count104
+\c@definition=\count105
+\c@example=\count106
+\c@exercise=\count107
+\c@lemma=\count108
+\c@note=\count109
+\c@problem=\count110
+\c@property=\count111
+\c@proposition=\count112
+\c@question=\count113
+\c@solution=\count114
+\c@remark=\count115
+\headlineindent=\dimen124
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcapti
+on.sty"
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.
+sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3
+.sty"
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.
+sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+\captionmargin=\dimen125
+\captionmargin@=\dimen126
+\captionwidth=\dimen127
+\caption@tempdima=\dimen128
+\caption@indent=\dimen129
+\caption@parindent=\dimen130
+\caption@hangindent=\dimen131
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecap
+tionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\b
+fseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
+tempboxa \hfil }\fi \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count116
+)
+\c@subfigure=\count117
+\c@subtable=\count118
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphic
+s.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.st
+y"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphic
+s.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdfte
+x.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwa
+rerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcm
+ds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count119
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.st
+y"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.c
+fg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb
+.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfont
+s.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithms\algor
+ithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count120
+\float@exts=\toks20
+\float@box=\box54
+\@float@everytoks=\toks21
+\@floatcapt=\box55
+) ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.st
+y"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks22
+\c@algorithm=\count121
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.
+sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.
+sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.s
+ty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen132
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.s
+ty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen133
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.s
+ty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count122
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count123
+\leftroot@=\count124
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count125
+\DOTSCASE@=\count126
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box56
+\strutbox@=\box57
+\big@size=\dimen134
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count127
+\c@MaxMatrixCols=\count128
+\dotsspace@=\muskip10
+\c@parentequation=\count129
+\dspbrk@lvl=\count130
+\tag@help=\toks24
+\row@=\count131
+\column@=\count132
+\maxfields@=\count133
+\andhelp@=\toks25
+\eqnshift@=\dimen135
+\alignsep@=\dimen136
+\tagshift@=\dimen137
+\tagwidth@=\dimen138
+\totwidth@=\dimen139
+\lineht@=\dimen140
+\@envbody=\toks26
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.
+sty"
+\wrapoverhang=\dimen141
+\WF@size=\dimen142
+\c@WF@wrappedlines=\count134
+\WF@box=\box58
+\WF@everypar=\toks28
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx\alg
+pseudocode.sty"
+Package: algpseudocode 
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx\alg
+orithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count135
+\c@ALG@rem=\count136
+\c@ALG@nested=\count137
+\ALG@tlm=\skip48
+\ALG@thistlm=\skip49
+\c@ALG@Lnr=\count138
+\c@ALG@blocknr=\count139
+\c@ALG@storecount=\count140
+\c@ALG@tmpcounter=\count141
+\ALG@tmplength=\skip50
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\stmaryrd\stmaryr
+d.sty"
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\booktabs\booktab
+s.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen143
+\lightrulewidth=\dimen144
+\cmidrulewidth=\dimen145
+\belowrulesep=\dimen146
+\belowbottomsep=\dimen147
+\aboverulesep=\dimen148
+\abovetopsep=\dimen149
+\cmidrulesep=\dimen150
+\cmidrulekern=\dimen151
+\defaultaddspace=\dimen152
+\@cmidla=\count142
+\@cmidlb=\count143
+\@aboverulesep=\dimen153
+\@belowrulesep=\dimen154
+\@thisruleclass=\count144
+\@lastruleclass=\count145
+\@thisrulewidth=\dimen155
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.
+sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip51
+\LTright=\skip52
+\LTpre=\skip53
+\LTpost=\skip54
+\LTchunksize=\count146
+\LTcapwidth=\dimen156
+\LT@head=\box59
+\LT@firsthead=\box60
+\LT@foot=\box61
+\LT@lastfoot=\box62
+\LT@cols=\count147
+\LT@rows=\count148
+\c@LT@tables=\count149
+\c@LT@chunks=\count150
+\LT@p@ftn=\toks29
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlaye
+r\tikz.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\p
+gf.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pg
+frcs.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgfutil-common.tex"
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen157
+\pgfutil@tempdimb=\dimen158
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgfutil-common-lists.tex"))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgfutil-latex.def"
+\pgfutil@abb=\box63
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgfrcs.code.tex"
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\p
+gfcore.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphic
+x.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\
+pgfsys.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
+r\pgfsys.code.tex"
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen161
+\pgf@y=\dimen162
+\pgf@xa=\dimen163
+\pgf@ya=\dimen164
+\pgf@xb=\dimen165
+\pgf@yb=\dimen166
+\pgf@xc=\dimen167
+\pgf@yc=\dimen168
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count151
+\c@pgf@countb=\count152
+\c@pgf@countc=\count153
+\c@pgf@countd=\count154
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
+r\pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
+r\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
+r\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
+r\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count155
+\pgfsyssoftpath@bigbuffer@items=\count156
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
+r\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcore.code.tex"
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+th.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thcalc.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thutil.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thparser.code.tex"
+\pgfmath@dimen=\dimen169
+\pgfmath@count=\count157
+\pgfmath@box=\box64
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.basic.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.trigonometric.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.random.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.comparison.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.base.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.round.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.misc.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfunctions.integerarithmetics.code.tex")))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+thfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count158
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen170
+\pgf@picmaxx=\dimen171
+\pgf@picminy=\dimen172
+\pgf@picmaxy=\dimen173
+\pgf@pathminx=\dimen174
+\pgf@pathmaxx=\dimen175
+\pgf@pathminy=\dimen176
+\pgf@pathmaxy=\dimen177
+\pgf@xx=\dimen178
+\pgf@xy=\dimen179
+\pgf@yx=\dimen180
+\pgf@yy=\dimen181
+\pgf@zx=\dimen182
+\pgf@zy=\dimen183
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen184
+\pgf@path@lasty=\dimen185
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen186
+\pgf@shorten@start@additional=\dimen187
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box65
+\pgf@hbox=\box66
+\pgf@layerbox@main=\box67
+\pgf@picture@serial@count=\count159
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen188
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen189
+\pgf@pt@y=\dimen190
+\pgf@pt@temp=\dimen191
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen192
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen193
+\pgf@sys@shading@range@num=\count160
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box68
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
+\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pg
+fmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box69
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pg
+fmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibilit
+y\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen194
+\pgf@nodesepend=\dimen195
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibilit
+y\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pg
+ffor.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pg
+fkeys.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgfkeys.code.tex"))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath
+.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+th.code.tex"))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
+pgffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
+th.code.tex")
+\pgffor@iter=\dimen196
+\pgffor@skip=\dimen197
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
+yer\tikz\tikz.code.tex"
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
+pgflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count161
+\pgfplotmarksize=\dimen198
+)
+\tikz@lastx=\dimen199
+\tikz@lasty=\dimen256
+\tikz@lastxsaved=\dimen257
+\tikz@lastysaved=\dimen258
+\tikzleveldistance=\dimen259
+\tikzsiblingdistance=\dimen260
+\tikz@figbox=\box70
+\tikz@figbox@bg=\box71
+\tikz@tempbox=\box72
+\tikz@tempbox@bg=\box73
+\tikztreelevel=\count162
+\tikznumberofchildren=\count163
+\tikznumberofcurrentchild=\count164
+\tikz@fig@count=\count165
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pg
+fmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count166
+\pgfmatrixcurrentcolumn=\count167
+\pgf@matrix@numberofcolumns=\count168
+)
+\tikz@expandcount=\count169
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
+yer\tikz\libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgfplots\pgfplot
+s.sty"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+ots.revision.tex")
+Package: pgfplots 2016/08/10 v1.14 Data Visualization (1.14)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+ots.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+otscore.code.tex"
+\t@pgfplots@toka=\toks42
+\t@pgfplots@tokb=\toks43
+\t@pgfplots@tokc=\toks44
+\pgfplots@tmpa=\dimen261
+\c@pgfplots@coordindex=\count170
+\c@pgfplots@scanlineindex=\count171
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\p
+gfplotssysgeneric.code.tex"))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\libs\
+pgfplotslibrary.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpg
+fcompatib\pgfplotsoldpgfsupp_loader.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
+pgflibraryfpu.code.tex")
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpg
+fcompatib\pgfplotsoldpgfsupp_pgflibraryfpu.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpg
+fcompatib\pgfplotsoldpgfsupp_pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count172
+))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\
+pgfplotsutil.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
+tructure\pgfplotsliststructure.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
+tructure\pgfplotsliststructureext.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
+tructure\pgfplotsarray.code.tex"
+\c@pgfplotsarray@tmp=\count173
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
+tructure\pgfplotsmatrix.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\numta
+ble\pgfplotstableshared.code.tex"
+\c@pgfplotstable@counta=\count174
+\t@pgfplotstable@a=\toks45
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
+tructure\pgfplotsdeque.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\
+pgfplotsbinary.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\
+pgfplotsbinary.data.code.tex"))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\
+pgfplotsutil.verb.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\libs\
+pgflibrarypgfplots.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count175
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\p
+gflibrarypgfplots.surfshading.pgfsys-pdftex.def")))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\
+pgfplotscolormap.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\
+pgfplotscolor.code.tex"))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+otsstackedplots.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+otsplothandlers.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+otsmeshplothandler.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+otsmeshplotimage.code.tex")))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+ots.scaling.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+otscoordprocessing.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+ots.errorbars.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+ots.markers.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+otsticks.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfpl
+ots.paths.code.tex")
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
+yer\tikz\libraries\tikzlibrarydecorations.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pg
+fmoduledecorations.code.tex"
+\pgfdecoratedcompleteddistance=\dimen262
+\pgfdecoratedremainingdistance=\dimen263
+\pgfdecoratedinputsegmentcompleteddistance=\dimen264
+\pgfdecoratedinputsegmentremainingdistance=\dimen265
+\pgf@decorate@distancetomove=\dimen266
+\pgf@decorate@repeatstate=\count176
+\pgfdecorationsegmentamplitude=\dimen267
+\pgfdecorationsegmentlength=\dimen268
+)
+\tikz@lib@dec@box=\box74
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
+yer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
+decorations\pgflibrarydecorations.pathmorphing.code.tex"))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
+yer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex"
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
+decorations\pgflibrarydecorations.pathreplacing.code.tex"))
+\pgfplots@numplots=\count177
+\pgfplots@xmin@reg=\dimen269
+\pgfplots@xmax@reg=\dimen270
+\pgfplots@ymin@reg=\dimen271
+\pgfplots@ymax@reg=\dimen272
+\pgfplots@zmin@reg=\dimen273
+\pgfplots@zmax@reg=\dimen274
+)
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
+yer\tikz\libraries\tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
+pgflibraryplotmarks.code.tex"
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+))) (deltalogic.aux)
+\openout1 = `deltalogic.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \@caption).
+(caption)             \@caption = \long macro:#1[#2]#3->\par \addcontentsline {
+\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname the#1\endcsname }{
+\ignorespaces #2}}\begingroup \@parboxrestore \@makecaption {\csname fnum@#1\en
+dcsname }{\ignorespaces #3}\par \endgroup .
+
+
+Package caption Warning: Forced redefinition of \caption since the
+(caption)                unsupported(!) package option `compatibility=false'
+(caption)                was given.
+See the caption package documentation for explanation.
+
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcaptio
+n.sty"
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.
+mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count178
+\scratchdimen=\dimen275
+\scratchbox=\box75
+\nofMPsegments=\count179
+\nofMParguments=\count180
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count181
+\MPscratchDim=\dimen276
+\MPnumerator=\count182
+\makeMPintoPDFobject=\count183
+\everyMPtoPDFconversion=\toks47
+) ABD: EveryShipout initializing macros
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
+your preamble.
+ on input line 22.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 37.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.
+fd")
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+(logic.tex
+Overfull \hbox (4.55617pt too wide) in paragraph at lines 45--47
+\OT1/cmr/m/n/10 We pa-ram-e-ter-ize delta log-ics by a fi-nite set of first-ord
+er vari-ables $\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/
+m/it/10 v[]; [] v[]\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 . 
+ []
+
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 48.
+
+[1
+
+{C:/Users/Adithya/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2] [3]
+Overfull \hbox (19.6973pt too wide) in paragraph at lines 169--169
+[] 
+ []
+
+
+Overfull \hbox (11.90364pt too wide) in paragraph at lines 189--189
+[] 
+ []
+
+[4]
+
+LaTeX Warning: Reference `' on page 5 undefined on input line 223.
+
+
+Overfull \hbox (0.29369pt too wide) in paragraph at lines 241--247
+\OT1/cmr/m/n/10 forms the rel-e-vant set of lo-ca-tions that $\OML/cmm/m/it/10 
+'$\OT1/cmr/m/n/10 's truth can de-pend on (as $\OML/cmm/m/it/10 '$ \OT1/cmr/m/n
+/10 is quantifier-
+ []
+
+[5] [6]
+Overfull \hbox (63.40521pt too wide) in paragraph at lines 316--329
+[]\OT1/cmr/m/n/10 We now turn to the more com-plex logic $\OML/cmm/m/it/10 LM\O
+T1/cmr/m/n/10 [\OML/cmm/m/it/10 ls; hls; rank; len; MSKeys; Min; Max; Sorted\OT
+1/cmr/m/n/10 ]$,
+ []
+
+[7]) (SeparabilityTheorem.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+LaTeX Warning: Reference `make sure those restrictions are written' on page 8 u
+ndefined on input line 4.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+[8]
+Overfull \hbox (52.13622pt too wide) in paragraph at lines 21--21
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+
+ []
+
+
+Overfull \hbox (18.22014pt too wide) in paragraph at lines 36--36
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+
+Overfull \hbox (51.33882pt too wide) in paragraph at lines 58--59
+[]\OT1/cmr/m/it/10 For any re-cur-sively de-fined func-tion $\OML/cmm/m/it/10 R
+$\OT1/cmr/m/it/10 , $[] \OMS/cmsy/m/n/10 ^ [] []$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+[10]) (VC2Delta.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Overfull \hbox (31.0401pt too wide) in paragraph at lines 7--8
+[]\OT1/cmr/m/n/10 ;and a for-mula $\OML/cmm/m/it/10 T[]$ \OT1/cmr/m/n/10 that c
+on-juncts over for-mu-lae of the form: $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+LaTeX Warning: Reference `separability' on page 12 undefined on input line 11.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+) (deltalogic.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 5.
+
+) [12] (deltalogic.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 24120 strings out of 493634
+ 607407 string characters out of 3134423
+ 814351 words of memory out of 3000000
+ 27083 multiletter control sequences out of 15000+200000
+ 11737 words of font info for 44 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 62i,14n,96p,1512b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Adithya/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Adithya/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
+/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi5.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Adithya/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Adithya/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/A
+dithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pf
+b><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Adithya/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Adithya/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/U
+sers/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/hoekwater/stmary10.pfb>
+Output written on deltalogic.pdf (12 pages, 266194 bytes).
+PDF statistics:
+ 120 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+
