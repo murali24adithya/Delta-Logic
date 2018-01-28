@@ -1,122 +1,71 @@
-\documentclass[12pt]{article} % use larger type; default would be 10pt
-\usepackage{mathptmx}
-\usepackage{calc}
-\usepackage{courier}
-\usepackage{listings}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{pdfpages}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{t4phonet}
-\usepackage{pst-node}
-\usepackage{tikz-cd}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{diagram}
-\usepackage{qtree}
-\usepackage[fleqn]{amsmath}
-\usepackage{amsthm}
-\usepackage[english]{babel}
-
-\lstset{breaklines=true, basicstyle=\ttfamily\footnotesize}
-\usepackage[utf8]{inputenc} 
-\usepackage{authblk}
-\parindent0pt
-
-\usepackage{geometry} % to change the page dimensions
-\geometry{a4paper} % or letterpaper (US) or a5paper or....
-\geometry{margin=1in} % for example, change the margins to 2 inches all round
-
-\usepackage{float}
-\usepackage{graphicx} % support the \includegraphics command and options
-\graphicspath{{./figs/}}
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}
-
-\begin{document}
-
-\title{Delta Logic : Internal Report III}
-\author{Adithya Murali ; adithya5@illinois.edu}
-\maketitle
-
-
 	\section{Separability Theorem}
-In this section, we show a key result: that for any quantifier-free FO+\textit{lfp} formula, there exists an equisatisfiable delta-logic formula. This result substantiates and its elements illustrate our primary thesis: that delta-logic is the correct logic in which to write VCs.\\\
+In this section, we show a key result: that for any quantifier-free FO+\textit{lfp} formula we can effectively find an equivalent delta-logic formula. We do this by reasoning separately with the elements of the formula that are specific to $\Delta{}$, and those that are oblivious to $\Delta{}$. We bring these separate analyses together with a set of parameters that we shall describe and justify below.\\\
 
-First, let us consider a recursively defined predicate/function $R$, with the restricted in form as above \ref{make sure those restrictions are written}. Let the set of pointer fields be interpreted by unary functions in $P = \{ p_i \,|\, 1 \leq{} i \leq{} k \}$ for some $k$. We argue that one can rewite this definition so as to be able to handle the changes that the program makes on a finite portion of the heap (which we interpret as the finite set of variables $\Delta{}$) not by having entirely new recursively defined predicates/functions, but by writing the formula in a static logic that accounts for the change by defining the recursive predicates/functions in context-logic that stays oblivious of the exact model on $\Delta{}$, which when combined with the changes to the finite portion can be written into a delta-logic formula.\\\
-
-Observe, that on any given model of locations related by pointers in a set of pointer fields interpreted by $P$, the valuation on this \textit{lfp} definition can be viewed as an iterative process that assigns the least element of the lattice to every location at the beginning, and then, iteratively imbibes the value of at a location from its decendendants on $P$. We relativise this process with respect to $\Delta$ by introducing a set of booleans and first-order variables, one for each element in $\Delta$ which parameterises the new definition on this set, as in:\\
-If $R$ is defined as $R :=_{lfP} \phi{}$, we define a set of variables $B_{R}^{\Delta} = \{b_{R}^{d}\,|\, d \in{} \Delta{} \} \subseteq{} range(R)$.\\
- Then, we define the new recursively defined function/precdicate corresponding to $R$, namely $R^{B_{R}^{\Delta}}$ as follows:\\
+First, let us consider a recursively defined function $R$, with the restricted in form as above \ref{make sure those restrictions are written}. Let the set of functions $PF = \{ p_i \,|\, 1 \leq{} i \leq{} k \}$ (for some $k$) model the pointer fields (we assume that have a clause $p_i(nil) = nil$ for every $1 \leq{} i \leq{} k$). We also assume that $\Delta{}$ is fixed for this discussion.\\
+We define a set of variables $\{R^{d}\,|\, d \in{} \Delta{} \}$ of the type of the range of $R$. These variables are in the set of parameters $P$. Then if $R$ is defined as $R(x) :=_\textit{lfp} \varphi{}(x)$ we define a new function corresponding to $R$, namely $R^{P}$, that is recursively defined as follows:\\
 \begin{align}
-R^{B_{R}^{\Delta}}(x) :=_{lfp} &\;\; b_{R}^{d}\,,\, x = d \textrm{ for some } d \in{}\Delta{}\notag{}\\
-&\;\; \phi{}[R^{B_{R}^{\Delta}}/R] \,,\, x \notin{} \Delta{} \notag{}
+R^{P}(x) & :=_\textit{lfp} & R^{d} & \textit{ if } \llbracket{}x\rrbracket{} = \llbracket{} d \rrbracket{} \textrm{ for some } d \in{}\Delta{}\tag{delta case}\\
+& & \varphi{}[R^{P}/R] & \textit{ if } \llbracket{}x\rrbracket{} \notin{} \llbracket{}\Delta{}\rrbracket{} \tag{recursive case}
 \end{align}  
-It is easy to see that for a formula $R(x)$, writing it as $R^{B_{R}^{\Delta}}(x)$ would be a formula in context-logic since an model of it would not depend on a valuation over $\Delta{}$.\\\
+It is easy to see that for a formula $R(x)$, writing it as $R^{P}(x)$ would be a formula in context-logic since any model of it would not depend on a valuation of $PF$ over $\Delta{}$.\\\
 
-However, the above is obviously not equivalent to $R$. To capture the semantics of the original \textit{lfp} definition, we must ensure that the values of variables in $\Delta{}$ must be constrained to match the values that one would have obtained on a valuation on the original definition. This will yield definitions that are equivalent in FO+\textit{lfp} under such constraints.\\
-We do this by writing constraints that simulate the 'imbibing' of values from descendants that we described earlier. However, in doing so, we run into the problem of cycles. Simple implication constraints that produce a value on a location from values of its descendants will not work when, for example, we have a circular list. If the constraint were that the location pointed to being the head of a list sufficed for the location itself to be the head of a list, then one could easily provide a valuation on every element on the cycle as beingthe head of a/ pointing to a list. This, of course, is not true.\\
-We handle this by introducing the notion of the 'rank' of a location w.r.t $R$, which intuitively captures an order among elements where elements that were provided with their correct valuation on a later iteration (in the iteration view of \textit{lfp} valuation) would be higher in the order. In particular, for the example of a circular list before, if we recursively defined a 'rank' at a location as being $0$ at the location $nil$, and being one higher than the rank of the location pointed to for every node that was the head of a list, there would be no way to provide a valuation of every element on the cycle as being the head of a list. However, since the rank will need to communicate through the elements outside $\Delta{}$ to maintain this order, it will also be a similarly relativised \textit{lfp} definition with parameters for values on locations interpreted by variables in $\Delta{}$. We choose to model the rank as a function to $\mathbb{N} \cup{} \{\ bot{}\}$ ($\bot{}$ signifies undefined rank), as follows for a recursively defined predicate $R$:\\
+To capture the semantics of the original \textit{lfp} definition, we constrain these parameters. This will yield definitions that are equivalent in FO+\textit{lfp} under such constraints.\\
+We do this by writing constraints that, effectively, unfold the recursive definition over $\Delta{}$. However in doing so we would run into a problem with cycles. Consider the case of evaluating a list predicate at a node by simply imbibing the value from the node pointed to when we have a circular list.\\
+We handle this by introducing the notion of the `rank' of a location w.r.t $R$. In particular, for the example of a circular list, if we recursively defined rank as a natural number increasing on a list starting from $0$ at the location $nil$, there is no way to provide a valuation of every element on the cycle as pointing to a list. However, since the rank will need to communicate through the elements outside $\Delta{}$ to maintain this order (pointer paths between elements interpreted in $\Delta{}$ need not lie within it), it will also be a similarly relativised \textit{lfp} definition with a set of parameters $\{\textit{RANK}_{R}^{d} \,|\, d \in{} \Delta{} \}$ which are also included in $P$. We choose to model the rank as a function to $\mathbb{N} \cup{} \{\ bot{}\}$ ($\bot{}$ signifies undefined rank) as follows given recursively defined function $R$:
 
-\begin{align}
-Rank_{R}^{\Delta}(x) :=_{lfp} &\;\; \rho_{R}^{d}\,,\, x = d \textrm{ for some } d \in{}\Delta{}\notag{}\\
-&\;\; max\{Rank_{R}^{\Delta}(p_i(x)) \,|\, 1 \leq{} i \leq{} k\} + 1\,,\, x \notin{} \Delta{} \land{} R^{B_{R}^{\Delta}}(x) \notag{}\\
-&\;\; \bot{} \,,\, x \notin{} \Delta{} \land{} \neg{}R^{B_{R}^{\Delta}}(x)\notag{}
-\end{align}
-;such that $max(S) = -1 \textrm{ for } S \subseteq{} \mathbb{N} \cup{} \{\bot{}\} \iff{} \bot{} \in{} S $\\
-,and where $\rho_{R}^{\Delta} = \{\rho_{R}^{d} \,|\, d \in{} \Delta{} \} \subseteq{} \mathbb{N} \cup{} \{\bot{}\}$ is a set of parameters to provide the value of rank on variables in $\Delta$.\\\
+\begin{align*}
+Rank_{R}(x) & :=_\textit{lfp} & \textit{RANK}_{R}^{d} & \textit{ if } \llbracket{}x\rrbracket{} = \llbracket{}d\rrbracket{} \textrm{ for some } d \in{}\Delta{} \tag{delta case}\\
+& & 0 & \textit{ if } \llbracket{}x\rrbracket{} \notin{} \llbracket{}\Delta{}\rrbracket{} \land{} R^{P}(x) \neq{} \bot{} \land{}\bigvee\limits_{1 \leq{} i \leq{} k}\left( R^{P}(p_i(x)) = \bot{}\right) \tag{base case}\\
+& & \max\limits_{1 \leq{} i \leq{} k}\{Rank_{R}(p_i(x))\} & \textit{ if } \llbracket{}x\rrbracket{} \notin{} \llbracket{}\Delta{}\rrbracket{} \land{} R^{P}(x) \neq{} \bot{} \tag{recursive case}\\
+& & \bot{} & \textit{ if } \llbracket{}x\rrbracket{} \notin{} \llbracket{}\Delta{}\rrbracket{} \land{} R^{P}(x) = \bot{}\tag{undefined}
+\end{align*}
 
-Finally, we define:\\
-$B_{R}^{p_i(\Delta)} = \{ b_R^{p_i(d)} \,|\, d \in{} \Delta{} \} \subseteq{} range(R)$\\
-and $\rho_{R}^{p_i(\Delta)} = \{ \rho_{R}^{p_i(d)} \,|\, d \in{} \Delta{} \} \subseteq{} \mathbb{N} \cup{} \{\bot{}\}$\\
+Finally, we define some more parameters in $P$ in similar vein as above to communicate between the constraints within $\Delta{}$ and the new \textit{lfp} definitions that are in context-logic. This will be on variables in $p_i(\Delta{}) \cap{} \Delta^{c}$ for some $i$, and are therefore named thus:\\
+Let $R^{p_i(\Delta)} = \{ R^{p_i(d)} \,|\, d \in{} \Delta{} \}$ of the type of range of $R$\\
+and $\textit{RANK}_{R}^{p_i(\Delta)} = \{ \textit{RANK}_{R}^{p_i(d)} \,|\, d \in{} \Delta{} \} \subseteq{} \mathbb{N} \cup{} \{\bot{}\}$\\
 for every $1\leq{} i \leq{}k$.\\\
 
-We then denote the substitution $\gamma[B/R]$ as replacing the term $R(p_i(x))$ with $b_{R}^{p_i(x)}$ for every $1\leq{} i \leq{}k$, and $\gamma[\{\bot{}\}/R]$ as replacing with $\bot{}$. We shall also denote $\phi{}[d/x]$ as $\phi(d)$.
-With the above, we write the following constraint $\beta_{R}^{\Delta}$ for a recursively defined predicate $R$:\\
-\begin{align*}
-\bigwedge\limits_{d \in{} \Delta} \bigg\lbrack{} & \left( \phi{}(d)[\{\bot{}\}/R] \implies{} b_{R}^{d} \land{} \left(\rho_{R}^{d} = 0\right) \right)\notag{}\\
-&\land{}  \left( \left( \phi{}(d)[B/R] \land{} \neg{}\phi{}(d)[\{\bot{}\}/R] \right) \implies{} \left( b_{R}^{d} \land{} \left(\rho_{R}^{d} = max(\{\rho_{R}^{p_i(d)},\, 1 \leq{} i \leq{} k\}) + 1 \right)\right)  \right) \notag{}\\
-& \land{}  \left( \left( \neg{}\phi{}(d)[B/R] \land{} \neg{}\phi{}(d)[\{\bot{}\}/R] \right) \implies{} \left( \neg{}b_{R}^{d} \land{} \left(\rho_{R}^{d} = \bot{} \right)\right) \right) \notag{}\\
-\bigwedge\limits_{1 \leq{} i \leq{} k} & \big\lbrack{} \left(p_i(d) \notin{} \Delta{} \implies{} b_{R}^{p_i(d)} \iff{}  R^{B_R^{\Delta}}(p_i(d)) \right) \notag{}\\
-& \land{} \left(p_i(d) \notin{} \Delta{} \implies{} \rho_{R}^{p_i(d)} =  Rank_{R}^{\Delta}(p_i(d)) \right) \big\rbrack{} \bigg\rbrack{} \notag{} 
-\end{align*}
-
-For a recursively defined function, we shall do the same, except for a few minor differences. The definition of rank and $\beta_{R}^{\Delta}$ for a recursively defined function $G :=_{lfp} \phi{}$ with the same restrictions of form are as follows:\\
-
-\begin{align}
-Rank_{G}^{\Delta}(x) :=_{lfp} &\;\; \rho_{G}^{d}\,,\, x = d \textrm{ for some } d \in{}\Delta{}\notag{}\\
-&\;\; max\{Rank_{G}^{\Delta}(p_i(x)) \,|\, 1 \leq{} i \leq{} k\} + 1\,,\, x \notin{} \Delta{} \land{} G^{B_{G}^{\Delta}}(x) \neq{} \bot{} \notag{}\\
-&\;\; \bot{} \,,\, x \notin{} \Delta{} \land{} G^{B_{G}^{\Delta}}(x) = \bot{}\notag{}
-\end{align}
-,and similarly $\beta_{G}^{\Delta}$ :\\
+We then denote the substitution $\varphi(x)[P_{R}/R]$ as replacing the term $R(p_i(x))$ with $R^{p_i(x)}$ for every $1\leq{} i \leq{}k$, and $\varphi(x)[\bot{}/R]$ as replacing with $\bot{}$.
+With the above, we write the following delta-specific constraint $\beta_{R}$ for a recursively defined function $R$:\\
 
 \begin{align*}
-\bigwedge\limits_{d \in{} \Delta} \bigg\lbrack{} & \left( \phi{}(d)[\{\bot{}\}/G] \neq{} \bot{} \implies{} b_{G}^{d} = \phi{}(d)[\{\bot{}\}/G] \land{} \left(\rho_{G}^{d} = 0\right) \right)\notag{}\\
-&\land{}  \left( \left( \phi{}(d)[B/G] \neq{} \bot{} \land{} \phi{}(d)[\{\bot{}\}/G] = \bot{} \right) \implies{} \left( b_{G}^{d} = \phi{}(d)[B/G] \right.\right.\notag{}\\
-&\qquad{} \left.\left. \land{} \left(\rho_{G}^{d} = max(\{\rho_{G}^{p_i(d)},\, 1 \leq{} i \leq{} k\}) + 1 \right)\right)  \right) \notag{}\\
-& \land{}  \left( \left( \phi{}(d)[B/G] = \bot{} \land{} \phi{}(d)[\{\bot{}\}/G] = \bot{} \right) \implies{} \left( b_{G}^{d} = \bot{} \land{} \left(\rho_{G}^{d} = \bot{} \right)\right) \right) \notag{}\\
-\bigwedge\limits_{1 \leq{} i \leq{} k} & \big\lbrack{} \left(p_i(d) \notin{} \Delta{} \implies{} b_{G}^{p_i(d)} =  G^{B_G^{\Delta}}(p_i(d)) \right) \notag{}\\
-& \land{} \left(p_i(d) \notin{} \Delta{} \implies{} \rho_{G}^{p_i(d)} =  Rank_{G}^{\Delta}(p_i(d)) \right) \big\rbrack{} \bigg\rbrack{} \notag{} 
+\bigwedge\limits_{d \in{} \Delta} \big\lbrack{} & \left( \varphi{}(d)[\bot{}/R] \neq{} \bot{} \implies{} R^{d} = \varphi{}(d)[\bot{}/R] \land{} \left(\textit{RANK}_{R}^{d} = 0\right) \right)\tag{base case}\\
+&\land{}  \left( \left( \varphi{}(d)[\bot{}/R] = \bot{} \land{} \varphi{}(d)[P_{R}/R] \neq{} \bot{}  \right) \implies{} \left( R^{d} = \varphi{}(d)[P_{R}/R] \right.\right.\notag{}\\
+&\qquad{} \left.\left. \land{} \left(\textit{RANK}_{R}^{d} = \max\limits_{1 \leq{} i \leq{} k}(\{\textit{RANK}_{R}^{p_i(d)} \}) + 1 \right)\right)  \right) \tag{recursive case}\\
+& \land{}  \left( \left( \phi{}(d)[\bot{}/R] = \bot{} \land{} \phi{}(d)[P_{R}/R] = \bot{} \right) \implies{} \left( R^{d} = \bot{} \land{} \left(\textit{RANK}_{R}^{d} = \bot{} \right)\right) \right) \big\rbrack{} \tag{undefined}
+\end{align*}\\
+
+The above constraints capture the values of $R$ accurately on $\Delta{}$:
+\begin{itemize}
+\item{} the base case simply constrains the parameter at a node interpreting its corresponding variable to be the value provided by the function definition, and its rank to be $0$ when the interpretation for that variables satisfies the base case of the recursive definition.
+
+\item{} the recursive case constrains the parameter (when it does not satisfy the base case) to be the value computed by one unfolding of the definition, where the values of the descendants are also denoted by their respective parameters (whether $\Delta{}$ or boundary) and its rank to be one more than the maximum rank among its descendants.
+
+\item{} the undefined case constrains the parameter to be undefined when it must be according to an unfolding of the definition, and its rank to be undefined as well.
+\end{itemize}
+
+Lastly, we must also have that the `boundary' does in fact communicate the values of the context-logic recursive definition to $\Delta{}$, i.e that the placeholder parameters for their values are indeed the values provided by the context-logic \textit{lfp} definition:\\ 
+\begin{align*}
+\bigwedge\limits_{1 \leq{} i \leq{} k} \big\lbrack{} p_i(d) \notin{} \Delta{} \implies{} & \left( R^{p_i(d)} =  R^{P}(p_i(d)) \right) \notag{}\\
+& \land{} \left( \textit{RANK}_{R}^{p_i(d)} =  Rank_{R}(p_i(d)) \right) \big\rbrack{} \notag{} 
 \end{align*}
+These constraints ensure that the values of the function are computed accurately on $\Delta{}$.\\\
 
-We are now ready to state our main theorem. Let us call the total set of variables introduced $B_{R}^{\Delta} \cup{} \rho_{R}^{\Delta} \cup{} \bigcup\limits_{1 \leq{} i \leq{} k}\left( B_{R}^{p_i(\Delta)} \cup{} \rho_{R}^{p_i(\Delta)} \right)$ as the set of `parameters' $P_{R}^{\Delta}$.Then, 
+We are now ready to state the main theorem, the proof of which will use the following lemma. Let $P$, which we shall write as $P_{R}$ to indicate the function, include only the sets of parameters defined hitherto. Then: 
 
-\begin{theorem}
+\begin{lemma}
 \label{relative_lfp}
-Fory any recursively defined function/predicate $R$, $\left(\exists{}P_{R}^{\Delta}.\,\,\beta_{R}^{\Delta}\right) \land{} \left(\forall{}P_{R}^{\Delta}.\,\left(\beta_{R}^{\Delta} \implies{} R^{B_{R}^{\Delta}} = R\right) \right)$
+For any recursively defined function $R$, $\left(\exists{}P_{R}.\,\,\beta_{R} \right) \land{} \left(\forall{}P_{R}.\,\left(\beta_{R} \implies{} R^{P_{R}} = R\right) \right)$
+\end{lemma}
+
+If this is true then we have for any FO+\textit{lfp} formula $\alpha$ an equivalent delta-logic formula. Let the set of recursive functions/predicates mentioned in $\alpha{}$ be $\mathcal{R}$, and $\Delta{}$ be fixed. Let $\mathcal{R}^{P} = \{ R^{P_{R}} \,|\, R \in{} \mathcal{R}\}$, and $P_{\mathcal{R}} = \bigcup\limits_{R \in{} \mathcal{R}}P_{R}$. Then:\\
+
+\begin{theorem}[Separability]
+$\alpha{} \equiv{} \exists{}P_{\mathcal{R}}.\, \alpha[\mathcal{R}^{P}/\mathcal{R}] \land{} \left( \bigwedge\limits_{R \in{} \mathcal{R}} \beta_{R} \right)$.
 \end{theorem}
 
-We shall delay a proof of this until the end of this paper. Assuming this is true, we have, for any FO+\textit{lfp} formula $\alpha$, an equisatisfiable delta-logic formula. Let the set of recursive functions/predicates mentioned in $\alpha{}$ be $\mathcal{R}$, and $\Delta{}$ be fixed. Let $\mathcal{R}^{\Delta} = \{ R^{B_{R}^{\Delta}} \,|\, R \in{} \mathcal{R}\}$. Then:\\
-
-\begin{corollary}[Separability]
-$\alpha{}$ is satisfiable iff  $\alpha[\mathcal{R}^{\Delta}/\mathcal{R}] \land{} \left( \bigwedge\limits_{R \in{} \mathcal{R}} \beta_{R}^{\Delta}\right)$ is satisfiable.
-\end{corollary}
-
 \begin{proof}
-To see why this is true, consider that $\alpha{}$ is satisfiable. From theorem \ref{relative_lfp}, for every $R \in{} \mathcal{R}$, we can pick $P_{R}^{\Delta}$ such that $\beta_{R}^{\Delta}$ and, therefore, $R^{B_{R}^{\Delta}} = R$ . Thus, we have that $\alpha[\mathcal{R}^{\Delta}/\mathcal{R}] \land{} \left( \bigwedge\limits_{R \in{} \mathcal{R}} \beta_{R}^{\Delta}\right)$ is satisfiable.\\
-Conversely, let $\alpha[\mathcal{R}^{\Delta}/\mathcal{R}] \land{} \left( \bigwedge\limits_{R \in{} \mathcal{R}} \beta_{R}^{\Delta}\right)$ be satisfiable. Again, from theorem \ref{relative_lfp} we have that for every $R \in{} \mathcal{R}$, the valuation given by the model for $P_{R}^{\Delta}$ satisfies $\beta_{R}^{\Delta}$, and therefore $R^{B_{R}^{\Delta}} = R$. Therefore, $\alpha[\mathcal{R}^{\Delta}/\mathcal{R}][\mathcal{R}/\mathcal{R}^{\Delta}] = \alpha{}$ is satisfiable.
+Consider that $\alpha{}$ holds. From lemma \ref{relative_lfp}, for every $R \in{} \mathcal{R}$, we can pick $P_{R}$ such that $\beta_{R}$ and, therefore, $R^{P_{R}} = R$ . Thus, we have that $\alpha[\mathcal{R}^{P}/\mathcal{R}] \land{} \left( \bigwedge\limits_{R \in{} \mathcal{R}} \beta_{R}\right)$ holds.\\
+Conversely, let $\alpha[\mathcal{R}^{P}/\mathcal{R}] \land{} \left( \bigwedge\limits_{R \in{} \mathcal{R}} \beta_{R} \right)$ hold. Again, from lemma \ref{relative_lfp} we have that for every $R \in{} \mathcal{R}$, the valuation given by the model for $P_{R}$ satisfies $\beta_{R}$, and therefore $R^{P_{R}} = R$. Therefore, $\alpha[\mathcal{R}^{P}/\mathcal{R}][\mathcal{R}/\mathcal{R}^{P}] = \alpha{}$ holds.
 \end{proof}
-\end{document}
+Observe that the latter formula is a formula in delta-logic, a boolean combination of context-logic formulae and delta-specific formulae.
