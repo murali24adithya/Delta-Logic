@@ -194,9 +194,31 @@ that are the minimum and maximum elements of this order. Let $max(r_1,r_2) \equi
 The above definitions can be written in usual syntax using $\textit{ite}$ expressions; we omit this 
 formulation.
 
-We define the logic of list-measures (LM) to be quantifier-free formulas that use only the recursive 
-definitions of $LM$ mentioned above; the subformulae of the formula in $LM$ are however allowed
+We define the \emph{context logic of list-measures (LM)} to be quantifier-free formulas that use only the recursive 
+definitions of $LM$ mentioned above, and combine them as described in Figure~1.
+The logic $LM$ allows first-order variables that range over locations, keys, and integers. Note that
+dereferencing pointers of locations is completely disallowed--- the delta-specific formula that combined
+with context logic formulas will refer to such dereferences, depending on the particular state modeled.
+Here $\Delta$ is assumed to be a subset of the free location variables in the context logic formula.
+
+
+$LM$ formulas are ; the subformulae of the formula in $LM$ are however allowed
 to refer to \emph{different} sets of parameter variables.
+
+\begin{figure}
+   \begin{align*}
+   \textit{Location} ~~\textit{Term} ~~lt & ::=  x \mid p_i(y) \mid \texttt{nil} \hfill*{\textit{~~~~~~~~~~~~~where~} y \not \in \Delta}\\
+   \textit{Integer} ~~\textit{Term} ~~it & ::=  c \mid len_z^P(lt) \mid it+it \\
+   \textit{Key} ~~\textit{Term} ~~keyt & ::=  c \mid \textit{key}(lt) \mid max_z^P(lt) \mid min_z^P(lt) \mid keyt+keyt \\
+   \textit{Heaplet}~~ \textit{Term} ~~hlt  & ::=  \emptyset \mid \{ lt \} \mid hls_z^P(lt) \mid hlt \cup hlt \mid hlt \cap hlt \mid hlt \setminus hlt\\
+   \textit{MultisetKeys}~~ \textit{Term} ~~mskt & ::= \emptyset \mid mskeys_z^P(x) \mid mskt \cup_m mskt \mid mskt \cap_m mskt \mid mskt \setminus_m mskt\\
+   ~&~\\
+   \textit{Formulas}~~ \varphi &  ::=  b \mid ls_z^P(x) \mid sorted_z^P(x) \mid lt = lt \mid lt \in hlt \mid hlt \subseteq hlt \mid hlt = \emptyset \mid \\
+   ~& ~~~~~ it < it \mid it = it \mid keyt < keyt \mid keyt = keyt \mid \\
+   ~& ~~~~~ keyt \in mskt \mid mskt \subseteq_m mskt \mid \varphi \vee \varphi \mid \neg \varphi
+   \end{align*}
+ \caption{The context logic $LM$ of list measures involving list-segments, heaplets, multisets of keys, max, min, and sortedness.} 
+\end{figure}
 
 
 
@@ -224,7 +246,7 @@ most common and the logic VCs translate to, as shown in Section~\ref{}).
 
 We will first describe the decision procedure and its proof of correctness for the fragment
 of $LM$ that involves only the three recursive definitions $ls_z^P$, $hls_z^P$, and $rank_z^P$,
-where $P \in \{cal P\}$, which we will refer to as $LM[ls,hls,rank]$. 
+where $P \in \{\cal P\}$, which we will refer to as $LM[ls,hls,rank]$. 
 Then we will extend the procedure to handle the logic with all the other measures; this latter
 proof requires more expressive decision procedures and pseudo-measures that make its proof harder.
 
@@ -288,59 +310,62 @@ $P \in {\cal P}$, occurs in $\varphi$.
                \left( Dist_z(x) \!\not =\! \bot \Rightarrow rank_z^P\!(x)\!=\!RANK_z^P \right)$$
                
     \item We capture the heaplets of list-segments from $v \in V \cup (X \setminus \Delta)$ to $T(v)$ (excluding both
-              end-points) using a multiset
+              end-points) using a set
              of locations $H(v)$
-             and constrain it so that it does not contain any elements in $X$:
-             $$ \bigwedge_{x \in X, v \in V \cup (X \setminus \Delta)} x \not \in H(v)$$  
+             and constrain them so that they are pairwise disjoint and do not contain the locations $X$:
+             $$ \bigwedge_{x \in X, v \in V \cup (X \setminus \Delta)} x \not \in H(v) ~~\wedge 
+             \bigwedge_{v,v' \in V \cup (X \setminus \Delta)} (v \!\not =\! v' \Rightarrow H(v) \cap H(v') = \emptyset)$$  
     
     \item We can then precisely capture the heaplet $hls_z^P(x)$ by taking the union of all heaplets of
            list segments lying on its path to $z$. We do this using the following constraint, for each
            $v \in X \cup V$:
            $$(Dist_z(v)=\bot \Rightarrow hls_z^P (v) = \emptyset) \wedge (hls_z^P(z)= \emptyset)\wedge $$
-           $$(Dist_z(v) \not = \bot \wedge v \not = z) \Rightarrow hls_z(v)= H(v) \cup \{T(v)\} \cup hls_z(T(v))$$
+           $$(Dist_z(v) \not = \bot \wedge v \not = z) \Rightarrow hls_z(v)= H(v) \cup \{v\} \cup hls_z(T(v))$$
 
 \end{itemize}
 
-Note that the formula $\psi$ is quantifier-free and over the combined theory of arithmetic, uninterpreted functions, and sets, and hence is decidable. 
+Note that the formula $\psi$ is quantifier-free and over the combined theory of arithmetic, uninterpreted functions, and sets.
 
 We can show the correctness of the above translation:
-\begin{lemma}
+\begin{theorem}
 	For any quantifier-free formula $\varphi({\cal P}, X)$ of $LM[ls,hls,rank]$, the quantifier-free and recursion-free
 	 formula $\psi({\cal P}, X)$ obtained $\varphi$ obtained from the translation above
 	 satisfies the following property: for any interpretation of the free variables
     in ${\cal P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
-\end{lemma}
+\end{theorem}
 
 \bigskip
 
-We now turn to the more complex logic $LM[ls, hls, rank, len, MSKeys, Min, Max, Sorted]$, and show that
+We now turn to the more complex logic $LM[ls, hls, rank, len, mskeys, min, $\\$max, sorted]$, and show that
 any quantifier-free formula $\varphi$ in the logic can be satisfied. First, we model the multi-set
 of keys, minimum and maximum values and sortedness of each list-segment from $v$ to $T(v)$ 
 (where $v \in (X \setminus \Delta) \cup V$),
-which is outside $\Delta$, using multiset variables $M-MSKeys(v)$, integer variables $M-Min(v)$, $M-Max(v)$,
-and $M-Len(v)$ and Boolean variables $M-Sorted(v)$.
-We can also aggregate them, as above, to express the sets $MSKeys_z(x)$, $Min_z(x)$, $Max_z(x)$, $Len_z(x)$
-and $Sorted_z(x)$, for each $z \in Z$ and
+which is outside $\Delta$, using multiset variables $mskeys\mu(v)$, integer variables $min\mu(v)$, $max\mu(v)$,
+and $len\mu(v)$ and Boolean variables $sorted\mu(v)$.
+We can also aggregate them, as above, to express the sets $mskeys_z(x)$, $min_z(x)$, $max_z(x)$, $len_z(x)$
+and $sorted_z(x)$, for each $z \in Z$ and
 each $x \in (X \setminus \Delta) \cup V$, similar to definitions of $hls_z(x)$ as defined above.
 One point to note is that the recursive definition of sortedness across segments will by expressed
 by using both $Min_z(x)$ and $Max_z(x)$ definitions, though the definition of sortedness is defined
-using only minimum--- this is needed as expressing when concatenation of list segments is sorted
+using only minimum--- this is needed as expressing when concatenation of sorted list segments is sorted
 requires the max value of the first segment. We skip these definitions as they are easy to derive.
 
 The main problem that remains is in \emph{constraining} these measures so that they can be the measures
 of the \emph{same} list segment. The following constraints capture these constraints, for each 
 $v \in (X \setminus \Delta) \cup V$:
 \begin{itemize}
-	\item The cardinality of $M-MSKeys(v)$ must be $M-Len(v)$.
-	\item $M-Min(v)$ and $M-Max(v)$ must be the minimum and maximum elements of $M-MSKeys(v)$.
-	\item If $M-Min(v)=M-Max(v)$ (and they are not $\bot$), then $M-Sorted(v)$ cannot be false.
+	\item The cardinality of $hls\mu(v)$ must be $len\mu(v)$.
+	\item The cardinality of $mskeys\mu(v)$ must be $len\mu(v)$.
+	\item $min\mu(v)$ and $max\mu(v)$ must be the minimum and maximum elements of $mskeys\mu(v)$.
+	\item If $min\mu(v)=max\mu(v)$ (and they are not $\bot$), then $sorted\mu(v)$ can only be true.
 \end{itemize}
 
 The intuition is that any measures meeting the above constraints can be realized using true list
 segments. As for the third clause above, notice that any list segment with minumum element different
 from maximum can be realized using either a sorted list or an unsorted list.
 
-The above measures, though seemingly simple, are hard to shoehorn into existing decidable theories.
+The above constraints on measures, though seemingly simple, are hard to shoehorn into existing decidable theories
+(though the third constraint can be easily expressed).
 The first constraint can be expressed using quantifier-free BAPA~\cite{} (Boolean Algebra with Presburger
 arithmetic) constraints, which is decidable. We can get around defining the minimum of list segments
 by having the set of keys store only offsets from the minimum (and including the key $0$ always). However,
@@ -354,5 +379,42 @@ of a set $S$ can always be captured by demanding $k \in S$, for a freshly introd
 without affecting satisfiability.
 
 Our primary observation is that we can then restrict the multiset of keys to be over a  \emph{bounded}
-universe of elements, involving at most one element for each free variable mentioned in the formula,
-plus one extra element $\nu$. 
+universe of elements. This bounded universe will consist of one element for each free variable of type key 
+in the formula (call this $K$), and in addition will consist of one element for each Venn region formed by the multiset
+of keys for each segment $(v,T(v))$ of the context heap. The idea of introducing an element for each Venn
+region is not new, and is found in many works that deal with combinations of sets and cardinality constraints~\cite{}.
+
+One can show that if there is a satisfiable model, then by collapsing all elements that are different
+than $K$ and that are in the same Venn region can be identified by the unique representative we have chosen
+for that region. Taking unions and intersections will not affect the multiplicities of elements in the Venn
+region and the formula cannot distinguish between them (as it is quantifier-free).
+
+Once we have bounded the universe of keys, we can represent a multiset of keys using a set of natural numbers
+that represent the multiplicity of elements in the multiset, and write the effect of unions and intersections
+using Presburger arithmetic. The cardinality of the multiset can be expressed as the sum of these numbers
+and the minimum and maximum key can be expressed using the smallest and largest keys in the finite universe
+with multiplicity greater than $0$. 
+We can hence translate the formula into a quantifier-free formula, 
+giving the required theorem.
+
+Note that the above procedure introduces an exponential number of variables, and hence poses challenges
+to be effective in practice. There are several possible ways we see to mitigate it. 
+First, there is existing work~(see ~\cite{}) on reasoning with BAPA that argues and builds practical 
+algorithms that introduce far smaller universes in practice. Second, in the case where we allow only
+combinations of sets using union (and not intersection), and allow checking subset constraints and emptiness,
+we can show that introducing a \emph{single} new element in the universe other than $K$ suffices. The reason
+is that when there are no intersections, the identity of the elements do not matter and their multiplicities
+are preserved by representing with only one element. It turns out that there are many instances in verification
+of programs where the intersection of multisets of keys is never called for (intersection of \emph{heaplets} are
+very important as they are needed to model separation, but we handle them using true sets as described earlier).
+Third, as we explain in the evaluation section, we can use some approximations of the constraints to obtain
+faster procedures, and this already seems to work adequately in practice.
+
+We end with the main theorem:
+\begin{theorem}
+	For any quantifier-free formula $\varphi({\cal P}, X)$ of $LM[ls, hls, rank, len, $\\$min, max, sorted]$, the quantifier-free and recursion-free
+	formula $\psi({\cal P}, X)$ obtained $\varphi$ obtained from the translation above
+	satisfies the following property: for any interpretation of the free variables
+	in ${\cal P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
+\end{theorem}
+
