@@ -1,5 +1,91 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
+
+\bibitem{BerdineCalcagnoO'Hearn2004}
+Berdine, J., Calcagno, C., O'Hearn, P.W.: A decidable fragment of separation
+  logic. In: Proceedings of the 24th International Conference on Foundations of
+  Software Technology and Theoretical Computer Science. pp. 97--109. FSTTCS'04
+  (2004)
+
+\bibitem{BerdineCalcagnoO'Hearn2005}
+Berdine, J., Calcagno, C., O'Hearn, P.W.: Symbolic execution with separation
+  logic. In: Proceedings of the Third Asian Conference on Programming Languages
+  and Systems. pp. 52--68. APLAS'05 (2005)
+
+\bibitem{BouajjaniDruagoiEnea2009}
+Bouajjani, A., Dr{\u{a}}goi, C., Enea, C., Sighireanu, M.: A logic-based
+  framework for reasoning about composite data structures. In: CONCUR 2009 -
+  Concurrency Theory. pp. 178--195 (2009)
+
+\bibitem{BrotherstonFuhsPerez2014}
+Brotherston, J., Fuhs, C., P{\'e}rez, J.A.N., Gorogiannis, N.: A decision
+  procedure for satisfiability in separation logic with inductive predicates.
+  In: Proceedings of the Joint Meeting of the Twenty-Third EACSL Annual
+  Conference on Computer Science Logic (CSL) and the Twenty-Ninth Annual
+  ACM/IEEE Symposium on Logic in Computer Science (LICS). pp. 25:1--25:10.
+  CSL-LICS '14 (2014)
+
+\bibitem{ChinDavidNguyen2007}
+Chin, W.N., David, C., Nguyen, H.H., Qin, S.: Automated verification of shape,
+  size and bag properties. In: 12th IEEE International Conference on
+  Engineering Complex Computer Systems (ICECCS 2007). pp. 307--320 (2007)
+
+\bibitem{CookHaaseChristoph2011}
+Cook, B., Haase, C., Ouaknine, J., Parkinson, M., Worrell, J.: Tractable
+  reasoning in a fragment of separation logic. In: Proceedings of the 22Nd
+  International Conference on Concurrency Theory. pp. 235--249. CONCUR'11
+  (2011)
+
+\bibitem{IosifRogalewiczSimacek2013}
+Iosif, R., Rogalewicz, A., Simacek, J.: The tree width of separation logic with
+  recursive definitions. In: Proceedings of the 24th International Conference
+  on Automated Deduction. pp. 21--38. CADE'13 (2013)
+
+\bibitem{LeSunChin2016}
+Le, Q.L., Sun, J., Chin, W.N.: Satisfiability modulo heap-based programs. In:
+  Computer Aided Verification. pp. 382--404 (2016)
+
+\bibitem{LeTatsutaSun2017}
+Le, Q.L., Tatsuta, M., Sun, J., Chin, W.N.: A decidable fragment in separation
+  logic with inductive predicates and arithmetic. In: Computer Aided
+  Verification (2017)
+
+\bibitem{MadhusudanParlatoQiu2011}
+Madhusudan, P., Parlato, G., Qiu, X.: Decidable logics combining heap
+  structures and data. In: Proceedings of the 38th Annual ACM SIGPLAN-SIGACT
+  Symposium on Principles of Programming Languages. pp. 611--622. POPL '11
+  (2011)
+
+\bibitem{PerezAntonioRybalchenko2011}
+Navarro~P{\'e}rez, J.A., Rybalchenko, A.: Separation logic + superposition
+  calculus = heap theorem prover. In: Proceedings of the 32Nd ACM SIGPLAN
+  Conference on Programming Language Design and Implementation. pp. 556--566.
+  PLDI '11 (2011)
+
+\bibitem{PerezRybalchenko2013}
+P{\'e}rez, J.A.N., Rybalchenko, A.: Separation logic modulo theories. In:
+  Programming Languages and Systems (APLAS). pp. 90--106. Springer
+  International Publishing, Cham (2013)
+
+\bibitem{PiskacWiesZufferey2014}
+Piskac, R., Wies, T., Zufferey, D.: Automating separation logic with trees and
+  data. In: Proceedings of the 16th International Conference on Computer Aided
+  Verification - Volume 8559. pp. 711--728 (2014)
+
+\bibitem{PiskacWiesZufferey2014Tool}
+Piskac, R., Wies, T., Zufferey, D.: Grasshopper. In: Tools and Algorithms for
+  the Construction and Analysis of Systems. pp. 124--139 (2014)
+
+\bibitem{QiuGargStefanescu2013}
+Qiu, X., Garg, P., \c{S}tef\u{a}nescu, A., Madhusudan, P.: Natural proofs for
+  structure, data, and separation. In: Proceedings of the 34th ACM SIGPLAN
+  Conference on Programming Language Design and Implementation. pp. 231--242.
+  PLDI '13 (2013)
+
+\bibitem{Reynolds2002}
+Reynolds, J.C.: Separation logic: A logic for shared mutable data structures.
+  In: Proceedings of the 17th Annual IEEE Symposium on Logic in Computer
+  Science. pp. 55--74. LICS '02 (2002)
 
 \end{thebibliography}

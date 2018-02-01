@@ -16,18 +16,20 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 %\pgfplotsset{compat=1.15}
-
+\usepackage{esvect}
 
 %\input{./macros}
 \begin{document}
 
 \newcommand{\HLS}{\textit{HLS}}
 \newcommand{\sem}[1]{\llbracket #1 \rrbracket}
+\newcommand{\vect}[1]{\overline{#1}}
 \pagestyle{plain} % Remove when publishing
 
 %% Title information
 \title{Delta Logics: Logics for Change}
-\author{Adithya Murali and P. Madhusudan
+\author{Adithya Murali \and
+  P.\@ Madhusudan
 }
 
 \institute{
@@ -37,14 +39,22 @@
 \maketitle
 
 \begin{abstract}
-~\\
+We define delta logics, a new class of logics designed to express verification conditions
+of basic blocks that destructively manipulates a heap. Delta logics separately describes the part of the heap that changes
+and its unchanged context. Utilizing this simplicity and separation, we develop an expressive decidable
+delta logic that states properties of lists using a variety of measures on them, including their heaplets, 
+their length, the multiset of keys stored in them, the min/max keys stored in them, and their sortedness. We show that 
+delta logics and the associated decision procedure yield a practically viable verification engine through an 
+implementation of the technique and an evaluation of it.
 \end{abstract}
 
 
-%\input{intro}
+\input{intro}
 \input{logic}
 \input{SeparabilityTheorem}
 \input{VC2Delta}
+\input{Experiments}
+\input{RelatedWork}
 
 %% Bibliography
 \bibliographystyle{splncs03}

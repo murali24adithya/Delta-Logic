@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.24)  29 JAN 2018 23:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.24)  1 FEB 2018 14:24
 entering extended mode
 **"C:/Users/Adithya/Documents/Acads/UIUC/Madhu research/Delta-Logic/deltalogic.
 tex"
@@ -834,7 +834,12 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
 pgflibraryplotmarks.code.tex"
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
-))) (deltalogic.aux)
+)))
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\esvect\esvect.st
+y"
+Package: esvect 
+\symesvector=\mathgroup7
+) (deltalogic.aux)
 \openout1 = `deltalogic.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -893,25 +898,44 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into
 your preamble.
  on input line 22.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
 "
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 37.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 39.
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.
 fd")
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+LaTeX Font Info:    Try loading font information for U+esvect on input line 39.
 
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\esvect\uesvect.f
+d"
+File: uesvect.fd 
+) (intro.tex [1
+
+{C:/Users/Adithya/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (16.59892pt too wide) in paragraph at lines 68--74
+[]\OT1/cmr/m/n/10 One pre-cise for-mu-la-tion of the ver-i-fi-ca-tion con-di-ti
+on is $[]([]\OML/cmm/m/it/10 ; R\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m
+/it/10 T\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; [][]; []; [][]\OT1/cmr/m/n/10 ) \
+OMS/cmsy/m/n/10 ^$
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \vbox (badness 2158) has occurred while \output is active []
+
+ [3])
 (logic.tex
 Overfull \hbox (4.55617pt too wide) in paragraph at lines 45--47
 \OT1/cmr/m/n/10 We pa-ram-e-ter-ize delta log-ics by a fi-nite set of first-ord
@@ -919,14 +943,12 @@ er vari-ables $\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/
 m/it/10 v[]; [] v[]\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 . 
  []
 
-[1
-
-{C:/Users/Adithya/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[4]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 48.
 
-[2] [3]
+[5] [6]
 Overfull \hbox (19.6973pt too wide) in paragraph at lines 169--169
 [] 
  []
@@ -936,79 +958,36 @@ Overfull \hbox (11.90364pt too wide) in paragraph at lines 189--189
 [] 
  []
 
-[4]
+[7]
+Overfull \hbox (38.20718pt too wide) in paragraph at lines 219--219
+[] 
+ []
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 223.
 
+LaTeX Warning: Reference `' on page 8 undefined on input line 245.
 
-Overfull \hbox (0.29369pt too wide) in paragraph at lines 241--247
+[8]
+Overfull \hbox (0.29369pt too wide) in paragraph at lines 263--269
 \OT1/cmr/m/n/10 forms the rel-e-vant set of lo-ca-tions that $\OML/cmm/m/it/10 
 '$\OT1/cmr/m/n/10 's truth can de-pend on (as $\OML/cmm/m/it/10 '$ \OT1/cmr/m/n
 /10 is quantifier-
  []
 
-[5] [6]
-Overfull \hbox (63.40521pt too wide) in paragraph at lines 316--329
-[]\OT1/cmr/m/n/10 We now turn to the more com-plex logic $\OML/cmm/m/it/10 LM\O
-T1/cmr/m/n/10 [\OML/cmm/m/it/10 ls; hls; rank; len; MSKeys; Min; Max; Sorted\OT
-1/cmr/m/n/10 ]$,
+[9] [10] [11]) (SeparabilityTheorem.tex [12]
+Overfull \hbox (2.6315pt too wide) in paragraph at lines 23--23
+[] 
  []
 
-[7]) (SeparabilityTheorem.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--3
-
- []
-
-
-LaTeX Warning: Reference `make sure those restrictions are written' on page 8 u
-ndefined on input line 4.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-[8]
-Overfull \hbox (52.13622pt too wide) in paragraph at lines 21--21
+[13]
+Overfull \hbox (69.38692pt too wide) in paragraph at lines 39--39
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
-
- []
-
-
-Overfull \hbox (18.22014pt too wide) in paragraph at lines 36--36
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
-
+Overfull \hbox (7.4075pt too wide) in paragraph at lines 52--53
+[]$[] [][]\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 d\OT1/cmr/m/n/1
+0 ) [] []\OML/cmm/m/it/10 []  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  [] [] ^ [
+] [] [][]$ 
  []
 
 
@@ -1022,7 +1001,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-[10]) (VC2Delta.tex
+[14]) (VC2Delta.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
@@ -1047,16 +1026,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[11]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-) (deltalogic.bbl
+) (Experiments.tex
+Overfull \hbox (48.39944pt too wide) in alignment at lines 6--28
+ [] [] [] [] [] 
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 5.
 
-) [12] (deltalogic.aux)
+Underfull \vbox (badness 10000) detected at line 28
+ []
+
+[16]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
+
+("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+) (RelatedWork.tex) (deltalogic.bbl [17] [18]) [19] (deltalogic.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1065,13 +1057,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 24120 strings out of 493634
- 607407 string characters out of 3134423
- 814351 words of memory out of 3000000
- 27083 multiletter control sequences out of 15000+200000
- 11737 words of font info for 44 fonts, out of 3000000 for 9000
+ 24252 strings out of 493634
+ 609477 string characters out of 3134423
+ 820351 words of memory out of 3000000
+ 27180 multiletter control sequences out of 15000+200000
+ 16738 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,14n,96p,1109b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,14n,96p,1783b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX
@@ -1080,24 +1072,30 @@ rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Adithya/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
 /Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmmi5.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Adithya/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Adithya/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/A
-dithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pf
-b><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Adithya/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Adithya/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/U
-sers/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mtt10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/hoekwater/stmary10.pfb>
-Output written on deltalogic.pdf (12 pages, 265652 bytes).
+ic/amsfonts/cm/cmmi6.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Adithya/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Adithya/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/
+Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr9.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Adithya/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Adithya/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Us
+ers/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy9.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmti10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/Adithya/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/Adithya/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Adi
+thya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb
+><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/hoekwater/stmary10.pfb>
+Output written on deltalogic.pdf (19 pages, 362010 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
