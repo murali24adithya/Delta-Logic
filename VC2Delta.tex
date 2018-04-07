@@ -1,35 +1,34 @@
 	\section{Translating Verification Conditions to Delta Logics}
-	
-	We now can explain the crux of the motivation behind delta logics, namely that they can naturally express verification conditions,
+\label{sec:VC2Delta}	
+	We now explain the crux of the motivation behind delta-logics, namely that they can naturally express verification conditions,
 	without introducing extra quantification or complex reformulation of recursive definitions.
 	
 Consider a Hoare Triple: $\langle \alpha_{\textit{pre}}(X, P, {\cal R})$, $S$, $\alpha_{\textit{post}}(X, P, {\cal R})\rangle$,
-such that $\alpha_{pre}$ and $\alpha_{post}$ 
-utilize a set of relatons and functions ${\cal R}$  with recursive definitions defined using FO+\textit{lfp}. 
-The program manipulates a set of scalar variables $X$, and pointer fields and data fields $P$, the latter being modeled as unary functions. 
+such that $\alpha_{pre}$ and $\alpha_{post}$ utilise a set of relations and functions ${\cal R}$ with recursive definitions defined using FO+\textit{lfp}. 
+The program manipulates a set of scalar variables $X$, and pointer and data fields $P$, the latter being modeled as unary functions. 
 
 The verification condition is then of the form $\alpha_{\textit{pre}}(X, P, {\cal R}) \land{} T(X, X', P, P') \Rightarrow 
-\alpha_{\textit{post}} (X', P', {\cal R'})$, where $T$ captures the semantics of the program snippet $S$.
-$T$ can be expressed as a delta-specific formula $T_\Delta$ conjuncted with the formula 
+\alpha_{\textit{post}} (X', P', {\cal R'})$, where $T$ captures the semantics of the program snippet $S$, which has no function calls.
+$T$ can be expressed as a delta-specific formula $T_\Delta$ conjoined with the formula 
 $\wedge_{f \in{} P} \left(\forall{}z.\,z\notin{}\Delta{} \Rightarrow f'(z) = f(z) \right)$, which captures
-the fact that the fields of elements outside $\Delta$ have not changed. Notice the definitions of ${\cal R'}$ are 
+the fact that the fields of elements outside $\Delta$ have not changed. Notice that the definitions of ${\cal R'}$ are 
 obtained from the definitions of ${\cal R}$ by substituting $P'$ for $P$.
 
-Let us now show how to express this VC using an equivalent Delta-logic formula without introducing universal quantification.
+Let us now show how to express this VC using an equivalent delta-logic formula without introducing universal quantification.
 
 First, using the separability theorem, Theorem~\ref{Separability}, we can write $\alpha_{\textit{pre}}$ and $\alpha_{\textit{post}}$
-as Delta-logic formulae $\alpha_{\textit{pre}}^*(U, X, P, {\cal R}^U)$ and $\alpha_{\textit{post}}^*(V, X', P', {\cal (R')}^V)$.
-Notice that the definition of $R'$ uses the transformed fields $P'$ and we translate using \emph{different} parameters $U$
-and $V$. However, observe that since $(R')^V$ is a context-logic definition, we know that it does not refer to the changed heaplet
+as delta-logic formulae $\alpha_{\textit{pre}}^*(U, X, P, {\cal R}^U)$ and $\alpha_{\textit{post}}^*(V, X', P', {\cal (R')}^V)$.
+Notice that the definition of $R'$ uses the transformed fields $P'$ and we translate using \emph{different} sets of parameters: $U$
+and $V$. However, observe that since $(R')^V$ is a contextual definition, we know that it does not refer to the changed heaplet
 $\Delta$. Consequently, we can replace $P'$ with $P$ uniformly in $(R')^V$. Also, we can \emph{remove} the universally
 quantified conjunct in $T$ that says that fields for locations outside $\Delta$ are unaltered.
 
 This leaves us with a verification condition of the form:\\
 \centerline{ $\alpha_{\textit{pre}}^*(U, X, P, {\cal R}^U) \wedge 
-T_\Delta(X, X', P, P') \Rightarrow \alpha_{\textit{post}}^*(V, X', P, {\cal (R')}^V$)}\\
+T_\Delta(X, X', P, P') \Rightarrow \alpha_{\textit{post}}^*(V, X', P, {\cal (R')}^V)$}\\
 where $T_\Delta$ is a
 delta-specific formula that simply says how the variables $X$ change to $X'$, and the fields $P$ change to $P'$ over $\Delta$.
-This is clearly a delta logic formula.
+The VC is now clearly a delta-logic formula.
 
 Notice that though we have two set of recursive definitions, the definitions do not rely on different sets of
 data and pointer fields (which are functions), but rather differ only on the first-order parameter variables $U$ 
@@ -48,4 +47,4 @@ and $V$.
 %It is clear that the VC that captures the goven Hoare Triple will be $\alpha_{\textit{pre}} \land{} T \land{} \neg{} \alpha_{\textit{post}}$, which by the above is a formula in FO+\textit{lfp} within our given signature. From Theorem \ref{Separability}, we have that an FO+\textit{lfp} formula can be written equivalently as a delta-logic formula. Therefore, $\alpha_{\textit{pre}}$ and $\alpha_{\textit{post}}$ can be rewritten to equivalent delta-logic.\\
 %However, from the theorem we will also see in particular that the resursive definitions of functions and predicates in $\alpha_{\textit{post}}$ use functions from $P'$ only on arguments in $\Delta{}^{c}$. Therefore, from $T_2$ we have that these can be replaced with corresponding functions in $P$ since the pointer and data fields of (locations interpreted by) variables not in $\Delta{}$ are unaltered by the program. Then, we also remove $T_2$ since the symbols in $P'$ are no longer referred to anywhere else on an argument not in $\Delta{}$.\\\
 %
-%Therefore, the VC can be written equivalently as a delta-logic formula (since $T$ does not contain any resursively defined functions as subterms). Since delta-logic formulae are boolean combinations of context-logic fomulae and delta-specific formulae, satisfiability of the VC then becomes the meaningful question of asking independently for a model of a context, a prior state and a resulting state (with a common valuation for finitely many shared first-order variables), such the context when applied over a model of the prior state satisfies the precondition, and applied over a model of the resulting state falsifies the postcondition. 
+%Therefore, the VC can be written equivalently as a delta-logic formula (since $T$ does not contain any resursively defined functions as subterms). Since delta-logic formulae are boolean combinations of context-logic fomulae and delta-specific formulae, satisfiability of the VC %then becomes the meaningful question of asking independently for a model of a context, a prior state and a resulting state (with a common valuation for finitely many shared first-order variables), such the context when applied over a model of the prior state satisfies the %precondition, and applied over a model of the resulting state falsifies the postcondition. 

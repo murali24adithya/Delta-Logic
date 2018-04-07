@@ -16,22 +16,22 @@
 
 %   - The problem of generating VCs and expressing it into a static logic
 
-<< Introduce deductive verification >>
 
-Classical logics, such as first-order logic with least fixpoints or higher order logics, are often static in the sense that formulas 
+
+Classical logics, such as first-order logic with least fixpoints or higher order logics, are often static in the sense that formulae 
 describe the state of a single world. 
-Verification conditions of imperative programs describe typically at least two different worlds--- the pre-state
-and the post-state of a program snippet. Consequently, expressing validity of verification conditions
+Verification conditions of imperative programs describe typically at least two different worlds: the pre-state
+and the post-state of a program. Consequently, expressing validity of verification conditions
 naturally involves the challenge of expressing the evolving worlds of program states in a static logic.
 The classical notion of strongest post-condition for programs with scalar variables does precisely this--- 
-it expresses the precondition and the intermediate states of the program and the post-state using \emph{auxilliary} 
+it expresses the precondition, the intermediate states of the program, and the post-state using \emph{auxilliary} 
 first-order variables that capture the scalar variables at these states. The weakest precondition, again for
 programs with scalar variables, solves the same problem.
 
 The focus of this paper is in generating logical formulations of verification conditions for program snippets that manipulate the heap.
 In this setting, the heap consists, minimally, of a set of pointer fields that are modeled by \emph{first-order
 functions}, and the program's execution alters these functions.
-Consequently, the translation of validity of verification conditions to validity of logic formulas changes considerably.
+Consequently, the translation of validity of verification conditions to validity of formulae changes considerably.
 %The goal of this paper is to identify a new class of logics that can express the verification conditions of
 %such programs precisely, while at the same time being amenable to automated reasoning.
 
@@ -40,14 +40,14 @@ using least fixpoints over $\vect{p}$. Typical functions include properties such
 ``$x$ points to a linked list segment ending at the location $z$'', ``the length of the list pointed to be $x$'', 
 ``$x$ points to a binary search tree'', ``the set of keys stored in the tree pointed to by $x$'', ``the heaplet defined
 by the tree pointed to by $x$'', etc.
-Consider a Hoare triple of the form $\textit{@pre}(\vect{x}, \vect{p}, R) ~S~ \textit{@post}(\vect{x}, \vect{p}, R)$, the pre- and post-conditions use the recursively defined predicate/function $R$.
+Consider a Hoare triple of the form $\textit{@pre}(\vect{x}, \vect{p}, R) ~S~ \textit{@post}(\vect{x}, \vect{p}, R)$: the pre- and post-conditions use the recursively defined predicate/function $R$.
 
 One simple approach is to capture the precondition using logic and use the \emph{frame rule} to reason soundly
 (but incompletely) about the post-state--- i.e., we can simply ignore the definition of $R$
-on the transformed heap, and just say that $R'(x)$ is guaranteed to hold if it held in the pre-state and 
-the $\Delta$ portion of the heap modified did not intersect with the heaplet of the definition of $R$.
+on the transformed heap and infer that $R'(x)$ holds if it held in the pre-state and 
+the modified portion of the heap did not intersect with the underlying heaplet of $R(x)$ (from the definition of $R$).
 This is, in practice, a very \emph{convenient and simple} reasoning that often works, but is incomplete.
-For example, consider the following Hoare triple with pre/post conditions written in FO+lfp,
+For example, consider the following Hoare triple with pre/post conditions written in FO+\textit{lfp},
 where $list(x)$ means $x$ points to a list, and in which
 case, $hlist(x)$ stands for the set of locations in that list: \\
 \centerline{$ \{ list(x) \wedge  list(w) \wedge  y \not \in hlist(w) \} 
@@ -55,18 +55,18 @@ case, $hlist(x)$ stands for the set of locations in that list: \\
 \{list(x) \}$}\\
 \noindent In this case, the Hoare triple does hold, but frame reasoning is insufficient to argue it--- since $y$ can be
 in $hlist(x)$ in the pre-state, the frame rule is insufficient in inferring that the postcondition continues to hold. 
-(The above can also be formulated in separation logic, of course, and frame reasoning alone will continue to be
+(The above can also be formulated in separation logic, of course, and using frame reasoning \textbf{alone} will continue to be
 ineffective.)
 
-Let us now focus on basic blocks $S$ that do not involve function calls. We would like
+Let us now focus on basic blocks that do not involve function calls. We would like
 to generate precise verification conditions in such cases, while falling back on frame reasoning for function calls. 
-There are several approaches in the literature that argue for this--- for example the Grasshopper suite of tools
-handle such blocks accurately~\cite{}, and there is work on
-expressing weakest pre-conditions for separation logic formulas and such blocks 
+There are several approaches in the literature that argue for this: for example the Grasshopper suite of tools
+handle such blocks accurately~\cite{PiskacWiesZufferey2014}, and there is work on
+expressing weakest pre-conditions in separation logic for such blocks 
 using the magic wand.
 
 One precise formulation of the verification condition is 
-$\textit{@pre}(\vect{x}, R) \wedge T(\vect{x}, \vect{x}', \vect{p}, \vect{p}') \wedge \textit{@post}(\vect{x}', \vect{p}', R')$
+$\textit{@pre}(\vect{x}, \vect{p}, R) \wedge\, T(\vect{x}, \vect{x}', \vect{p}, \vect{p}') \wedge\, \textit{@post}(\vect{x}', \vect{p}', R')$
 where $T$ describes the effect of the program on the stack and the heap, describing how the scalar variables $\vect{x}$ and
  pointer-fields $\vect{p}$ have evolved to the scalar variables $\vect{x}'$ and $\vect{p}'$.
 Most importantly, the new recursive definitions $R'$ are \emph{reformulated} by replacing $\vect{p}$ in the definition of $R$
@@ -75,59 +75,55 @@ with $\vect{p}'$.
 Though the above is a precise formulation of the verification condition, it has several drawbacks. First, there is a heaplet $H$
 modified by the program, and the formula will have conjuncts of the form $\forall y \not \in H. p'(y)=p(y)$, for every $p \in \vect{p}$.
  This introduces
-universal quantification, which is harder to reason with automatically--- however, for basic blocks that do not involve
+universal quantification, which is harder to reason with automatically. However, for basic blocks that do not involve
 function calls, i.e, when $H$ is finite, we can map this into a decidable quantifier free logic (modeling $p$ as an array
 and $p'$ as an update to the array).
 Second, the new definition of $R'$ depends on $\vect{p}'$, which in turn depends on the various constraints introduced by the basic
 block. For example, pointer fields may change depending on complex properties involving the data elements stored in the heap.
-Reasoning with $R'$ which involves least fixpoints, coupled with such constraints is daunting.
+Reasoning with $R'$ (which involves least fixpoints), coupled with such constraints, is daunting.
 
-\emph{Surely, there must be a simpler formulation of the verification condition!} The delta changes to the heap do cause global changes and
+\emph{Surely, there must be a simpler formulation of the verification condition!} Small changes to the heap do cause global changes and
 can dramatically affect the valuation of recursively defined predicates/functions, which are global.
-But surely, the effect on the semantics of $R'$ must be expressible in a simpler localized fashion.
+But surely, the effect on the semantics of $R$ (changing into $R'$) must be expressible in a simpler localized fashion.
 
-In this paper, we describe a class of logics, called \emph{delta logics,} that are precisely meant to solve the above issues.
-Formulas in delta logics are Boolean combinations of two distinct kinds of formulas--- one kind, called delta-specific
-formulas, talk strictly about the modified portion of the heap (identifiied by a bounded set of location $\Delta$) without using
-any recursive definitions, while the other 
-kind, called contextual formulas, talk strictly talk about the unbounded heap different from $\Delta$ using recursive definitions.
-The common free variables $X$ between these sets of formulas are used to \emph{communicate} information between the $\Delta$
-portion of the heap and its context. In particular, a recursive definition $R$ over the unbounded context are \emph{parameterized}
-over a set of first-order communication variables $Par^R$, where $Par^R$ summarizes the value of $R$ within $\Delta$.
-These variables themselves can, of course, depend on the value of $R$ outside $\Delta$ as well, setting up mutally restricting
+In this paper, we describe a class of logics, called \emph{delta-logics}, that are precisely meant to address the above.
+Formulae in delta-logics are Boolean combinations of two distinct kinds of formulae: one kind, called \emph{delta-specifi
+c} formulae, strictly talk about the modified portion of the global heap (identifiied by a bounded set of locations `$\Delta$') without using
+any recursive definitions; while the other 
+kind, called \emph{contextual/context-logic} formulae, strictly talk about the unbounded portion different from $\Delta$ using recursive definitions.
+A set of interface variables are used to communicate information between the $\Delta$ and the rest of the heap: its `context'. In particular, a recursive definition $R$ over the unbounded context is \emph{parameterized}
+over a set of first-order communication variables $P^R$, where $P^R$ summarizes the values of $R$ within $\Delta$.
+These variables themselves can, of course, depend on the value of $R$ outside $\Delta$ as well, setting up mutual
 constraints. 
 
-We prove several key results. First, we show a \emph{separability theorem} that shows that any quantifier-free FO formula
-with recursive definitions can be expressed in delta logics, i.e., as a Boolean combination of delta specific formulas
-and context formulas. We prove this by setting up communication between the two portions of the heap, and it turns out that
+We prove several key results. First, we show a \emph{separability theorem} in Section~\ref{sec:separability} that shows that any quantifier-free FO formula
+with recursive definitions (with \textit{lfp} semantics) can be expressed in delta-logics, i.e., as a Boolean combination of delta-specific formulae
+and contextual formulae. We prove this by setting up communication between the two portions of the heap as desribed above, and it turns out that
 a new set of recursive definitions and communication variables involving the \emph{rank} for recursive definitions is
-needed to accurately capture least fixpoints. These ranks can however be constrained to be \emph{bounded} integers,
-as opposed to ordinals, even though the heap is infinite. 
+needed to accurately capture least fixpoints. These ranks can however be constrained to be \emph{bounded integers} as opposed to ordinals (though the heap is infinite). 
 
-Second, we argue that verification conditions of basic blocks without function calls can be expressed precisely using delta logics.
+Second, we argue that verification conditions of basic blocks without function calls can be expressed precisely using delta-logics.
 The key idea here is to set up \emph{two parameterized sets} of recursive definitions, expressing the pre-condition using
-one and the post-condition using the other. The change to the heaplet can be described using FOL as usual, and the pre and post
-conditions can be translated to delta logic formulas using the separation theorem above. Notice that this captures naturally
-captures the changing $\Delta$ portion of the heap while keeping the context unchanged, 
+one and the post-condition using the other. The change to the heaplet can be described in quantifier-free FOL as usual, and the pre- and post-conditions can be translated to delta-logic formulae using the separability theorem. Notice that this captures naturally the changing $\Delta$ portion of the heap while keeping the context unchanged and 
 hence removes the need for the universally quantified formula asserting that pointers in the context have not changed.
 
-We turn then to specific delta logics and explore decidability results for them. We define a delta logic that expresses
+Then, we turn to specific delta-logics and explore decidability results for them. We define a delta-logic that expresses
 properties of list segments along with a variety of measures on them, including their heaplets (for expressing separation properties), 
-their lengths, the multisets of keys stored in them, the min/max keys stored in them, and their sortedness. We consider the context-logic
-corresponding to this delta logic, and by exploiting the simplicity of delta logics (namely, that the recursive definitions change only
-with respect to the communication parameters, which correspond to base cases of these definitions), we show that they
-can be transformed to equivalent formulas expressed as quantifier-free formulas \emph{without} recursive definitions. This
-leads us to a decision procedure for delta logics for linked lists with all the six measures above, and hence a decidable logic
+their lengths, the multisets of keys stored in them, the min/max keys stored in them, and their sortedness. We consider the contextual logic
+corresponding to this delta-logic, and by exploiting the simplicity of delta-logics (namely, that the recursive definitions change only
+w.r.t the communication parameters which correspond to base cases of these definitions), we show that they
+can be transformed to equivalent quantifier-free formulae \emph{without} recursive definitions. This
+leads us to a decision procedure for delta-logics for linked lists with all the six measures above, and hence a decidable logic
 for verification conditions of programs manipulating linked lists with pre- and post-conditions expressed using the above measures.
 
-Finally, we implement and evaluate our technique by expressing VCs using delta logics and validating them using our decision procedure
+Finally, we implement and evaluate our technique by expressing VCs using delta-logics and validating them using our decision procedure
 on a suite of programs, and show it to be effective. 
 To the best of our knowledge, this is the most expressive decidable logic over lists in existing literature. 
 
-Whie our decidability result is interesting in its own right, we emphasize the main contribution of this paper is, in our view, 
-the definition and advocacy of delta logics as a logic for verification conditions. 
+While our decidability result is interesting in its own right, we emphasize the main contribution of this paper is, in our view, 
+the definition and advocacy of delta-logics as a logic for verification conditions. 
 Traditional ways of reducing validation of verification conditions to logic embed the verifcation in logics that have much
 more expressive power than necessary, and harder to reason with; we think it is a reduction from an easier problem to a harder problem!
-Delta-logics explicitly delineate the changed portion of the heap and only allow recursive definitions to be parameterized over 
-first-order communication variables, and avoid introducing quantification, making them easier to reason with.
+Delta-logics explicitly delineate the changed portion of the heap by only allowing recursive definitions to be parameterized over 
+first-order communication variables and avoid introducing quantification, making them easier to reason with.
 

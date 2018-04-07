@@ -1,0 +1,298 @@
+\section{A Decidable Delta Logic on Lists with List Measures}
+\label{sec:declogic}
+In this section, we will define a delta-logic on linked lists equipped with \emph{list measures}--- measures of
+list segments that include its length, heaplet, the multiset of keys stored in the list (say, in a data-field {\tt key}),
+and the minimum and maximum keys stored in it. We prove that the quantifier-free first-order logic fragment of this delta-logic 
+is \emph{decidable}. 
+
+We prove decidability by first proving that the corresponding contextual logic formuale can be translated to equisatisfiable quantifier-free first-order
+formulae. Consequently, a delta-logic formula, being a Boolean combination of contextual formulae and delta-specific
+formulae can be translated to quantifier-free formulae as well, which is decidable using a Nelson-Oppen combination of decidable theories of arithmetic, sets, and uninterpreted functions.
+
+%The translation in fact will allow us to decide delta-logic formulas of the form $\alpha \wedge \beta$ obtained as verification %conditions
+%in the section above, where $\alpha$ is a delta-logic formula on lists and list measures and $\beta$ is over a decidable
+%Nelson-Oppen combinable quantifier-free theories, and where $\alpha$ and $\beta$ share Boolean and first-order variables.
+%At the end of the section, we outline some generalizations of our result.
+
+\subsection*{The contextual logic of list measures}
+We  now define a contextual logic over list segments and measures over them. Notice from Section~\ref{sec:separability} that the separation of formulae into delta-logic introduces recursive definitions in the contextual logic (parameterized over various sets of variables) and additionally a rank function for each such definition. However, it is easy to see that for the definitions of lists and measures, all the rank functions (over a given set of parameters) coincide, since the existence of a meaningful value for each of these measures is predicated upon the referred location pointing to a list. This motivates the following recursive definitions for our contextual logic of lists and measures.
+
+As usual, let us fix a set of first-order variables $\Delta$.
+Let us also fix a single pointer field $n$.
+
+\begin{definition}[Recursive Definitions for the Logic of List Measures (LM)]
+Let us fix a set of \emph{parameter variables} $P$ that consists of the following of sets of variables:
+a set of Boolean variables $LS_z^v$, a set of variables with type set of locations
+$HLS_z^v$, a set of variables of type multiset of keys $MSKEYS_z^v$, and
+a set of variables of type integer (type of keys in general) $Max_z^v$ and $Min_z^v$, where $z,v$ range over $\Delta$.
+
+The contextual logic of list measures (LM) wrt $\Delta$ and parameter variables $P$ is defined using the following recursive definitions, which depend crucially on the parameter variables $P$.
+\begin{itemize}
+	\item We have unary relations $ls_z^P$ that capture linked list segments 
+	       that end in $z$, where
+	         the relation for a location $v$ in $\Delta$ is imbibed using the Boolean variables $LS_z^v$ ($v \in \Delta$),
+	      and where $z$ is any element of $\Delta$ or the constant location $\textit{nil}$.
+	      (The relation $ls_\textit{nil}()$ captures whether a location points to a list
+	       ending with $\textit{nil}$.)
+	
+	This is defined as follows:
+	$$\textit{ls}_z^P(x)\!\!:=_{\textit{lfp}}\!\! \left( x\!\!=\!\!\textit{z} \vee \left( x \!\not =\! z \wedge x \!\not=\! nil \wedge x \not \in \Delta \wedge \textit{ls}_z^P(n(x))\right) 
+	\vee\right.$$
+	$$~~~~ \left.\left(x \!\not =\! z \wedge x \in \Delta \wedge \bigwedge_{v \in \Delta} (x=v \Rightarrow LS_z^v)\right)\right)$$ 
+	           
+
+    \item We have recursive definitions that capture the heaplet of such list-segments, where the heaplet
+of list-segments from an element $v$ in $\Delta$ to $z$ (where $z \in \Delta \cup \{nil\}$) is imbibed from the set variable $\HLS_z^v$:
+\begin{align*}
+\textit{hls}_z^P(x) & :=_{\textit{lfp}} & \emptyset & \textit{~~if~} \sem{x}\!\!=\!\!\sem{z} \\
+& & \{x\} \cup \textit{hls}_z^P(n(x)) & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x} \!\not=\! \sem{nil} \wedge \sem{x} \not \in \sem{\Delta} \\
+& & \HLS\,_z^v & \textit{~~if~} \sem{x} \not = \sem{z} \wedge \sem{x}=\sem{v} \wedge v \in \Delta 
+\end{align*}
+
+\item We have similar recursive definitions that capture the multiset of data elements stored in list segments, the maximum/minimum element stored inthe list, and a predicate capturing sortedness of list segments. We omit these definitions: see Appendix for detailed definitions.    
+
+\end{itemize}
+\end{definition}
+
+%The above definitions can be written in usual syntax using $\textit{ite}$ expressions; we omit this 
+%formulation.
+
+We define the \emph{contextual logic of list-measures (LM)} to be quantifier-free formulae that use only the recursive 
+definitions of $LM$ mentioned above, and combine them as described in Figure~1.
+The logic $LM$ allows first-order variables that range over locations, keys, and integers. Note that
+dereferencing pointers of locations is completely disallowed--- the delta-specific formula will refer to such dereferences, depending on the particular state modeled.
+Here $\Delta$ is assumed to be a subset of the free location variables in the contextual formula.
+Formulae in $LM$ are allowed to refer to recursive predicates/functions defined using over various sets of parameter variables.
+
+
+\begin{figure}
+   \begin{align*}
+   \textit{Location} ~~\textit{Term} ~~lt & ::=  x \mid p_i(y) \mid \texttt{nil} \hfill{\textit{~~~~~~~~~~~~~where~} y \not \in \Delta}\\
+   \textit{Integer} ~~\textit{Term} ~~it & ::=  c \mid len_z^P(lt) \mid it+it \\
+   \textit{Key} ~~\textit{Term} ~~keyt & ::=  c \mid \textit{key}(lt) \mid max_z^P(lt) \mid min_z^P(lt) \mid keyt+keyt \\
+   \textit{Heaplet}~~ \textit{Term} ~~hlt  & ::=  \emptyset \mid \{ lt \} \mid hls_z^P(lt) \mid hlt \cup hlt \mid hlt \cap hlt \mid hlt \setminus hlt\\
+   \textit{MultisetKeys}~~ \textit{Term} ~~mskt & ::= \emptyset \mid mskeys_z^P(x) \mid mskt \cup_m mskt \mid mskt \cap_m mskt \mid mskt \setminus_m mskt\\
+   ~&~\\
+   \textit{Formulas}~~ \varphi &  ::=  true \mid false \mid ls_z^P(x) \mid sorted_z^P(x) \mid lt = lt \mid lt \in hlt \mid hlt \subseteq hlt \mid hlt = \emptyset \mid \\
+   ~& ~~~~~ it < it \mid it = it \mid keyt < keyt \mid keyt = keyt \mid \\
+   ~& ~~~~~ keyt \in mskt \mid mskt \subseteq_m mskt \mid \varphi \vee \varphi \mid \neg \varphi
+   \end{align*}
+ \caption{The context logic $LM$ of list measures involving list-segments, heaplets, multisets of keys, max, min, and sortedness.} 
+\end{figure}
+
+\subsection{Translating contextual formulae to quantifier-free recursion-free formulae}
+We can now state the main result of this section:
+
+\begin{theorem}
+\label{decidableLMbig}
+	For any quantifier-free formula $\varphi({\cal P}, X)$ of $LM[ls, hls, rank, len, $\\$min, max, sorted]$, the quantifier-free and recursion-free
+	formula $\psi({\cal P}, X)$ obtained $\varphi$ obtained from the translation below
+	satisfies the following property: for any interpretation of the free variables
+	in ${\cal P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
+\end{theorem}
+
+
+\begin{corollary}
+	The delta-logic of linear measures is decidable.
+\end{corollary}
+
+Let us fix a set of sets of parameters ${\cal P} = \{P_1, \ldots P_k\}$
+(we encourage the reader to fix $k=2$ in their mind while reading the section, as it's the
+most common and the logic VCs translate to, as shown in Section~\ref{sec:VC2Delta}).
+
+We will first describe the decision procedure and its proof of correctness for the fragment
+of $LM$ that involves only the three recursive definitions $ls_z^P$, $hls_z^P$, and $rank_z^P$,
+where $P \in \{\cal P\}$, which we will refer to as $LM[ls,hls,rank]$. 
+Then we will extend the procedure to handle the logic with all the other measures; this latter
+proof requires more expressive decision procedures and pseudo-measures that make its proof harder.
+
+Let us assume a quantifier-free $LM[ls,hls,rank]$ formula $\varphi$ which is a $\Delta$-logic formula
+w.r.t a finite set of variables $\Delta$.
+Assume the set of (free) location variables occurring in $\varphi$ is $X = \{x_1, \ldots x_n\}$ with
+$\Delta \subseteq X$. 
+
+In order to determine whether there is a model satsifying $\varphi$, we need to construct a universe
+of locations, an interpretation of the variables in $X$, and the heap
+(with the single pointer field $n()$) on all locations \emph{outside} $\Delta$ (the definition
+of $n()$ on $\Delta$, by definition, does not matter).
+
+Our decision procedure relies intuitively on the following observations. First, note that the locations
+reached by using the $n()$ pointer any number of times forms the relevant set of locations that $\varphi$'s
+truth can depend on (as $\varphi$ is quantifier-free and has recursive definitions that only use the $n$-pointer).
+There are three distinct cases to consider when pursuing the paths using the $n$-pointer on a location $x$:
+(a) the path may reach a node in $\Delta$, (b) the path may reach a node that is reachable also from another location in $X$,
+or (c) the path may never reach a location in $\Delta$ nor a location that is reachable from another location in $X$. 
+
+The key idea is to \emph{collapse} paths where the reachability of those locations from locations in (interpreted by) $X$ does not change.
+More precisely, let $L$ be the set of all locations reachable from $X$ such that $l$ is in $\Delta$ or 
+for every location $l'$ reachable from $X$ such that $n(l')=l$, the set of nodes in $X$ that have a path
+to $l'$ is different from the set of nodes in $X$ that have a path to $l$.
+%Consider writing 'either in X or are locations of earliest points of intersection of n()-paths from locations in X' or some clearer variant
+
+It is easy to see that there are at most $|X|-1$ locations of the above kind that are distinct from $\Delta$,
+since the paths can merge at most $|X|-1$ times forming a tree-like structure. Our key idea is now to 
+represent these list segments that connect these kinds of locations \emph{symbolically}, summarising the 
+measures on these list segments. Since there are only a bounded number of such locations and hence list
+segments, we can compute recursive definitions of linear measures involving them using quantifier-free
+and recursive-definition-free formulae.
+
+We construct a formula $\psi$ that is satisfiable iff $\varphi$ is satisfiable, as follows.
+First, we fix a new set (distinct from $X$) of location variables $V={v_1, \ldots v_{|X|-1}}$,
+to stand for the merging locations described above.
+We introduce an uninterpreted function $T: V \cup (X\setminus \Delta) \longrightarrow V \cup X \cup \{\bot\}$
+($\bot$ is used to signify that the n()-path on the location never intersects $X \cup{} L$).
+Let $Z$ be the set of variables in $X$ such that the recursive definitions $ls_z^P$, $hls_z^P$, $rank_z^P$, for some
+$P \in {\cal P}$, occur in $\varphi$.
+
+\medskip
+\noindent 
+{\bf $\psi$ is the conjunct of the following formulae:}
+\begin{itemize}
+	\item The formula $\varphi$ (but with recursive definitions treated as uninterpreted relations and functions).
+	\item For every $z \in Z$, we introduce an uninterpreted function $Dist_z: V \cup (X \setminus \Delta) \longrightarrow \mathbb{N} \cup \{\bot\}$ that
+             is meant to capture the distance from any location in $V \cup X$ to $z$, if $z$ is reachable from
+               that location without going through $\Delta$, and is $\bot$ otherwise. We add the constraint:
+          $$\wedge_{v \in V\cup (X\setminus \Delta)} \big[ (Dist_z(v)\!=\!0 \Leftrightarrow v=z) ~\wedge ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$$
+          $$ v \!\not =\! z \Rightarrow \big(~\left( (T(v)\!=\!\bot \vee Dist_z(T(v))\!=\!\bot) \Rightarrow Dist_z(v) \!=\! \bot
+                 \right)~~~~~~~~~~~~~~~$$
+          $$  ~~~~~  \left. \wedge ~((T(v) \not = \bot \wedge Dist_z(T(v)) \not = \bot) \Rightarrow Dist_z(v) = Dist_z(T(v))+1
+                \big) ~\right)\big] $$
+              
+	\item For every $x \in X$, and for every $P \in {\cal P}$, we have a conjunct:
+		     $$ls_z^P(x) \Leftrightarrow (Dist_z(x)\not= \bot \vee \bigvee_{v \in \Delta} (Dist_v(x) \not = \bot
+		       \wedge LS_z^v))$$
+		     
+    \item For every $x \in X$, $z \in Z$, and for every $P \in {\cal P}$, we have a conjunct:
+             $$ \left( Dist_z(x) \!=\! \bot \Rightarrow rank_z^P\!(x)\!=\!\bot\right) ~~\wedge~~ 
+               \left( Dist_z(x) \!\not =\! \bot \Rightarrow rank_z^P\!(x)\!=\!RANK_z^P \right)$$
+               
+    \item We capture the heaplets of list-segments from $v \in V \cup (X \setminus \Delta)$ to $T(v)$ (excluding both
+              end-points) using a set
+             of locations $H(v)$
+             and constrain them so that they are pairwise disjoint and do not contain the locations $X$:
+             $$ \bigwedge_{x \in X, v \in V \cup (X \setminus \Delta)} x \not \in H(v) ~~\wedge 
+             \bigwedge_{v,v' \in V \cup (X \setminus \Delta)} (v \!\not =\! v' \Rightarrow H(v) \cap H(v') = \emptyset)$$  
+    
+    \item We can then precisely capture the heaplet $hls_z^P(x)$ by taking the union of all heaplets of
+           list segments lying on its path to $z$. We do this using the following constraint, for each
+           $v \in X \cup V$:
+           $$(Dist_z(v)=\bot \Rightarrow hls_z^P (v) = \emptyset) \wedge (hls_z^P(z)= \emptyset)\wedge $$
+           $$(Dist_z(v) \not = \bot \wedge v \not = z) \Rightarrow hls_z(v)= H(v) \cup \{v\} \cup hls_z(T(v))$$
+
+\end{itemize}
+
+Note that the formula $\psi$ is quantifier-free and over the combined theory of arithmetic, uninterpreted functions, and sets.
+
+We can show the correctness of the above translation:
+%\begin{theorem}
+%	For any quantifier-free formula $\varphi({\cal P}, X)$ of $LM[ls,hls,rank]$, the quantifier-free and recursion-free
+%	 formula $\psi({\cal P}, X)$ obtained $\varphi$ obtained from the translation above
+%	 satisfies the following property: for any interpretation of the free variables
+ %   in ${\cal P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
+%\end{theorem}
+\begin{theorem}
+The statement of Theorem~\ref{decidableLMbig} holds for the fragment $LM[ls,hls,rank]$.
+\end{theorem}
+
+We now turn to the more complex logic $LM[ls, hls, rank, len, mskeys, min, $\\$max, sorted]$, and show that
+any quantifier-free formula $\varphi$ in the logic can be similarly translated. First, we model the multiset
+of keys, minimum and maximum values and sortedness of each list-segment from $v$ to $T(v)$ 
+(where $v \in (X \setminus \Delta) \cup V$),
+which is outside $\Delta$, using multiset variables $mskeys\mu(v)$, integer variables $min\mu(v)$, $max\mu(v)$,
+and $len\mu(v)$ and boolean variables $sorted\mu(v)$.
+We can also aggregate them, as above, to express the sets $mskeys_z(x)$, $min_z(x)$, $max_z(x)$, $len_z(x)$
+and $sorted_z(x)$, for each $z \in Z$ and
+each $x \in (X \setminus \Delta) \cup V$, similar to definitions of $hls_z(x)$ as defined above.
+A point of note is that the recursive definition of sortedness across segments is expressed
+by using both $Min_z(x)$ and $Max_z(x)$ definitions, though the recursive definition of sortedness uses 
+only minimum--- this is needed as expressing when the concatenation of sorted list segments is sorted
+requires the max value of the first segment. We skip these definitions as they are easy to derive.
+
+The main problem that remains is in \emph{constraining} these measures so that they can be the measures
+of the \emph{same} list segment, i.e, be the attributes not of a pseudo-model. The following constraints capture this, for each 
+$v \in (X \setminus \Delta) \cup V$:
+\begin{itemize}
+	\item The cardinality of $hls\mu(v)$ must be $len\mu(v)$.
+	\item The cardinality of $mskeys\mu(v)$ must be $len\mu(v)$.
+	\item $min\mu(v)$ and $max\mu(v)$ must be the minimum and maximum elements of $mskeys\mu(v)$.
+	\item If $min\mu(v)=max\mu(v) \not = \bot$, then $sorted\mu(v)$ can only be true.
+\end{itemize}
+
+The intuition is that any measures meeting the above constraints can be realized using true list
+segments. As for the fourth clause above, notice that any list segment with minumum element different
+from maximum can be realized by either a sorted or an unsorted list.
+
+The above constraints on measures, though seemingly simple, are hard to shoehorn into existing decidable theories
+(though the fourth constraint can be easily expressed).
+The first two constraints can be expressed using quantifier-free BAPA~\cite{BAPA} (Boolean Algebra with Presburger
+Arithmetic) constraints, which is decidable. We can get around defining the minimum of list segments
+by having the set of keys store only offsets from the minimum (and including the key $0$ always). However,
+capturing max and sortedness measures as well while preserving decidability seems hard.
+
+Consequently, we give a new decision procedure that exploits the setup we have here.
+First, note that we can restrict the formulae that use sets containing keys to involve
+only membership testing of free variables in them, combinations using union and intersection,
+and checking emptiness of derived sets. We can \emph{disallow checking non-emptiness} as non-emptiness
+of a set $S$ can always be captured by demanding $k \in S$, for a fresh free variable $k$.
+
+%without affecting satisfiability.
+
+Our primary observation is that we can then restrict the multiset of keys to be over a \emph{bounded}
+universe of elements. This bounded universe consists of one element for each free variable of type key 
+in the formula (call this $K$), and, in addition, will consist of one element for each Venn region formed by the multiset
+of keys for each segment $(v,T(v))$ of the context's heap. The idea of introducing an element for each Venn
+region is not new, and is found in many works that deal with combinations of sets and cardinality constraints~\cite{BAPA}.
+
+%One can show that if there is a satisfiable model, then by collapsing all elements that are different
+%than $K$ and that are in the same Venn region can be identified by the unique representative we have chosen
+%for that region. Taking unions and intersections will not affect the multiplicities of elements in the Venn
+%region and the formula cannot distinguish between them (as it is quantifier-free).
+
+\begin{figure}[t]
+\begin{tabular}{| l| c| r| l|r|} 
+\hline
+&&&&\\
+\textbf{Correct programs} & \textbf{\#VCs} & \textbf{time(s)} & \textbf{Buggy programs} & \textbf{time(s)} \\ 
+&&&&\\
+\hline
+append(x: list, y: list) & 4 & 57~~~ & buggy\_append(x: list, y: list) & 0.2 \\ 
+copyall(x: list) & 4 & 183~~~ & buggy\_copyall(x: list) & 36 \\ 
+detect\_cycle(x: list) & 6 & 5~~~ & buggy\_detect\_cycle(x: list) & 0.7 \\ 
+deleteall(x: list, k: key) & 5 & 10~~~ & buggy\_deleteall(x: list, k: key) & 0.1 \\ 
+find(x: list, k: key) & 3 & 6~~~ & buggy\_find(x: list, k: key) & 0.1 \\ 
+insert(x: list, k: key) & 4 & 38~~~ & buggy\_insert(x: list, k: key & 0.2\\ 
+insert\_front(x: list, k: key) & 1 & 3~~~ & buggy\_insert\_front(x: list, k: key) & 0.1\\ 
+insert\_back(x: list, k: key) & 4 & 20~~~ & buggy\_insert\_back(x: list, k: key) & 0.2\\ 
+reverse(x: list) & 3 & 14~~~ & buggy\_reverse(x: list) & 0.1\\ 
+\hline
+sorted\_append(x: list, y: list) & 4 & 54~~~ & buggy\_sorted\_append(x: list, y: list) & 0.2 \\ 
+sorted\_deleteall(x: list, k: key) & 5 & 2~~~ & buggy\_sorted\_deleteall(x: list, k: key) & 1.1 \\ 
+sorted\_insert(x: list, k: key) & 4 & 17~~~ & buggy\_sorted\_insert(x: list, k: key) & 1.2 \\ 
+sorted\_reverse(x: list) & 3 & 37~~~ & buggy\_sorted\_reverse(x: list) & 0.5 \\ 
+sorted\_merge(x: list, y: list) & 8 & 300~~~ & buggy\_sorted\_merge(x: list, y: list) & 0.7 \\ 
+\hline
+%\caption{Decision procedure for LM: experimental results} % needs to go inside longtable environment
+%\label{experiments}
+\end{tabular}
+\caption{Experimental results for the decision procedure for the delta-logic LM}
+\end{figure}
+
+
+Once we have bounded the universe of keys, we can represent a multiset of keys using a set of natural numbers
+that represent the multiplicity of elements, and write the effect of unions and intersections
+using Presburger arithmetic. The cardinality of the multiset is the sum of these numbers
+and the minimum and maximum key can be expressed using the smallest and largest keys in the finite universe
+with multiplicity greater than $0$. 
+We can hence translate the formula into a quantifier-free formula, 
+giving the required theorem.
+This proves Theorem~\ref{decidableLMbig}.
+
+Note that the above procedure introduces an exponential number of variables, and hence poses challenges
+to be effective in practice. There are several possible ways of mitigating this. 
+First, there is existing work~(see ~\cite{BAPA2}) on reasoning with BAPA that argues and builds practical 
+algorithms that introduce far smaller universes in practice. Second, in the case where we allow only
+combinations of sets using union (and not intersection), and allow checking subset constraints and emptiness,
+we can show that introducing a \emph{single} new element in the universe other than $K$ suffices. 
+The reason
+is that without intersections, the identity of the elements do not matter and their multiplicities
+are preserved by representing with only one element. We exploit this in our implementation below. 

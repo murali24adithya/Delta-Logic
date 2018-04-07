@@ -1,30 +1,9 @@
-\section{Implementation and evaluation of decision procedure for LM}
-In this section we detail the results of implementing the above-mentioned decision procedure for $LM[ls, hls, rank, len, mskeys, min, max, sorted]$. We applied our technique on a small suite of list-manipulating programs, encoding the VC in Z3 \cite{}.
+\subsection{Implementation and evaluation of decision procedure for LM}
 
-The specifications for the programs were the strongest possible expressions in our logic. For example, the program \textit{copyall} copies a given list pointed to by $x$ into one pointed to by $y$, and has the precondition $\textit{ls}(x, nil)$, and the postcondition $\left( \textit{ls}(y, nil) \right) \land{} \left( \textit{hls}(x, nil) \cap{} \textit{hls}(y, nil) = \emptyset{} \right) \land{} \left(\textit{mkeys}(x, nil) = \textit{mkeys}(y, nil) \right)$.
+\begin{sloppypar}We implemented the decision procedure for the delta-logic $LM[ls, hls, rank, len, mskeys, min, max, sorted]$ using the reduction to SMT described above, solved using Z3. We applied our technique to a suite of list-manipulating programs.\end{sloppypar}
 
-\begin{longtable}{| l| c| c| l|c|} 
-\hline
- program & \#VCs & time(s) & bugs & time(s) \\ 
-\hline
-append(x: list, y: list) & 4 & 57 & buggy\_append(x: list, y: list) & 0.275 \\ 
-copyall(x: list) & 4 & 183 & buggy\_copyall(x: list) & 36 \\ 
-detect\_cycle(x: list) & 6 & 5 & buggy\_detect\_cycle(x: list) & 0.719 \\ 
-deleteall(x: list, k: key) & 5 & 10 & buggy\_deleteall(x: list, k: key) & 0.129 \\ 
-find(x: list, k: key) & 3 & 6 & buggy\_find(x: list, k: key) & 0.127 \\ 
-insert(x: list, k: key) & 4 & 38 & buggy\_insert(x: list, k: key & 0.198\\ 
-insert\_front(x: list, k: key) & 1 & 3 & buggy\_insert\_front(x: list, k: key) & 0.116\\ 
-insert\_back(x: list, k: key) & 4 & 20 & buggy\_insert\_back(x: list, k: key) & 0.158\\ 
-reverse(x: list) & 3 & 14 & buggy\_reverse(x: list) & 0.129\\ 
-\hline
-sorted\_append(x: list, y: list) & 4 & 54 & buggy\_sorted\_append(x: list, y: list) & 0.229 \\ 
-sorted\_deleteall(x: list, k: key) & 5 & 2 & buggy\_sorted\_deleteall(x: list, k: key) & 1.131 \\ 
-sorted\_insert(x: list, k: key) & 4 & 17 & buggy\_sorted\_insert(x: list, k: key) & 1.150 \\ 
-sorted\_reverse(x: list) & 3 & 37 & buggy\_sorted\_reverse(x: list) & 0.537 \\ 
-sorted\_merge(x: list, y: list) & 8 & 300 & buggy\_sorted\_merge(x: list, y: list) & 0.682 \\ 
-\hline
-\caption{Decision procedure for LM: experimental results} % needs to go inside longtable environment
-\label{experiments}
-\end{longtable}
+The specifications for the programs were strong. For example, the program \textit{sorted\_merge} merges two disjoint sorted lists pointed to by $x$ and $y$, and has the precondition they are indeed so, the postcondition asserting that the result is a sorted list whose heaplet is the union of the heaplets of lists pointed to by $x$ and $y$, and similarly for the multiset of keys. It is also possible to express that for an arbitrary node in either list, the key was unaltered.
 
-The experiements were performed on a machine with an Intel\textregistered  Core\texttrademark  i7-7600U processor with clock speeds upto 3.9GHz.
+The results are summarized in the table below. The left column shows results of verifying correct prorgrams, while the column on the right shows results on `buggy' variants of these programs. The buggy programs were obtained by expressing weaker annotations. Our tool worked well on all these examples and for the buggy programs, the satisfying valuation it provided was sufficiently informative to diagnose the error. To the best of our knowledge, ours is the only decidable verification tool that can handle this suite of examples.
+
+The experiements were performed on a machine with an Intel\textsuperscript{\textregistered}  Core\texttrademark  i7-7600U processor with clock speeds upto 3.9GHz.

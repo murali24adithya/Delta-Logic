@@ -13,11 +13,6 @@ Berdine, J., Calcagno, C., O'Hearn, P.W.: Symbolic execution with separation
   logic. In: Proceedings of the Third Asian Conference on Programming Languages
   and Systems. pp. 52--68. APLAS'05 (2005)
 
-\bibitem{BouajjaniDruagoiEnea2009}
-Bouajjani, A., Dr{\u{a}}goi, C., Enea, C., Sighireanu, M.: A logic-based
-  framework for reasoning about composite data structures. In: CONCUR 2009 -
-  Concurrency Theory. pp. 178--195 (2009)
-
 \bibitem{BrotherstonFuhsPerez2014}
 Brotherston, J., Fuhs, C., P{\'e}rez, J.A.N., Gorogiannis, N.: A decision
   procedure for satisfiability in separation logic with inductive predicates.
@@ -41,6 +36,17 @@ Cook, B., Haase, C., Ouaknine, J., Parkinson, M., Worrell, J.: Tractable
 Iosif, R., Rogalewicz, A., Simacek, J.: The tree width of separation logic with
   recursive definitions. In: Proceedings of the 24th International Conference
   on Automated Deduction. pp. 21--38. CADE'13 (2013)
+
+\bibitem{BAPA}
+Kuncak, V., Nguyen, H.H., Rinard, M.: An algorithm for deciding bapa: Boolean
+  algebra with presburger arithmetic. In: Proceedings of the 20th International
+  Conference on Automated Deduction. pp. 260--277. CADE' 20 (2005)
+
+\bibitem{BAPA2}
+Kuncak, V., Rinard, M.: Towards efficient satisfiability checking for boolean
+  algebra with presburger arithmetic. In: Proceedings of the 21st International
+  Conference on Automated Deduction: Automated Deduction. pp. 215--230. CADE-21
+  (2007)
 
 \bibitem{LeSunChin2016}
 Le, Q.L., Sun, J., Chin, W.N.: Satisfiability modulo heap-based programs. In:

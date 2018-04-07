@@ -1,0 +1,36 @@
+\newpage
+\section*{Appendix}
+We give here the detailed definitions of the other  measures that were omitted in Section 4.
+
+\begin{itemize}
+\item We have recursive definitions that capture the multiset of data elements (through a data-field
+    $\textit{key}$) stored in list segments, 
+    where again the multiset of data 
+of list-segments from an element $v$ in $\Delta$ to $z$ (where $z \in \Delta \cup \{nil\}$) is imbibed from the set variable $MSKeys_z^v$:
+\begin{align*}
+\textit{mskeys}_z^P(x) & :=_{\textit{lfp}} & \emptyset & \textit{~~if~} \ \sem{x}\!\!=\!\!\sem{z} \\
+& & \{\textit{key}(x)\} \cup_m \textit{mskeys}_z^P(n(x)) & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x} \!\not =\! \sem{nil} \wedge \sem{x} \not \in \sem{\Delta} \\
+& & \textit{MSKeys}_z^x & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x}=\sem{v} \wedge v \in \Delta 
+\end{align*}
+
+    \item We have recursive definitions that capture the maximum/minimum element of data elements stored in list segments, where again the maximum/minimum element  
+of list-segments from an element $v$ in $\Delta$ to $z$ where $z \in \Delta \cup \{nil\}$) is imbibed from the data variable $Max_z^v$ (or $Min_z^v$).
+We assume the data-domain has a linear-order $\leq$, and that there are special constants $-\infty$ and $+\infty$
+that are the minimum and maximum elements of this order. Let $max(r_1,r_2) \equiv \textit{ite}(r_1 \leq r_2, r_2, r_1)$.
+\begin{align*}
+\textit{Max}_z^P(x) & :=_{\textit{lfp}} & -\infty & \textit{~~if~} \sem{x}\!\!=\!\!\sem{z} \\
+& & \textit{max}(key(x), \textit{Max}_z^P(n(x))) & \textit{~~if~} \sem{x} \!\not =\! \sem{z} \wedge \sem{x} \!\not=\! \sem{nil} \wedge \sem{x} \not \in \sem{\Delta} \\
+& & \textit{MSKeys}_z^v & \textit{~~if~} \sem{x} \not = \sem{z} \wedge \sem{x} = \sem{v} \wedge v \in \Delta 
+\end{align*}
+
+ The function $\textit{Min}_z^P$ is similarly defined.
+ 
+    \item We have a recursive definition that captures sortedness, using the minimum measure.
+\begin{align*}
+	&\textit{Sorted}_z^P(x) \!\!:=_{\textit{lfp}}\!\! \Big( ~~x\!\!=\!\textit{z} ~~\vee  \\
+	&~\left( x \!\not =\! z \wedge x \!\not=\! nil \wedge x \not \in \Delta \wedge \textit{min}_z^P(x) \!\not =\! \bot \wedge \textit{key}(x) \leq \textit{min}_z^P(x) \wedge \textit{Sorted}_z^P(n(x))\right) \vee\\
+&	~
+\left(x \!\not =\! z \wedge x \in \Delta \wedge \textit{min}_z^P(x) \!\not =\! \bot \wedge \textit{key}(x) \leq \textit{min}_z^P(x) \wedge \bigwedge_{v \in \Delta} (x=v \Rightarrow \textit{SORTED}_z^v\right)\Big)
+\end{align*}
+
+\end{itemize}
