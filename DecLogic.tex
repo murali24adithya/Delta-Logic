@@ -85,10 +85,10 @@ We can now state the main result of this section:
 
 \begin{theorem}
 \label{decidableLMbig}
-	For any quantifier-free formula $\varphi({\cal P}, X)$ of $LM[ls, hls, rank, len, $\\$min, max, sorted]$, the quantifier-free and recursion-free
-	formula $\psi({\cal P}, X)$ obtained $\varphi$ obtained from the translation below
+	For any quantifier-free formula $\varphi(\mathcal{P}, X)$ of $LM[ls, hls, rank, len, $\\$min, max, sorted]$, the quantifier-free and recursion-free
+	formula $\psi(\mathcal{P}, X)$ obtained $\varphi$ obtained from the translation below
 	satisfies the following property: for any interpretation of the free variables
-	in ${\cal P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
+	in $\mathcal{P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
 \end{theorem}
 
 
@@ -96,13 +96,13 @@ We can now state the main result of this section:
 	The delta-logic of linear measures is decidable.
 \end{corollary}
 
-Let us fix a set of sets of parameters ${\cal P} = \{P_1, \ldots P_k\}$
+Let us fix a set of sets of parameters $\mathcal{P} = \{P_1, \ldots P_k\}$
 (we encourage the reader to fix $k=2$ in their mind while reading the section, as it's the
 most common and the logic VCs translate to, as shown in Section~\ref{sec:VC2Delta}).
 
 We will first describe the decision procedure and its proof of correctness for the fragment
 of $LM$ that involves only the three recursive definitions $ls_z^P$, $hls_z^P$, and $rank_z^P$,
-where $P \in \{\cal P\}$, which we will refer to as $LM[ls,hls,rank]$. 
+where $P \in \{\mathcal{P}\}$, which we will refer to as $LM[ls,hls,rank]$. 
 Then we will extend the procedure to handle the logic with all the other measures; this latter
 proof requires more expressive decision procedures and pseudo-measures that make its proof harder.
 
@@ -142,7 +142,7 @@ to stand for the merging locations described above.
 We introduce an uninterpreted function $T: V \cup (X\setminus \Delta) \longrightarrow V \cup X \cup \{\bot\}$
 ($\bot$ is used to signify that the n()-path on the location never intersects $X \cup{} L$).
 Let $Z$ be the set of variables in $X$ such that the recursive definitions $ls_z^P$, $hls_z^P$, $rank_z^P$, for some
-$P \in {\cal P}$, occur in $\varphi$.
+$P \in \mathcal{P}$, occur in $\varphi$.
 
 \medskip
 \noindent 
@@ -158,11 +158,11 @@ $P \in {\cal P}$, occur in $\varphi$.
           $$  ~~~~~  \left. \wedge ~((T(v) \not = \bot \wedge Dist_z(T(v)) \not = \bot) \Rightarrow Dist_z(v) = Dist_z(T(v))+1
                 \big) ~\right)\big] $$
               
-	\item For every $x \in X$, and for every $P \in {\cal P}$, we have a conjunct:
+	\item For every $x \in X$, and for every $P \in \mathcal{P}$, we have a conjunct:
 		     $$ls_z^P(x) \Leftrightarrow (Dist_z(x)\not= \bot \vee \bigvee_{v \in \Delta} (Dist_v(x) \not = \bot
 		       \wedge LS_z^v))$$
 		     
-    \item For every $x \in X$, $z \in Z$, and for every $P \in {\cal P}$, we have a conjunct:
+    \item For every $x \in X$, $z \in Z$, and for every $P \in \mathcal{P}$, we have a conjunct:
              $$ \left( Dist_z(x) \!=\! \bot \Rightarrow rank_z^P\!(x)\!=\!\bot\right) ~~\wedge~~ 
                \left( Dist_z(x) \!\not =\! \bot \Rightarrow rank_z^P\!(x)\!=\!RANK_z^P \right)$$
                
@@ -185,10 +185,10 @@ Note that the formula $\psi$ is quantifier-free and over the combined theory of 
 
 We can show the correctness of the above translation:
 %\begin{theorem}
-%	For any quantifier-free formula $\varphi({\cal P}, X)$ of $LM[ls,hls,rank]$, the quantifier-free and recursion-free
-%	 formula $\psi({\cal P}, X)$ obtained $\varphi$ obtained from the translation above
+%	For any quantifier-free formula $\varphi(\mathcal{P}, X)$ of $LM[ls,hls,rank]$, the quantifier-free and recursion-free
+%	 formula $\psi(\mathcal{P}, X)$ obtained $\varphi$ obtained from the translation above
 %	 satisfies the following property: for any interpretation of the free variables
- %   in ${\cal P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
+ %   in $\mathcal{P} \cup X$, there is a model for $\varphi$ iff there is a model for $\psi$.
 %\end{theorem}
 \begin{theorem}
 The statement of Theorem~\ref{decidableLMbig} holds for the fragment $LM[ls,hls,rank]$.

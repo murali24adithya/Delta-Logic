@@ -1,10 +1,10 @@
-\documentclass{llncs}
+\documentclass{acmart}
 \usepackage{subcaption} %% For complex figures with subfigures/subcaptions
                         %% http://ctan.org/pkg/subcaption
 \captionsetup{compatibility=false}
 \usepackage{graphics,xcolor,amssymb}
 \usepackage{algorithm}
-\usepackage{cite}
+%\usepackage{cite}
 \usepackage{amsmath}
 \usepackage{wrapfig}
 \usepackage[noend]{algpseudocode}
@@ -15,8 +15,9 @@
 \usepackage{longtable}
 \usepackage{tikz}
 \usepackage{pgfplots}
-%\pgfplotsset{compat=1.15}
+\pgfplotsset{compat=1.14} 
 \usepackage{esvect}
+\usepackage{natbib}
 
 %\input{./macros}
 \begin{document}
@@ -28,12 +29,11 @@
 
 %% Title information
 \title{Delta Logics: Logics for Change}
-\author{Adithya Murali \and
-  P.\@ Madhusudan
-}
+%\author{Adithya Murali \and
+%  P.\@ Madhusudan
+%}
 
-\institute{  Department of Computer Science, University of Illinois, Urbana-Champaign
-}
+%\institute{  Department of Computer Science, University of Illinois, Urbana-Champaign}
 
 \maketitle
 
@@ -48,19 +48,21 @@ implementation of the technique and an evaluation of it.
 \end{abstract}
 
 
-\input{intro}
-\input{logic}
-\input{SeparabilityTheorem}
-\input{VC2Delta}
-\input{DecLogic}
-\input{Experiments}
-\input{RelatedWork}
+\input{lsegview}
+%\input{intro}
+%\input{logic}
+%\input{SeparabilityTheorem}
+%\input{VC2Delta}
+%\input{DecLogic}
+%\input{Experiments}
+%\input{RelatedWork}
 \newpage
 
-%% Bibliography
-\bibliographystyle{splncs03}
-\bibliography{references}
 
-\input{Appendix}
+%% Bibliography
+%\bibliographystyle{ACM-Reference-Format}
+%\bibliography{references}
+
+%\input{Appendix}
 
 \end{document}

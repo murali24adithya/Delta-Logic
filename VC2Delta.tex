@@ -3,29 +3,29 @@
 	We now explain the crux of the motivation behind delta-logics, namely that they can naturally express verification conditions,
 	without introducing extra quantification or complex reformulation of recursive definitions.
 	
-Consider a Hoare Triple: $\langle \alpha_{\textit{pre}}(X, P, {\cal R})$, $S$, $\alpha_{\textit{post}}(X, P, {\cal R})\rangle$,
-such that $\alpha_{pre}$ and $\alpha_{post}$ utilise a set of relations and functions ${\cal R}$ with recursive definitions defined using FO+\textit{lfp}. 
+Consider a Hoare Triple: $\langle \alpha_{\textit{pre}}(X, P, \mathcal{R})$, $S$, $\alpha_{\textit{post}}(X, P, \mathcal{R})\rangle$,
+such that $\alpha_{pre}$ and $\alpha_{post}$ utilise a set of relations and functions $\mathcal{R}$ with recursive definitions defined using FO+\textit{lfp}. 
 The program manipulates a set of scalar variables $X$, and pointer and data fields $P$, the latter being modeled as unary functions. 
 
-The verification condition is then of the form $\alpha_{\textit{pre}}(X, P, {\cal R}) \land{} T(X, X', P, P') \Rightarrow 
-\alpha_{\textit{post}} (X', P', {\cal R'})$, where $T$ captures the semantics of the program snippet $S$, which has no function calls.
+The verification condition is then of the form $\alpha_{\textit{pre}}(X, P, \mathcal{R}) \land{} T(X, X', P, P') \Rightarrow 
+\alpha_{\textit{post}} (X', P', \mathcal{R'})$, where $T$ captures the semantics of the program snippet $S$, which has no function calls.
 $T$ can be expressed as a delta-specific formula $T_\Delta$ conjoined with the formula 
 $\wedge_{f \in{} P} \left(\forall{}z.\,z\notin{}\Delta{} \Rightarrow f'(z) = f(z) \right)$, which captures
-the fact that the fields of elements outside $\Delta$ have not changed. Notice that the definitions of ${\cal R'}$ are 
-obtained from the definitions of ${\cal R}$ by substituting $P'$ for $P$.
+the fact that the fields of elements outside $\Delta$ have not changed. Notice that the definitions of $\mathcal{R'}$ are 
+obtained from the definitions of $\mathcal{R}$ by substituting $P'$ for $P$.
 
 Let us now show how to express this VC using an equivalent delta-logic formula without introducing universal quantification.
 
 First, using the separability theorem, Theorem~\ref{Separability}, we can write $\alpha_{\textit{pre}}$ and $\alpha_{\textit{post}}$
-as delta-logic formulae $\alpha_{\textit{pre}}^*(U, X, P, {\cal R}^U)$ and $\alpha_{\textit{post}}^*(V, X', P', {\cal (R')}^V)$.
+as delta-logic formulae $\alpha_{\textit{pre}}^*(U, X, P, \mathcal{R}^U)$ and $\alpha_{\textit{post}}^*(V, X', P', \mathcal{(R')}^V)$.
 Notice that the definition of $R'$ uses the transformed fields $P'$ and we translate using \emph{different} sets of parameters: $U$
 and $V$. However, observe that since $(R')^V$ is a contextual definition, we know that it does not refer to the changed heaplet
 $\Delta$. Consequently, we can replace $P'$ with $P$ uniformly in $(R')^V$. Also, we can \emph{remove} the universally
 quantified conjunct in $T$ that says that fields for locations outside $\Delta$ are unaltered.
 
 This leaves us with a verification condition of the form:\\
-\centerline{ $\alpha_{\textit{pre}}^*(U, X, P, {\cal R}^U) \wedge 
-T_\Delta(X, X', P, P') \Rightarrow \alpha_{\textit{post}}^*(V, X', P, {\cal (R')}^V)$}\\
+\centerline{ $\alpha_{\textit{pre}}^*(U, X, P, \mathcal{R}^U) \wedge 
+T_\Delta(X, X', P, P') \Rightarrow \alpha_{\textit{post}}^*(V, X', P, \mathcal{(R')}^V)$}\\
 where $T_\Delta$ is a
 delta-specific formula that simply says how the variables $X$ change to $X'$, and the fields $P$ change to $P'$ over $\Delta$.
 The VC is now clearly a delta-logic formula.

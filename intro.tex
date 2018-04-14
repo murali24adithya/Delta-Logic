@@ -61,9 +61,7 @@ ineffective.)
 Let us now focus on basic blocks that do not involve function calls. We would like
 to generate precise verification conditions in such cases, while falling back on frame reasoning for function calls. 
 There are several approaches in the literature that argue for this: for example the Grasshopper suite of tools
-handle such blocks accurately~\cite{PiskacWiesZufferey2014}, and there is work on
-expressing weakest pre-conditions in separation logic for such blocks 
-using the magic wand.
+handle such blocks accurately~\cite{PiskacWiesZufferey2014}, and there is work on expressing weakest pre-conditions in separation logic for such blocks using the magic wand.
 
 One precise formulation of the verification condition is 
 $\textit{@pre}(\vect{x}, \vect{p}, R) \wedge\, T(\vect{x}, \vect{x}', \vect{p}, \vect{p}') \wedge\, \textit{@post}(\vect{x}', \vect{p}', R')$
