@@ -1,13 +1,5 @@
 %% For double-blind review submission, w/o CCS and ACM Reference (max submission space)
 \documentclass[acmsmall,review,anonymous]{acmart}\settopmatter{printfolios=true,printccs=false,printacmref=false}
-%% For double-blind review submission, w/ CCS and ACM Reference
-%\documentclass[acmsmall,review,anonymous]{acmart}\settopmatter{printfolios=true}
-%% For single-blind review submission, w/o CCS and ACM Reference (max submission space)
-%\documentclass[acmsmall,review]{acmart}\settopmatter{printfolios=true,printccs=false,printacmref=false}
-%% For single-blind review submission, w/ CCS and ACM Reference
-%\documentclass[acmsmall,review]{acmart}\settopmatter{printfolios=true}
-%% For final camera-ready submission, w/ required CCS and ACM Reference
-%\documentclass[acmsmall]{acmart}\settopmatter{}
 
 
 %% Journal information
@@ -57,14 +49,14 @@
 \begin{document}
 
 %% Title information
-\title[Short Title]{Full Title}         %% [Short Title] is optional;
+\title{Delta Logics: Logics for Change}         %% [Short Title] is optional;
                                         %% when present, will be used in
                                         %% header instead of Full Title.
-\titlenote{with title note}             %% \titlenote is optional;
+%\titlenote{with title note}             %% \titlenote is optional;
                                         %% can be repeated if necessary;
                                         %% contents suppressed with 'anonymous'
-\subtitle{Subtitle}                     %% \subtitle is optional
-\subtitlenote{with subtitle note}       %% \subtitlenote is optional;
+%\subtitle{Subtitle}                     %% \subtitle is optional
+%\subtitlenote{with subtitle note}       %% \subtitlenote is optional;
                                         %% can be repeated if necessary;
                                         %% contents suppressed with 'anonymous'
 
@@ -129,7 +121,13 @@
 %% Note: \begin{abstract}...\end{abstract} environment must come
 %% before \maketitle command
 \begin{abstract}
-Text of abstract \ldots.
+We define delta logics, a new class of logics designed to express verification conditions
+of basic blocks that destructively manipulate a heap. Delta logic describes separately the part of the heap that changes
+and its unchanged context. Utilizing this simplicity and separation, we develop an expressive decidable
+delta logic that states properties of lists using a variety of measures on them, including their heaplets, 
+their length, the multiset of keys stored in them, the min/max keys stored in them, and their sortedness. We show that 
+delta logics and the associated decision procedure yield a practically viable verification engine through an 
+implementation of the technique and an evaluation of it.
 \end{abstract}
 
 
@@ -160,44 +158,32 @@ Text of abstract \ldots.
 \keywords{keyword1, keyword2, keyword3}  %% \keywords are mandatory in final camera-ready submission
 
 
+\newcommand{\HLS}{\textit{HLS}}
+\newcommand{\sem}[1]{\llbracket #1 \rrbracket}
+\newcommand{\vect}[1]{\overline{#1}}
+
 %% \maketitle
 %% Note: \maketitle command must come after title commands, author
 %% commands, abstract environment, Computing Classification System
 %% environment and commands, and keywords command.
 \maketitle
 
-
-\section{Introduction}
-
-Text of paper \ldots
-
-
-%% Acknowledgments
-\begin{acks}                            %% acks environment is optional
-                                        %% contents suppressed with 'anonymous'
-  %% Commands \grantsponsor{<sponsorID>}{<name>}{<url>} and
-  %% \grantnum[<url>]{<sponsorID>}{<number>} should be used to
-  %% acknowledge financial support and will be used by metadata
-  %% extraction tools.
-  This material is based upon work supported by the
-  \grantsponsor{GS100000001}{National Science
-    Foundation}{http://dx.doi.org/10.13039/100000001} under Grant
-  No.~\grantnum{GS100000001}{nnnnnnn} and Grant
-  No.~\grantnum{GS100000001}{mmmmmmm}.  Any opinions, findings, and
-  conclusions or recommendations expressed in this material are those
-  of the author and do not necessarily reflect the views of the
-  National Science Foundation.
-\end{acks}
-
+\input{revintro}
+\input{revmotivation}
+\input{logic}
+\input{SeparabilityTheorem}
+\input{VC2Delta}
+\input{DecLogic}
+\input{revgeneralvc}
+\input{Experiments}
+\input{RelatedWork}
+\input{conclusion}
+\newpage
 
 %% Bibliography
-%\bibliography{bibfile}
+\bibliography{references}
 
+\input{Appendix}
 
-%% Appendix
-\appendix
-\section{Appendix}
-
-Text of appendix \ldots
 
 \end{document}

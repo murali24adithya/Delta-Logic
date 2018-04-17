@@ -1,0 +1,108 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: acmart-pacmpl-template.aux
+The style file: ACM-Reference-Format.bst
+Database file #1: references.bib
+"{" immediately follows a field part---line 31 of file references.bib
+ : author=P
+ :         {\'e}rez, Juan Antonio Navarro
+I'm skipping whatever remains of this entry
+Warning--string name "le" is undefined
+--line 51 of file references.bib
+I was expecting an "="---line 51 of file references.bib
+ : author=le, quang 
+ :                  Loc
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 72 of file references.bib
+ : 
+ : and Iosif, Radu
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--string name "piskac" is undefined
+--line 147 of file references.bib
+I was expecting an "="---line 148 of file references.bib
+ : 
+ : and Wies, Thomas
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 167 of file references.bib
+ : 
+ : and Dr{\u{a}}goi, Cezara
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 188 of file references.bib
+ :  booktitle = "Proceedings of the 21st International Conference on Automated Deduction: Automated Deduction
+ :                                                                                                           },
+I'm skipping whatever remains of this entry
+Warning--no key, author in PerezRybalchenko2013
+Warning--no author, editor, organization, or key in PerezRybalchenko2013
+Warning--to sort, need author or key in PerezRybalchenko2013
+Warning--no key, author in LeTatsutaSun2017
+Warning--no author, editor, organization, or key in LeTatsutaSun2017
+Warning--to sort, need author or key in LeTatsutaSun2017
+Warning--no key, author in PiskacWiesZufferey2014Tool
+Warning--no author, editor, organization, or key in PiskacWiesZufferey2014Tool
+Warning--to sort, need author or key in PiskacWiesZufferey2014Tool
+Warning--no key, author in LeTatsutaSun2017
+Warning--no key, author in LeTatsutaSun2017
+Warning--no key, author in PerezRybalchenko2013
+Warning--no key, author in PerezRybalchenko2013
+Warning--no key, author in PiskacWiesZufferey2014Tool
+Warning--no key, author in PiskacWiesZufferey2014Tool
+Warning--no key, author in PerezRybalchenko2013
+Warning--no author, editor, organization, or key in PerezRybalchenko2013
+Warning--empty author in PerezRybalchenko2013
+Warning--empty year in PerezRybalchenko2013
+Warning--empty title in PerezRybalchenko2013
+Warning--empty booktitle in PerezRybalchenko2013
+Warning--empty publisher in PerezRybalchenko2013
+Warning--empty address in PerezRybalchenko2013
+Warning--page numbers missing in both pages and numpages fields in PerezRybalchenko2013
+Warning--no key, author in LeTatsutaSun2017
+Warning--no author, editor, organization, or key in LeTatsutaSun2017
+Warning--empty author in LeTatsutaSun2017
+Warning--empty year in LeTatsutaSun2017
+Warning--empty title in LeTatsutaSun2017
+Warning--empty booktitle in LeTatsutaSun2017
+Warning--empty publisher in LeTatsutaSun2017
+Warning--empty address in LeTatsutaSun2017
+Warning--page numbers missing in both pages and numpages fields in LeTatsutaSun2017
+Warning--no key, author in PiskacWiesZufferey2014Tool
+Warning--no author, editor, organization, or key in PiskacWiesZufferey2014Tool
+Warning--empty author in PiskacWiesZufferey2014Tool
+Warning--empty year in PiskacWiesZufferey2014Tool
+Warning--empty title in PiskacWiesZufferey2014Tool
+Warning--empty booktitle in PiskacWiesZufferey2014Tool
+Warning--empty publisher in PiskacWiesZufferey2014Tool
+Warning--empty address in PiskacWiesZufferey2014Tool
+Warning--page numbers missing in both pages and numpages fields in PiskacWiesZufferey2014Tool
+Warning--empty publisher in BerdineCalcagnoOHearn2004
+Warning--empty address in BerdineCalcagnoOHearn2004
+Warning--empty publisher in BerdineCalcagnoOHearn2005
+Warning--empty address in BerdineCalcagnoOHearn2005
+Warning--empty publisher in BrotherstonFuhsPerez2014
+Warning--empty address in BrotherstonFuhsPerez2014
+Warning--empty publisher in ChinDavidNguyen2007
+Warning--empty address in ChinDavidNguyen2007
+Warning--empty publisher in CookHaaseChristoph2011
+Warning--empty address in CookHaaseChristoph2011
+Warning--empty publisher in IosifRogalewiczSimacek2013
+Warning--empty address in IosifRogalewiczSimacek2013
+Warning--empty publisher in BAPA
+Warning--empty address in BAPA
+Warning--empty year in BAPA2
+Warning--empty booktitle in BAPA2
+Warning--empty publisher in BAPA2
+Warning--empty address in BAPA2
+Warning--page numbers missing in both pages and numpages fields in BAPA2
+Warning--empty publisher in LeSunChin2016
+Warning--empty address in LeSunChin2016
+Warning--empty publisher in MadhusudanParlatoQiu2011
+Warning--empty address in MadhusudanParlatoQiu2011
+Warning--empty publisher in PerezAntonioRybalchenko2011
+Warning--empty address in PerezAntonioRybalchenko2011
+Warning--empty publisher in PiskacWiesZufferey2014
+Warning--empty address in PiskacWiesZufferey2014
+Warning--empty publisher in QiuGargStefanescu2013
+Warning--empty address in QiuGargStefanescu2013
+Warning--empty publisher in Reynolds2002
+Warning--empty address in Reynolds2002
+(There were 6 error messages)

@@ -1,0 +1,26 @@
+\section{Incorporating function calls with delta-logic}
+\label{sec:generalvc}
+Thus far, we have focused on formulating the VC for basic blocks \emph{without function calls} for heap manipulating programs and have shown a decidable logic of lists and list-measures that solves the delta-logic VC. As we have stated earlier, we recommend the continued use of frame reasoning to perform an inference on the post-state across a function call. In this section, we show how to generate VCs for a general setup that has both basic blocks and function calls, handling delta-changes using delta-logics and function calls using frame reasoning. To illustrate the key idea of our technique better, we shall restrict ourselves to the simple case of the delta-logic of lists and list-measures introduced earlier. A formulation for general delta-logics is a natural extension.
+
+For simplicity of exposition, let us consider generating a VC for the case of a basic block of the form: $S_1;\, \texttt{foo}(\overline{y})$. Let the pre and post conditions be denoted by $\varphi_{pre}$ and $\varphi_{post}$.
+
+Observe that we already know how to encode the transformation obtained from $S_1$ in a delta-logic formula, say $T_1$. We also know to write the pre and post conditions of the program in delta-logic as well. Let these be $\varphi_{pre-delta}$ and $\varphi_{post-delta}$ respectively.
+
+In order to encode frame reasoning for the function call, we do the following:
+\begin{itemize}
+ \item We introduce a new function $n'$ (modeling the new \textit{next} pointer), similarly new data fields (say, $key'$) and new recursive definitions, $\textit{list}'$, etc., defined using the new functions.
+ \item We add constraints that model frame reasoning, saying that a recursive predicate/function has the same valuation as it did before the function call, \emph{for the program variables in the basic block}, if the heaplet corresponding to the recursive definition did not intersect the modified heaplet of the function call. We also express a similar constraint for the function $n'$. Note that these are quantifier-free formulae.
+ \item We then express that the post-condition of the function \texttt{foo} holds, using the new recursive definitions.
+\end{itemize}
+
+Observe that the postcondition of the program would be encoded by using these new recursive definitions that use $n'$. We can then write these formulae in delta-logic, by using parameterized versions of these new recursive definitions.
+
+In the case of our decidable delta-logic of lists and list-measures, we model the abstraction of the context in the post-state of the function call with a function $T'$, analogous to the abstraction of the context in the pre-state using the uninterpreted function $T$ (as explained in Section~\ref{sec:decidability}). We then express similar constraints on summarizing segments in the post-state's context using $T'$ and reason with the resulting VC. Notice that the decidability result for the delta-logic of lists and list-measures extends naturally to the addition of a second version of the recursive definitions defined over $n'$ instead of $n$ (and similarly for the data fields) and summarized by $T'$ instead of $T$ since the relationships between these due to the program transformation are all expressible by quantifier-free formulae. 
+
+Let the pre and post conditions of \texttt{foo} be denoted by $FC_{pre}$ and $FC_{post}$ respectively. Then, if the the VC for this program would be of the form:\\
+\begin{center}
+ $\varphi_{pre-delta}(\mathcal{R}^{P1}, n, \overline{x}) \land{} T_1(\mathcal{R}^{P1},\mathcal{R}^{P2}, n, \overline{x}) \land{} \left(FC_{pre}(\mathcal{R}^{P2}, n, \overline{x}) \Rightarrow{} FC_{post}(\mathcal{R'}^{P3}, n', \overline{x}') \right) \land{}$ \textit{frame-reasoning}(heaplet($FC_{pre})$) $\Rightarrow{} \varphi_{post-delta}(\mathcal{R'}^{P3}, n', \overline{x}')$ 
+\end{center}
+where $\mathcal{R}^{P_1},\, \mathcal{R}^{P_2}$ refer to the parameterized recursive functions in the state of the program before the function call: one set of parameters each for the states before and after $S_1$, and $\mathcal{R'}^{P_3}$ refers to the parameterized recursive functions that are defined on the state of the program after the function call. $n$ and $n'$ refer to the respective pointers, and $\overline{x}$ and $\overline{x}'$ refer to the total set of program variables in the pre- and post-states of the function call. Finally, \textit{frame-reasoning} is a formula that systematically infers valuations of recursive functions on the post-state of the function call from the corresponding valuations on the pre-state, depending on the heaplet of the function call. Observe that this is a delta-logic formula.
+
+It is easy to see that this technique can be extended to any number of basic blocks interrupted by function calls. This gives us a generalized VC generation technique that helps us verify more interesting programs, examples of which are discussed in Section~\ref{sec:experiments}.

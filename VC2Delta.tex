@@ -20,12 +20,12 @@ First, using the separability theorem, Theorem~\ref{Separability}, we can write 
 as delta-logic formulae $\alpha_{\textit{pre}}^*(U, X, P, \mathcal{R}^U)$ and $\alpha_{\textit{post}}^*(V, X', P', \mathcal{(R')}^V)$.
 Notice that the definition of $R'$ uses the transformed fields $P'$ and we translate using \emph{different} sets of parameters: $U$
 and $V$. However, observe that since $(R')^V$ is a contextual definition, we know that it does not refer to the changed heaplet
-$\Delta$. Consequently, we can replace $P'$ with $P$ uniformly in $(R')^V$. Also, we can \emph{remove} the universally
+$\Delta$. Consequently, we can replace $P'$ with $P$ uniformly in $(R')^V$, which yields $(R)^V$. Also, we can \emph{remove} the universally
 quantified conjunct in $T$ that says that fields for locations outside $\Delta$ are unaltered.
 
 This leaves us with a verification condition of the form:\\
 \centerline{ $\alpha_{\textit{pre}}^*(U, X, P, \mathcal{R}^U) \wedge 
-T_\Delta(X, X', P, P') \Rightarrow \alpha_{\textit{post}}^*(V, X', P, \mathcal{(R')}^V)$}\\
+T_\Delta(X, X', P, P') \Rightarrow \alpha_{\textit{post}}^*(V, X', P, \mathcal{(R)}^V)$}\\
 where $T_\Delta$ is a
 delta-specific formula that simply says how the variables $X$ change to $X'$, and the fields $P$ change to $P'$ over $\Delta$.
 The VC is now clearly a delta-logic formula.

@@ -1,19 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: deltalogic.aux
-White space in argument---line 44 of file deltalogic.aux
- : \citation{BerdineCalcagnoO'Hearn2004,BerdineCalcagnoO'Hearn2005,CookHaaseChristoph2011,PerezAntonioRybalchenko2011
- :                                                                                                                    }
-I'm skipping whatever remains of this command
-White space in argument---line 47 of file deltalogic.aux
- : \citation{LeTatsutaSun2017,LeSunChin2016
- :                                          }
-I'm skipping whatever remains of this command
 The style file: ACM-Reference-Format.bst
 Database file #1: references.bib
 Warning--I didn't find a database entry for "Reynolds2002"
-Warning--empty publisher in BerdineCalcagnoO'Hearn2004
-Warning--empty address in BerdineCalcagnoO'Hearn2004
-Warning--empty publisher in BerdineCalcagnoO'Hearn2005
-Warning--empty address in BerdineCalcagnoO'Hearn2005
+Warning--empty publisher in BerdineCalcagnoOHearn2004
+Warning--empty address in BerdineCalcagnoOHearn2004
+Warning--empty publisher in BerdineCalcagnoOHearn2005
+Warning--empty address in BerdineCalcagnoOHearn2005
 Warning--empty publisher in BrotherstonFuhsPerez2014
 Warning--empty address in BrotherstonFuhsPerez2014
 Warning--empty publisher in ChinDavidNguyen2007
@@ -26,15 +18,19 @@ Warning--empty publisher in BAPA
 Warning--empty address in BAPA
 Warning--empty publisher in BAPA2
 Warning--empty address in BAPA2
+Warning--empty publisher in LeSunChin2016
+Warning--empty address in LeSunChin2016
 Warning--empty publisher in LeTatsutaSun2017
 Warning--empty address in LeTatsutaSun2017
 Warning--page numbers missing in both pages and numpages fields in LeTatsutaSun2017
 Warning--empty publisher in MadhusudanParlatoQiu2011
 Warning--empty address in MadhusudanParlatoQiu2011
+Warning--empty publisher in PerezAntonioRybalchenko2011
+Warning--empty address in PerezAntonioRybalchenko2011
 Warning--empty publisher in PiskacWiesZufferey2014
 Warning--empty address in PiskacWiesZufferey2014
 Warning--empty publisher in PiskacWiesZufferey2014Tool
 Warning--empty address in PiskacWiesZufferey2014Tool
 Warning--empty publisher in QiuGargStefanescu2013
 Warning--empty address in QiuGargStefanescu2013
-(There were 2 error messages)
+(There were 32 warnings)

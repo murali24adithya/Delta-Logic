@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{14}
+\begin{thebibliography}{16}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -39,7 +39,7 @@
 
 \bibitem[\protect\citeauthoryear{"Berdine, Calcagno, and O'Hearn}{"Berdine
   et~al\mbox{.}}{2004}]%
-        {BerdineCalcagnoO'Hearn2004}
+        {BerdineCalcagnoOHearn2004}
 \bibfield{author}{\bibinfo{person}{Josh "Berdine}, \bibinfo{person}{Cristiano
   Calcagno}, {and} \bibinfo{person}{Peter~W." O'Hearn}.}
   \bibinfo{year}{"2004"}\natexlab{}.
@@ -52,7 +52,7 @@
 
 \bibitem[\protect\citeauthoryear{"Berdine, Calcagno, and O'Hearn}{"Berdine
   et~al\mbox{.}}{2005}]%
-        {BerdineCalcagnoO'Hearn2005}
+        {BerdineCalcagnoOHearn2005}
 \bibfield{author}{\bibinfo{person}{Josh "Berdine}, \bibinfo{person}{Cristiano
   Calcagno}, {and} \bibinfo{person}{Peter~W." O'Hearn}.}
   \bibinfo{year}{"2005"}\natexlab{}.
@@ -145,6 +145,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{"Le, Sun, and Chin}{"Le et~al\mbox{.}}{2016}]%
+        {LeSunChin2016}
+\bibfield{author}{\bibinfo{person}{Quang~Loc "Le}, \bibinfo{person}{Jun Sun},
+  {and} \bibinfo{person}{Wei-Ngan" Chin}.} \bibinfo{year}{"2016"}\natexlab{}.
+\newblock \showarticletitle{"Satisfiability Modulo Heap-Based Programs"}. In
+  \bibinfo{booktitle}{\emph{"Computer Aided Verification"}}.
+  \bibinfo{pages}{"382--404"}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Le, Tatsuta, Sun, and Chin}{Le
   et~al\mbox{.}}{2017}]%
         {LeTatsutaSun2017}
@@ -167,6 +177,18 @@
   Data"}. In \bibinfo{booktitle}{\emph{"Proceedings of the 38th Annual ACM
   SIGPLAN-SIGACT Symposium on Principles of Programming Languages"}}
   \emph{(\bibinfo{series}{"POPL '11"})}. \bibinfo{pages}{"611--622"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{"Navarro~P{\'e}rez and
+  Rybalchenko}{"Navarro~P{\'e}rez and Rybalchenko}{2011}]%
+        {PerezAntonioRybalchenko2011}
+\bibfield{author}{\bibinfo{person}{Juan~Antonio "Navarro~P{\'e}rez} {and}
+  \bibinfo{person}{Andrey" Rybalchenko}.} \bibinfo{year}{"2011"}\natexlab{}.
+\newblock \showarticletitle{"Separation Logic + Superposition Calculus = Heap
+  Theorem Prover"}. In \bibinfo{booktitle}{\emph{"Proceedings of the 32Nd ACM
+  SIGPLAN Conference on Programming Language Design and Implementation"}}
+  \emph{(\bibinfo{series}{"PLDI '11"})}. \bibinfo{pages}{"556--566"}.
 \newblock
 
 

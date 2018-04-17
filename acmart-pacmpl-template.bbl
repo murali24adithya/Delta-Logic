@@ -1,0 +1,234 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{17}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{??}{Per}{[n. d.]}]%
+        {PerezRybalchenko2013}
+ \bibinfo{year}{[n. d.]}\natexlab{}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{??}{LeT}{[n. d.]}]%
+        {LeTatsutaSun2017}
+ \bibinfo{year}{[n. d.]}\natexlab{}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{??}{Pis}{[n. d.]}]%
+        {PiskacWiesZufferey2014Tool}
+ \bibinfo{year}{[n. d.]}\natexlab{}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Berdine, Calcagno, and O'Hearn}{Berdine
+  et~al\mbox{.}}{2004}]%
+        {BerdineCalcagnoOHearn2004}
+\bibfield{author}{\bibinfo{person}{Josh Berdine}, \bibinfo{person}{Cristiano
+  Calcagno}, {and} \bibinfo{person}{Peter~W. O'Hearn}.}
+  \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{A Decidable Fragment of Separation Logic}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 24th International Conference on
+  Foundations of Software Technology and Theoretical Computer Science}}
+  \emph{(\bibinfo{series}{"FSTTCS'04})}. \bibinfo{pages}{97--109}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Berdine, Calcagno, and O'Hearn}{Berdine
+  et~al\mbox{.}}{2005}]%
+        {BerdineCalcagnoOHearn2005}
+\bibfield{author}{\bibinfo{person}{Josh Berdine}, \bibinfo{person}{Cristiano
+  Calcagno}, {and} \bibinfo{person}{Peter~W. O'Hearn}.}
+  \bibinfo{year}{"2005"}\natexlab{}.
+\newblock \showarticletitle{"Symbolic Execution with Separation Logic"}. In
+  \bibinfo{booktitle}{\emph{"Proceedings of the Third Asian Conference on
+  Programming Languages and Systems"}} \emph{(\bibinfo{series}{"APLAS'05"})}.
+  \bibinfo{pages}{"52--68"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Brotherston, Fuhs, P{\'e}rez, and
+  Gorogiannis}{Brotherston et~al\mbox{.}}{2014}]%
+        {BrotherstonFuhsPerez2014}
+\bibfield{author}{\bibinfo{person}{James Brotherston}, \bibinfo{person}{Carsten
+  Fuhs}, \bibinfo{person}{Juan A.~Navarro P{\'e}rez}, {and}
+  \bibinfo{person}{Nikos Gorogiannis}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{A Decision Procedure for Satisfiability in
+  Separation Logic with Inductive Predicates}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the Joint Meeting of the
+  Twenty-Third EACSL Annual Conference on Computer Science Logic (CSL) and the
+  Twenty-Ninth Annual ACM/IEEE Symposium on Logic in Computer Science (LICS)}}
+  \emph{(\bibinfo{series}{CSL-LICS '14})}. \bibinfo{pages}{25:1--25:10}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chin, David, Nguyen, and Qin}{Chin
+  et~al\mbox{.}}{2007}]%
+        {ChinDavidNguyen2007}
+\bibfield{author}{\bibinfo{person}{W.~N. Chin}, \bibinfo{person}{C. David},
+  \bibinfo{person}{H.~H. Nguyen}, {and} \bibinfo{person}{S. Qin}.}
+  \bibinfo{year}{"2007"}\natexlab{}.
+\newblock \showarticletitle{"Automated Verification of Shape, Size and Bag
+  Properties"}. In \bibinfo{booktitle}{\emph{"12th IEEE International
+  Conference on Engineering Complex Computer Systems (ICECCS 2007)"}}.
+  \bibinfo{pages}{"307--320"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cook, Haase, Ouaknine, Parkinson, and
+  Worrell}{Cook et~al\mbox{.}}{2011}]%
+        {CookHaaseChristoph2011}
+\bibfield{author}{\bibinfo{person}{Byron Cook}, \bibinfo{person}{Christoph
+  Haase}, \bibinfo{person}{Jo\"{e}l Ouaknine}, \bibinfo{person}{Matthew
+  Parkinson}, {and} \bibinfo{person}{James Worrell}.}
+  \bibinfo{year}{"2011"}\natexlab{}.
+\newblock \showarticletitle{"Tractable Reasoning in a Fragment of Separation
+  Logic"}. In \bibinfo{booktitle}{\emph{"Proceedings of the 22Nd International
+  Conference on Concurrency Theory"}} \emph{(\bibinfo{series}{"CONCUR'11"})}.
+  \bibinfo{pages}{"235--249"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Iosif, Rogalewicz, and Simacek}{Iosif
+  et~al\mbox{.}}{2013}]%
+        {IosifRogalewiczSimacek2013}
+\bibfield{author}{\bibinfo{person}{Radu Iosif}, \bibinfo{person}{Adam
+  Rogalewicz}, {and} \bibinfo{person}{Jiri Simacek}.}
+  \bibinfo{year}{"2013"}\natexlab{}.
+\newblock \showarticletitle{"The Tree Width of Separation Logic with Recursive
+  Definitions"}. In \bibinfo{booktitle}{\emph{"Proceedings of the 24th
+  International Conference on Automated Deduction"}}
+  \emph{(\bibinfo{series}{"CADE'13"})}. \bibinfo{pages}{"21--38"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kuncak, Nguyen, and Rinard}{Kuncak
+  et~al\mbox{.}}{2005}]%
+        {BAPA}
+\bibfield{author}{\bibinfo{person}{Viktor Kuncak}, \bibinfo{person}{Huu~Hai
+  Nguyen}, {and} \bibinfo{person}{Martin Rinard}.}
+  \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{An Algorithm for Deciding BAPA: Boolean Algebra
+  with Presburger Arithmetic}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  20th International Conference on Automated Deduction}}
+  \emph{(\bibinfo{series}{CADE' 20})}. \bibinfo{pages}{260--277}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kuncak and Rinard}{Kuncak and Rinard}{[n.
+  d.]}]%
+        {BAPA2}
+\bibfield{author}{\bibinfo{person}{Viktor Kuncak} {and} \bibinfo{person}{Martin
+  Rinard}.} \bibinfo{year}{[n. d.]}\natexlab{}.
+\newblock \showarticletitle{Towards Efficient Satisfiability Checking for
+  Boolean Algebra with Presburger Arithmetic}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{"Le, Sun, and Chin}{"Le et~al\mbox{.}}{2016}]%
+        {LeSunChin2016}
+\bibfield{author}{\bibinfo{person}{Quang~Loc "Le}, \bibinfo{person}{Jun Sun},
+  {and} \bibinfo{person}{Wei-Ngan" Chin}.} \bibinfo{year}{"2016"}\natexlab{}.
+\newblock \showarticletitle{Satisfiability Modulo Heap-Based Programs}. In
+  \bibinfo{booktitle}{\emph{"Computer Aided Verification"}}.
+  \bibinfo{pages}{"382--404"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Madhusudan, Parlato, and Qiu}{Madhusudan
+  et~al\mbox{.}}{2011}]%
+        {MadhusudanParlatoQiu2011}
+\bibfield{author}{\bibinfo{person}{P. Madhusudan}, \bibinfo{person}{Gennaro
+  Parlato}, {and} \bibinfo{person}{Xiaokang Qiu}.}
+  \bibinfo{year}{"2011"}\natexlab{}.
+\newblock \showarticletitle{"Decidable Logics Combining Heap Structures and
+  Data"}. In \bibinfo{booktitle}{\emph{"Proceedings of the 38th Annual ACM
+  SIGPLAN-SIGACT Symposium on Principles of Programming Languages"}}
+  \emph{(\bibinfo{series}{"POPL '11"})}. \bibinfo{pages}{"611--622"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Navarro~P{\'e}rez and
+  Rybalchenko}{Navarro~P{\'e}rez and Rybalchenko}{2011}]%
+        {PerezAntonioRybalchenko2011}
+\bibfield{author}{\bibinfo{person}{Juan~Antonio Navarro~P{\'e}rez} {and}
+  \bibinfo{person}{Andrey Rybalchenko}.} \bibinfo{year}{"2011"}\natexlab{}.
+\newblock \showarticletitle{"Separation Logic + Superposition Calculus = Heap
+  Theorem Prover"}. In \bibinfo{booktitle}{\emph{"Proceedings of the 32Nd ACM
+  SIGPLAN Conference on Programming Language Design and Implementation"}}
+  \emph{(\bibinfo{series}{"PLDI '11"})}. \bibinfo{pages}{"556--566"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Piskac, Wies, and Zufferey}{Piskac
+  et~al\mbox{.}}{2014}]%
+        {PiskacWiesZufferey2014}
+\bibfield{author}{\bibinfo{person}{Ruzica Piskac}, \bibinfo{person}{Thomas
+  Wies}, {and} \bibinfo{person}{Damien Zufferey}.}
+  \bibinfo{year}{"2014"}\natexlab{}.
+\newblock \showarticletitle{"Automating Separation Logic with Trees and Data"}.
+  In \bibinfo{booktitle}{\emph{"Proceedings of the 16th International
+  Conference on Computer Aided Verification - Volume 8559"}}.
+  \bibinfo{pages}{"711--728"}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Qiu, Garg, \c{S}tef\u{a}nescu, and
+  Madhusudan}{Qiu et~al\mbox{.}}{2013}]%
+        {QiuGargStefanescu2013}
+\bibfield{author}{\bibinfo{person}{Xiaokang Qiu}, \bibinfo{person}{Pranav
+  Garg}, \bibinfo{person}{Andrei \c{S}tef\u{a}nescu}, {and}
+  \bibinfo{person}{Parthasarathy Madhusudan}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Natural Proofs for Structure, Data, and
+  Separation}. In \bibinfo{booktitle}{\emph{Proceedings of the 34th ACM SIGPLAN
+  Conference on Programming Language Design and Implementation}}
+  \emph{(\bibinfo{series}{PLDI '13})}. \bibinfo{pages}{231--242}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Reynolds}{Reynolds}{2002}]%
+        {Reynolds2002}
+\bibfield{author}{\bibinfo{person}{John~C. Reynolds}.}
+  \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Separation Logic: A Logic for Shared Mutable Data
+  Structures}. In \bibinfo{booktitle}{\emph{Proceedings of the 17th Annual IEEE
+  Symposium on Logic in Computer Science}} \emph{(\bibinfo{series}{LICS '02})}.
+  \bibinfo{pages}{55--74}.
+\newblock
+
+
+\end{thebibliography}

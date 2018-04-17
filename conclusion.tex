@@ -1,0 +1,12 @@
+\section{Conclusion and Future Work}
+\label{sec:conclusion}
+In conclusion, we presented a general delta-logic for generating precise verification conditions for heap-manipulating programs that are also amenable to automated reasoning. We proved a Separability Theorem to generate VCs in delta-logics, and used it to build a powerful decidable delta-logic on lists and list-measures. By incorporating frame-reasoning for function calls along with delta-logics, we have provided a tool for verifying a large suite of list-manipulating programs.
+
+We seek to do the following as future work:
+\begin{itemize}
+\item Extend our decidability result to trees and measures on them, similar to our list-measures, such as heaplet, height, multiset of keys, predicates checking for binary search trees, etc.
+
+\item Improve our codebase towards a programmer-facing tool that can be used for verification.
+
+\item Incorporate our method into a full-fledged verification engine such as Boogie.
+\end{itemize}

@@ -1,7 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.24)  14 APR 2018 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.24)  17 APR 2018 14:01
 entering extended mode
-**./deltalogic.tex
-(deltalogic.tex
+**"C:/Users/Adithya/Documents/Acads/UIUC/Madhu research/Delta-Logic/deltalogic.
+tex"
+
+("C:/Users/Adithya/Documents/Acads/UIUC/Madhu research/Delta-Logic/deltalogic.t
+ex"
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 (acmart.cls
@@ -42,8 +45,10 @@ Package acmart Info: Explicitly selecting natbib mode on input line 106.
 Package acmart Info: Not using anonymous mode on input line 114.
 Package acmart Info: Not using timestamp mode on input line 122.
 Package acmart Info: Not using authordraft mode on input line 132.
-Class acmart Info: Using format manuscript, number 0 on input line 141.
-Class acmart Info: Using fontsize 9pt on input line 199.
+Package acmart Info: Using review mode on input line 141.
+Package acmart Info: Using anonymous mode on input line 141.
+Class acmart Info: Using format acmsmall, number 1 on input line 141.
+Class acmart Info: Using fontsize 10pt on input line 199.
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsart.cl
 s"
@@ -210,10 +215,6 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 paces.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspace\setspac
-e.sty"
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\textcase\textcas
 e.sty"
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
@@ -741,7 +742,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@ACM@badge@skip=\skip58
 Class acmart Info: Printing CCS on input line 1258.
 Class acmart Info: Printing bibformat on input line 1258.
-Class acmart Info: Printing folios on input line 1260.
+Class acmart Info: Printing folios on input line 1263.
 Class acmart Info: Setting authorsperrow to 0 on input line 1268.
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\comment\comment.
@@ -768,6 +769,9 @@ s
 \f@nch@O@olf=\skip67
 \f@nch@O@orf=\skip68
 )
+\ACM@linecount@bx=\box34
+\ACM@linecount@bxht=\skip69
+\ACM@linecount=\count129
 \@folio@wd=\dimen140
 \@folio@ht=\dimen141
 \@folio@voffset=\dimen142
@@ -781,13 +785,13 @@ File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Li
 nuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2566.
+(Font)              scaled to size 10.0pt on input line 2566.
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcapti
 on.sty"
 Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
-\c@subfigure=\count129
-\c@subtable=\count130
+\c@subfigure=\count130
+\c@subtable=\count131
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb
 .sty"
@@ -1015,14 +1019,14 @@ nment
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks32
-\c@algorithm=\count131
+\c@algorithm=\count132
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.
 sty"
 \wrapoverhang=\dimen143
 \WF@size=\dimen144
-\c@WF@wrappedlines=\count132
-\WF@box=\box34
+\c@WF@wrappedlines=\count133
+\WF@box=\box35
 \WF@everypar=\toks33
 Package: wrapfig 2003/01/31  v 3.6
 )
@@ -1035,16 +1039,16 @@ orithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count133
-\c@ALG@rem=\count134
-\c@ALG@nested=\count135
-\ALG@tlm=\skip69
-\ALG@thistlm=\skip70
-\c@ALG@Lnr=\count136
-\c@ALG@blocknr=\count137
-\c@ALG@storecount=\count138
-\c@ALG@tmpcounter=\count139
-\ALG@tmplength=\skip71
+\c@ALG@line=\count134
+\c@ALG@rem=\count135
+\c@ALG@nested=\count136
+\ALG@tlm=\skip70
+\ALG@thistlm=\skip71
+\c@ALG@Lnr=\count137
+\c@ALG@blocknr=\count138
+\c@ALG@storecount=\count139
+\c@ALG@tmpcounter=\count140
+\ALG@tmplength=\skip72
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 )
@@ -1068,31 +1072,31 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen152
 \cmidrulekern=\dimen153
 \defaultaddspace=\dimen154
-\@cmidla=\count140
-\@cmidlb=\count141
+\@cmidla=\count141
+\@cmidlb=\count142
 \@aboverulesep=\dimen155
 \@belowrulesep=\dimen156
-\@thisruleclass=\count142
-\@lastruleclass=\count143
+\@thisruleclass=\count143
+\@lastruleclass=\count144
 \@thisrulewidth=\dimen157
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.
 sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip72
-\LTright=\skip73
-\LTpre=\skip74
-\LTpost=\skip75
-\LTchunksize=\count144
+\LTleft=\skip73
+\LTright=\skip74
+\LTpre=\skip75
+\LTpost=\skip76
+\LTchunksize=\count145
 \LTcapwidth=\dimen158
-\LT@head=\box35
-\LT@firsthead=\box36
-\LT@foot=\box37
-\LT@lastfoot=\box38
-\LT@cols=\count145
-\LT@rows=\count146
-\c@LT@tables=\count147
-\c@LT@chunks=\count148
+\LT@head=\box36
+\LT@firsthead=\box37
+\LT@foot=\box38
+\LT@lastfoot=\box39
+\LT@cols=\count146
+\LT@rows=\count147
+\c@LT@tables=\count148
+\c@LT@chunks=\count149
 \LT@p@ftn=\toks34
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlaye
@@ -1111,7 +1115,7 @@ pgfutil-common.tex"
 pgfutil-common-lists.tex"))
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
 pgfutil-latex.def"
-\pgfutil@abb=\box39
+\pgfutil@abb=\box40
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\
 pgfrcs.code.tex"
@@ -1146,10 +1150,10 @@ pgfkeysfiltered.code.tex"
 \pgf@yc=\dimen168
 \w@pgf@writea=\write5
 \r@pgf@reada=\read1
-\c@pgf@counta=\count149
-\c@pgf@countb=\count150
-\c@pgf@countc=\count151
-\c@pgf@countd=\count152
+\c@pgf@counta=\count150
+\c@pgf@countb=\count151
+\c@pgf@countc=\count152
+\c@pgf@countd=\count153
 \t@pgf@toka=\toks39
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
@@ -1171,8 +1175,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
 r\pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count153
-\pgfsyssoftpath@bigbuffer@items=\count154
+\pgfsyssoftpath@smallbuffer@items=\count154
+\pgfsyssoftpath@bigbuffer@items=\count155
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlaye
 r\pgfsysprotocol.code.tex"
@@ -1191,8 +1195,8 @@ thutil.code.tex")
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
 thparser.code.tex"
 \pgfmath@dimen=\dimen169
-\pgfmath@count=\count155
-\pgfmath@box=\box40
+\pgfmath@count=\count156
+\pgfmath@box=\box41
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
 \pgfmath@stack@operation=\toks44
@@ -1217,7 +1221,7 @@ thfunctions.misc.code.tex")
 thfunctions.integerarithmetics.code.tex")))
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfma
 thfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count156
+\c@pgfmathroundto@lastzeros=\count157
 ))
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
 \pgfcorepoints.code.tex"
@@ -1252,10 +1256,10 @@ File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
 \pgfcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box41
-\pgf@hbox=\box42
-\pgf@layerbox@main=\box43
-\pgf@picture@serial@count=\count157
+\pgfpic=\box42
+\pgf@hbox=\box43
+\pgf@layerbox@main=\box44
+\pgf@picture@serial@count=\count158
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
 \pgfcoregraphicstate.code.tex"
@@ -1290,7 +1294,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen193
-\pgf@sys@shading@range@num=\count158
+\pgf@sys@shading@range@num=\count159
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
 \pgfcoreimage.code.tex"
@@ -1299,7 +1303,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
 \pgfcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box44
+\pgfexternal@startupbox=\box45
 ))
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer
 \pgfcorelayers.code.tex"
@@ -1316,7 +1320,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pg
 fmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box45
+\pgfnodeparttextbox=\box46
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pg
 fmoduleplot.code.tex"
@@ -1360,7 +1364,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
 pgflibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count159
+\pgf@plot@mark@count=\count160
 \pgfplotmarksize=\dimen257
 )
 \tikz@lastx=\dimen258
@@ -1369,23 +1373,23 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@lastysaved=\dimen261
 \tikzleveldistance=\dimen262
 \tikzsiblingdistance=\dimen263
-\tikz@figbox=\box46
-\tikz@figbox@bg=\box47
-\tikz@tempbox=\box48
-\tikz@tempbox@bg=\box49
-\tikztreelevel=\count160
-\tikznumberofchildren=\count161
-\tikznumberofcurrentchild=\count162
-\tikz@fig@count=\count163
+\tikz@figbox=\box47
+\tikz@figbox@bg=\box48
+\tikz@tempbox=\box49
+\tikz@tempbox@bg=\box50
+\tikztreelevel=\count161
+\tikznumberofchildren=\count162
+\tikznumberofcurrentchild=\count163
+\tikz@fig@count=\count164
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pg
 fmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count164
-\pgfmatrixcurrentcolumn=\count165
-\pgf@matrix@numberofcolumns=\count166
+\pgfmatrixcurrentrow=\count165
+\pgfmatrixcurrentcolumn=\count166
+\pgf@matrix@numberofcolumns=\count167
 )
-\tikz@expandcount=\count167
+\tikz@expandcount=\count168
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
 yer\tikz\libraries\tikzlibrarytopaths.code.tex"
@@ -1405,8 +1409,8 @@ otscore.code.tex"
 \t@pgfplots@tokb=\toks48
 \t@pgfplots@tokc=\toks49
 \pgfplots@tmpa=\dimen264
-\c@pgfplots@coordindex=\count168
-\c@pgfplots@scanlineindex=\count169
+\c@pgfplots@coordindex=\count169
+\c@pgfplots@scanlineindex=\count170
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\p
 gfplotssysgeneric.code.tex"))
@@ -1422,7 +1426,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 fcompatib\pgfplotsoldpgfsupp_pgflibraryfpu.code.tex")
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpg
 fcompatib\pgfplotsoldpgfsupp_pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count170
+\c@pgfmathroundto@lastzeros=\count171
 ))
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\
 pgfplotsutil.code.tex"
@@ -1432,13 +1436,13 @@ tructure\pgfplotsliststructure.code.tex")
 tructure\pgfplotsliststructureext.code.tex")
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
 tructure\pgfplotsarray.code.tex"
-\c@pgfplotsarray@tmp=\count171
+\c@pgfplotsarray@tmp=\count172
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
 tructure\pgfplotsmatrix.code.tex")
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\numta
 ble\pgfplotstableshared.code.tex"
-\c@pgfplotstable@counta=\count172
+\c@pgfplotstable@counta=\count173
 \t@pgfplotstable@a=\toks50
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\lists
@@ -1451,7 +1455,7 @@ pgfplotsbinary.data.code.tex"))
 pgfplotsutil.verb.code.tex")
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\libs\
 pgflibrarypgfplots.surfshading.code.tex"
-\c@pgfplotslibrarysurf@no=\count173
+\c@pgfplotslibrarysurf@no=\count174
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\p
 gflibrarypgfplots.surfshading.pgfsys-pdftex.def")))
@@ -1488,11 +1492,11 @@ fmoduledecorations.code.tex"
 \pgfdecoratedinputsegmentcompleteddistance=\dimen267
 \pgfdecoratedinputsegmentremainingdistance=\dimen268
 \pgf@decorate@distancetomove=\dimen269
-\pgf@decorate@repeatstate=\count174
+\pgf@decorate@repeatstate=\count175
 \pgfdecorationsegmentamplitude=\dimen270
 \pgfdecorationsegmentlength=\dimen271
 )
-\tikz@lib@dec@box=\box50
+\tikz@lib@dec@box=\box51
 )
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
 yer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex"
@@ -1502,7 +1506,7 @@ decorations\pgflibrarydecorations.pathmorphing.code.tex"))
 yer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex"
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\
 decorations\pgflibrarydecorations.pathreplacing.code.tex"))
-\pgfplots@numplots=\count175
+\pgfplots@numplots=\count176
 \pgfplots@xmin@reg=\dimen272
 \pgfplots@xmax@reg=\dimen273
 \pgfplots@ymin@reg=\dimen274
@@ -1523,9 +1527,9 @@ y"
 Package: esvect 
 \symesvector=\mathgroup11
 )
-\c@theorem=\count176
+\c@theorem=\count177
  Excluding comment 'screenonly' Include comment 'printonly'
-Include comment 'anonsuppress' (deltalogic.aux)
+Excluding comment 'anonsuppress' Excluding comment 'acks' (deltalogic.aux)
 \openout1 = `deltalogic.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 23.
@@ -1583,7 +1587,7 @@ File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 23.
+(Font)              scaled to size 8.0pt on input line 23.
 LaTeX Font Info:    Try loading font information for OT1+LinuxLibertineT-TLF on
  input line 23.
 
@@ -1593,8 +1597,10 @@ File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 23.
+(Font)              scaled to size 8.0pt on input line 23.
 <<ot1.cmap>>
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.2pt on input line 23.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 23.
 <<oml.cmap>>
@@ -1665,7 +1671,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box51
+\AtBeginShipoutBox=\box52
 Package hyperref Info: Link coloring OFF on input line 23.
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref
@@ -1676,7 +1682,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 tlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count177
+\c@section@level=\count178
 )
 LaTeX Info: Redefining \ref on input line 23.
 LaTeX Info: Redefining \pageref on input line 23.
@@ -1689,40 +1695,40 @@ LaTeX Info: Redefining \nameref on input line 23.
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.
 mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count178
+\scratchcounter=\count179
 \scratchdimen=\dimen278
-\scratchbox=\box52
-\nofMPsegments=\count179
-\nofMParguments=\count180
+\scratchbox=\box53
+\nofMPsegments=\count180
+\nofMParguments=\count181
 \everyMPshowfont=\toks51
-\MPscratchCnt=\count181
+\MPscratchCnt=\count182
 \MPscratchDim=\dimen279
-\MPnumerator=\count182
-\makeMPintoPDFobject=\count183
+\MPnumerator=\count183
+\makeMPintoPDFobject=\count184
 \everyMPtoPDFconversion=\toks52
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: letterpaper
+* paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside heightrounded 
-* h-part:(L,W,R)=(73.71613pt, 430.00462pt, 110.57425pt)
-* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=430.00462pt
-* \textheight=560.0pt
-* \oddsidemargin=1.44614pt
-* \evensidemargin=38.30426pt
-* \topmargin=-3.87262pt
+* modes: includehead includefoot twoside heightrounded 
+* h-part:(L,W,R)=(46.0pt, 395.8225pt, 46.0pt)
+* v-part:(T,H,B)=(58.0pt, 620.7pt, 44.0pt)
+* \paperwidth=487.8225pt
+* \paperheight=722.7pt
+* \textwidth=395.8225pt
+* \textheight=574.0pt
+* \oddsidemargin=-26.26999pt
+* \evensidemargin=-26.26999pt
+* \topmargin=-14.26999pt
 * \headheight=13.0pt
 * \headsep=14.0pt
 * \topskip=10.0pt
-* \footskip=12.0pt
-* \marginparwidth=72.0pt
+* \footskip=24.0pt
+* \marginparwidth=24.0pt
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=7.0pt plus 11.0pt
@@ -1735,8 +1741,8 @@ mkii"
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count184
-\c@mv@boldtabular=\count185
+\c@mv@tabular=\count185
+\c@mv@boldtabular=\count186
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\upquote\upquote.
 sty"
@@ -1754,11 +1760,14 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package pgfplots notification 'compat/show suggested version=true': document ha
-s been generated with the most recent feature set (\pgfplotsset{compat=1.14}).
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
+your preamble.
+ on input line 23.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 38.
+(Font)              scaled to size 14.4pt on input line 38.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
 nput line 38.
 
@@ -1768,13 +1777,17 @@ File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 38.
+(Font)              scaled to size 14.4pt on input line 38.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 38.
+(Font)              scaled to size 14.4pt on input line 38.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 38.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 38.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
  input line 38.
 
@@ -1784,25 +1797,25 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 38.
+(Font)              scaled to size 8.0pt on input line 38.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 38.
+(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 38.
+(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 38.
+(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 38.
+(Font)              scaled to size 9.0pt on input line 38.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 38.
+(Font)              scaled to size 7.3pt on input line 38.
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msa
 .cfg"
@@ -1820,24 +1833,15 @@ Package hyperref Warning: Option `pdflang' has already been used,
 Package hyperref Warning: Option `pdfdisplaydoctitle' has already been used,
 (hyperref)                setting the option has no effect on input line 38.
 
-(lsegview.tex
+(oplusview.tex
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1.
+(Font)              scaled to size 10.0pt on input line 1.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 1.
+(Font)              scaled to size 10.0pt on input line 1.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 3.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 3.
-
-
-LaTeX Warning: Reference `sec:declogic' on page 1 undefined on input line 3.
-
+(Font)              scaled to size 10.0pt on input line 3.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 20.
-
-LaTeX Warning: Reference `sec:intro' on page 1 undefined on input line 20.
-
+(Font)              scaled to size 10.0pt on input line 20.
 LaTeX Font Info:    Try loading font information for T1+zi4 on input line 20.
 
 ("C:\Users\Adithya\AppData\Local\Programs\MiKTeX 2.9\tex\latex\inconsolata\t1zi
@@ -1849,47 +1853,118 @@ LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
 (Font)              using `T1/zi4/m/n' instead on input line 20.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 20.
+(Font)              scaled to size 10.0pt on input line 20.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `T1/zi4/m/n/9'.
+(microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `T1/zi4/m/n/9'.
+(microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.3pt on input line 20.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 5.5pt on input line 20.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 9.0pt on input line 20.
+(Font)              scaled to size 10.0pt on input line 20.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 7.3pt on input line 20.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 5.5pt on input line 20.
-
-LaTeX Warning: Reference `sec:declogic' on page 1 undefined on input line 20.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-[1.1{C:/Users/Adithya/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 59.
+(Font)              scaled to size 7.0pt on input line 21.
+[1.1{C:/Users/Adithya/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+(intro.tex
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 43.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 43.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 58.
 
-[2.2]
+Underfull \vbox (badness 2005) has occurred while \output is active []
+
+ [2.2]
+Overfull \hbox (14.77257pt too wide) in paragraph at lines 66--72
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) One pre-cise for-mu-la-tion of the ver-i
+-fi-ca-tion con-di-tion is $[]\LMS/ntxsy/m/n/10 ¹[]\OML/nxlmi/m/it/10 ; []; R\L
+MS/ntxsy/m/n/10 º ^  \OML/nxlmi/m/it/10 T\LMS/ntxsy/m/n/10 ¹[]\OML/nxlmi/m/it/1
+0 ; [][]; []; [][]\LMS/ntxsy/m/n/10 º ^  []¹[][]\OML/nxlmi/m/it/10 ; [][]; R[]\
+LMS/ntxsy/m/n/10 º$
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3.3])
+(logic.tex [4.4] [5.5]) (SeparabilityTheorem.tex [6.6] [7.7]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 10.0pt on input line 60.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+) (VC2Delta.tex) (DecLogic.tex [8.8] [9.9]
+Overfull \hbox (9.43143pt too wide) in paragraph at lines 79--79
+ [] 
+ []
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 80.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 9.0pt on input line 80.
+[10.10] [11.11]
+Overfull \hbox (26.75685pt too wide) in paragraph at lines 252--281
+ [][] 
+ []
+
+[12.12]) (Experiments.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) We im-ple-mented the de-ci-sion pro-ce-dur
+e for the delta-logic
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 4--4
+$\OML/nxlmi/m/it/10 LM\LMS/ntxsy/m/n/10 »\OML/nxlmi/m/it/10 ls; hls; rank; len;
+ mskeys; min; max; sorted\LMS/ntxsy/m/n/10 ¼$ \T1/LinuxLibertineT-TLF/m/n/10 (+
+20) us-ing the re-duc-tion to SMT de-scribed above,
+ []
+
+[13.13]
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 10.
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 10.
+) (RelatedWork.tex
+
+Package natbib Warning: Citation `Reynolds2002' on page 14 undefined on input l
+ine 3.
+
+) [14.14] (deltalogic.bbl
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 48.
+) (Appendix.tex [15.15])
+
+Package natbib Warning: There were undefined citations.
+
+[16.16]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (deltalogic.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 Package rerunfilecheck Info: File `deltalogic.out' has not changed.
-(rerunfilecheck)             Checksum: 99F9C57898AD4A158F28FF15B9620B8C;178.
+(rerunfilecheck)             Checksum: 5ADAB560E9141063E743A7CFF7E6BDCE;2326.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1898,50 +1973,56 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 37697 strings out of 493634
- 820055 string characters out of 3134423
- 1053452 words of memory out of 3000000
- 40053 multiletter control sequences out of 15000+200000
- 134426 words of font info for 211 fonts, out of 3000000 for 9000
+ 38196 strings out of 493634
+ 830931 string characters out of 3134423
+ 1062361 words of memory out of 3000000
+ 40158 multiletter control sequences out of 15000+200000
+ 211775 words of font info for 440 fonts, out of 3000000 for 9000
  1186 hyphenation exceptions out of 8191
- 64i,11n,111p,1081b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,15n,96p,1642b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine
-/lbtn_oexx6f.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
-dvips/newtx/libertinealt.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.
-9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/Adithya/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_fygcup.enc}{C:/Users/Adithya/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{C:/Use
-rs/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_7gr
-ukw.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fon
-tname/8r.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
-s/libertine/lbtn_76gpa5.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9
+/lbtn_ncsllp.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
+dvips/libertine/lbtn_oexx6f.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/enc/dvips/newtx/libertinealt.enc}{C:/Users/Adithya/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/Adithya/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_fygcup.enc}{C:/U
+sers/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t
+1-4.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lib
+ertine/lbtn_7grukw.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/font
+s/enc/dvips/fontname/8r.enc}{C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9
 /fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/Adithya/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}<C:/Users/Adithya/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/inconsolata/Inconsolata-zi4r.
-pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libe
-rtine/LinBiolinumTB.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/libertine/LinLibertineT.pfb><C:/Users/Adithya/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/Adit
-hya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertine
-TI.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
-ibertine/LinLibertineTZ.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/newtx/fxlri-7letters.pfb><C:/Users/Adithya/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/newtx/ntxsyralt.pfb><C:/Users/Adithya/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/Ad
-ithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/rtxr.pfb><C:
-/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/txs
-yc.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/n
-ewtx/txsys.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/newtx/zxlr.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/newtx/zxlri.pfb>
-Output written on deltalogic.pdf (2 pages, 514609 bytes).
+rams/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/Adithya/App
+Data/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Us
+ers/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/inconsolata/In
+consolata-zi4r.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/libertine/LinBiolinumT.pfb><C:/Users/Adithya/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/Adithya/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineT.pfb><
+C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine
+/LinLibertineTB.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/libertine/LinLibertineTI.pfb><C:/Users/Adithya/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTZ.pfb><C:/Users/Adithya
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/newtx/fxlri-5letters.pfb>
+<C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/newtx/fx
+lri-7letters.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/newtx/ntxsyralt.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/Adithya/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/newtx/rtxmi7.pfb><C:/Users/Adithya/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/Adithya/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/hoekwater/stmary10.pfb><C:/Use
+rs/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/newtx/txexs.pfb
+><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/txfonts
+/txsya.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/txfonts/txsyb.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/txfonts/txsyc.pfb><C:/Users/Adithya/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/newtx/txsys.pfb><C:/Users/Adithya/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/newtx/zxlr.pfb><C:/Users/Adithya/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/newtx/zxlri.pfb>
+Output written on deltalogic.pdf (16 pages, 808494 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 36385 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 56937 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -1,0 +1,46 @@
+\documentclass[acmsmall,review,anonymous]{acmart}
+\usepackage{subcaption} %% For complex figures with subfigures/subcaptions
+                        %% http://ctan.org/pkg/subcaption
+\captionsetup{compatibility=false}
+\usepackage{graphics,xcolor,amssymb}
+\usepackage{algorithm}
+%\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage[noend]{algpseudocode}
+\usepackage{stmaryrd}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.14} 
+\usepackage{esvect}
+%\usepackage{natbib}
+
+%\input{./macros}
+\begin{document}
+
+\newcommand{\HLS}{\textit{HLS}}
+\newcommand{\sem}[1]{\llbracket #1 \rrbracket}
+\newcommand{\vect}[1]{\overline{#1}}
+\pagestyle{plain} % Remove when publishing
+
+%% Title information
+\title{Delta Logics: Logics for Change}
+%\author{Adithya Murali \and
+%  P.\@ Madhusudan
+%}
+
+%\institute{  Department of Computer Science, University of Illinois, Urbana-Champaign}
+
+\maketitle
+
+\begin{tikzpicture}
+\draw (1,0) -- (0,0) -- (0,1) -- (1,1) -- cycle;
+\end{tikzpicture}
+
+\input{Appendix}
+
+\end{document}
